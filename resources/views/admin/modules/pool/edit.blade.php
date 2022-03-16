@@ -105,7 +105,8 @@
                                                             @endforeach
                                                             </td>
                                                             <td style="width: 50px;" class="text-center">
-                                                                <a href="#" class="btn btn-xs btn-danger" onclick="delete_with_swal('{!! url('moduel/pool/delete_session_time_slot',$date) !!}','{!! csrf_token() !!}',$(this).closest('tr'))"><i class="material-icons">remove</i></a>
+                                                                <a href="#" class="btn btn-xs btn-danger" onclick="delete_with_swal('{!! url('module/pool/delete_session_time_slot?pool_id='.$result->id,$index) !!}','{!! csrf_token() !!}',$(this).closest('tr'))"><i class="material-icons">remove</i></a>
+
                                                             </td>
 
                                                         </tr>
