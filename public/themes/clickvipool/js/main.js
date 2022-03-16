@@ -164,14 +164,24 @@
 
         $(n).owlCarousel({
             autoHeight: false,
+<<<<<<< HEAD
             navigation: false,
             navigationText: arrowIcons,
             items: 3,
+=======
+            navigation: true,
+            navigationText: arrowIcons,
+            items: 1,
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
             singleItem: true,
             addClassActive: true,
             transitionStyle: "fadeUp",
             afterMove: animatetCaptions,
+<<<<<<< HEAD
             autoPlay: true,
+=======
+            autoPlay: false,
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
             stopOnHover: true
         });
 
@@ -444,6 +454,7 @@
     updateGuestNumber();
     // update number of guest list
 
+<<<<<<< HEAD
     //Location Search
     // AJAX call for autocomplete 
         $("#location").keyup(function(){
@@ -466,6 +477,8 @@
 
 
 
+=======
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
 
     // Guests 
     // -------------------------------------------------------

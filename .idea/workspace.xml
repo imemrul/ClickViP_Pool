@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ChangeListManager">
     <list default="true" id="ff1fbce8-7701-46e8-a401-d90aa1bcc57c" name="Default Changelist" comment="" />
+=======
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ff1fbce8-7701-46e8-a401-d90aa1bcc57c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/modules/pool/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modules/pool/edit.blade.php" afterDir="false" />
+    </list>
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +34,12 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
@@ -89,9 +111,26 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
       <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+<<<<<<< HEAD
     </include_path>
   </component>
   <component name="ProjectId" id="25Sa5J72O9VHOnX4FcLyRqcECia" />
+=======
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/kylekatarnls/update-helper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="25Sa5J72O9VHOnX4FcLyRqcECia" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -101,11 +140,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
+=======
+      <recent name="E:\xampp\htdocs\cvpms\app" />
+      <recent name="E:\xampp\htdocs\cvpms\resources\views\admin\modules\pool" />
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
       <recent name="E:\xampp\htdocs\medicine\public" />
       <recent name="E:\xampp\htdocs\medicine\resources\views\admin\modules\client" />
     </key>
@@ -137,12 +185,33 @@
       <workItem from="1646887006869" duration="88000" />
       <workItem from="1646888123191" duration="4139000" />
       <workItem from="1646901738559" duration="1072000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1647424927978" duration="132000" />
+      <workItem from="1647425472328" duration="4769000" />
+      <workItem from="1647430565969" duration="1077000" />
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
   <component name="WindowStateProjectService">
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1645735995360">
       <screen x="0" y="0" width="1366" height="728" />
@@ -152,9 +221,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1646887090571" />
+<<<<<<< HEAD
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1646756311116">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1646756311116" />
+=======
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1647427116196">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1647427116196" />
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
   </component>
 </project>

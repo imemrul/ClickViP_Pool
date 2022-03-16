@@ -16,6 +16,10 @@ class WeeklySessionTime extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
         $results = Weekly_session_timing::where('host_id',auth()->user()->id)->orderBy('id','desc')->paginate(20);
         //return auth()->user()->id;
         return view('admin.modules.weekly_session_time.index',compact('results'));
@@ -84,7 +88,11 @@ class WeeklySessionTime extends Controller
      */
     public function update(Request $request, $id)
     {
+<<<<<<< HEAD
         dd($request->all());
+=======
+        //dd($request->all());
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
         //return $request->all();
         Weekly_session_timing::find($id)->fill($request->all())->save();
         return redirect()->back()->with('message','Session updated..');

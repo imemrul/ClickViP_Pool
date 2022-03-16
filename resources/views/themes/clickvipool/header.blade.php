@@ -5,7 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<<<<<<< HEAD
     <meta name="csrf-token" content="{{ Session::token() }}">
+=======
+
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
     <!-- Mobile Web-app fullscreen -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -78,9 +82,19 @@
                             <i class="icon icon-star"></i> 
                             Special offers
                         </a>
+<<<<<<< HEAD
                         <a class="box" href="mailto:info@clickvipool.com">
                             <i class="icon icon-envelope"></i> 
                             info@clickvipool.com
+=======
+                        <a class="box" href="#">
+                            <i class="icon icon-tag"></i> 
+                            Reservations
+                        </a>
+                        <a class="box" href="#">
+                            <i class="icon icon-phone-handset"></i> 
+                            (01) 252-3333
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                         </a>
                     </div>
                 </nav>

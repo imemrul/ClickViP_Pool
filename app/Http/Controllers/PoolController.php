@@ -104,8 +104,14 @@ class PoolController extends Controller
      */
     public function edit($id)
     {
+<<<<<<< HEAD
         $result =  Pool::find($id);
         //return $result->facilities;
+=======
+        $result =  Pool::with(['session_wise_price','session_wise_price.weekly_session_time_slot'])->find($id);
+
+        //return $result->session_wise_price->groupBy('date');
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
         return view('admin.modules.pool.edit',compact('result'));
     }
 
@@ -118,7 +124,54 @@ class PoolController extends Controller
      */
     public function update(Request $request, $id)
     {
+<<<<<<< HEAD
         //
+=======
+        //delete_session_time_slotreturn 'test';
+        $pool = Pool::find($id);
+        //return $pool->location;
+        $pool_master = $request->all();
+        $pool_master['allow_instant_booking'] = 'No';
+        if($request->has('allow_instant_booking')){
+            $pool_master['allow_instant_booking'] = 'Yes';
+        }
+        $pool->fill($pool_master)->save();
+        foreach($request->available_date as $i=>$date){
+            if($date){
+                foreach ($request->weekly_session_timing[$i] as $id=>$pirce){
+                    if($pirce && $pirce !== 0){
+                        $session_wise_price = new Weekly_session_wise_pool_price();
+                        $session_wise_price->weekly_session_id = $id;
+                        $session_wise_price->date = $date;
+                        $session_wise_price->price = $pirce;
+                        $pool->session_wise_price()->save($session_wise_price);
+                    }
+                }
+            }
+        }
+        if($request->hasFile('image')){
+            foreach($request->file('image') as $file)
+            {
+                if($file){
+                    $name = $pool->id.'_'.time().rand(1,100).'.'.$file->extension();
+                    $file->move(public_path('uploads'), $name);
+                    $image = new Pool_image();
+                    $image->name = $name;
+                    $pool->images()->save($image);
+                }
+            }
+        }
+        if($request->has('facility')){
+            $pool->facilities()->delete();
+            foreach ($request->facility as $item){
+                $pool_facility = new Pool_facility();
+                $pool_facility->facility_id = $item;
+                $pool->facilities()->save($pool_facility);
+            }
+        }
+
+        return redirect('module/pool')->with('message','Pool updated...');
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf
     }
 
     /**
@@ -131,4 +184,24 @@ class PoolController extends Controller
     {
         //
     }
+<<<<<<< HEAD
 }
+=======
+    public function delete_image($id){
+        $image = Pool_image::find($id);
+        if(file_exists(public_path('uploads/'.$image->name))){
+            unlink(public_path('uploads/'.$image->name));
+        }
+        $image->delete();
+    }
+    public function delete_session_time_slot($date){
+        //return request()->pool_id;
+        Weekly_session_wise_pool_price::where('pool_id',request()->pool_id)->where('date',$date)->delete();
+    }
+
+    public function  testfunction(){
+        return 'this function is to be delete';
+    }
+}
+
+>>>>>>> 88e6af949433281688a5863a52939b899109cbdf

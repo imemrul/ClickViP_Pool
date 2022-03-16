@@ -1,20 +1,20 @@
-@extends('admin.layouts.form')
-@section('custom_page_style')
+<?php $__env->startSection('custom_page_style'); ?>
     <style>
         table td{
             vertical-align: middle!important;
         }
     </style>
-@endsection
-@section('content')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
     <div class="container-fluid">
         <div class="block-header">
-            @if(Session::has('message'))
+            <?php if(Session::has('message')): ?>
                 <div class="alert bg-teal alert-dismissible m-t-20 animated fadeInDownBig" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    {!! Session::get('message') !!}
+                    <?php echo Session::get('message'); ?>
+
                 </div>
-            @endif
+            <?php endif; ?>
         </div>
 
         <!-- Striped Rows -->
@@ -36,7 +36,7 @@
                                         <h4 class="modal-title">Weekly session timing</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form method="post" action="{!! url('module/weekly_session_time') !!}">
+                                        <form method="post" action="<?php echo url('module/weekly_session_time'); ?>">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <table class="table table-condensed">
@@ -110,12 +110,8 @@
                         </div>
                     </div>
                     <div class="body table-responsive">
-<<<<<<< HEAD
-                        {!! Form::open(['url'=>URL::to('module/weekly_session_time'),'id'=>'table_form']) !!}
-=======
 
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
-                        <p>TOTAL SESSION TIME SLOT: {!! $results->count(); !!}</p>
+                        <p>TOTAL SESSION TIME SLOT: <?php echo $results->count();; ?></p>
                         <table class="table table-hover table-responsive">
                             <thead>
                             <tr>
@@ -129,9 +125,9 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($results as $i=>$result)
+                            <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i=>$result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <tr>
-                                    <td>{!! $i+1 !!}</td>
+                                    <td><?php echo $i+1; ?></td>
                                     <td><?php echo $result->week_day ?></td>
                                     <td><?php echo $result->title; ?></td>
                                     <td><?php echo date('h:i a',strtotime($result->start_from)) ?></td>
@@ -147,11 +143,7 @@
                                         ?>
                                     </td>
                                     <td>
-<<<<<<< HEAD
-                                        <a href="#" data-toggle="modal" data-target="#edit_session_timing_<?= $result->id ?>"  class="btn btn-info btn-xs btn-group-xs"><i class="fa fa-edit icon-only"></i></a>
-=======
                                         <a href="#" data-toggle="modal" data-target="#edit_session_timing_<?= $result->id ?>"  class="btn btn-info btn-xs btn-group-xs"><i class="material-icons">edit</i></a>
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
 
                                         <!-- Modal -->
                                         <div id="edit_session_timing_<?= $result->id ?>" class="modal fade" role="dialog">
@@ -164,13 +156,10 @@
                                                         <h4 class="modal-title">Update weekly session timing</h4>
                                                     </div>
                                                     <div class="modal-body">
-<<<<<<< HEAD
-                                                        <form method="POST" action="{!! url('module/weekly_session_time',$result->id) !!}" me>
-=======
-                                                        <form method="post" action="{!! url('module/weekly_session_time',$result->id) !!}">
-                                                            {!! csrf_field() !!}
+                                                        <form method="post" action="<?php echo url('module/weekly_session_time',$result->id); ?>">
+                                                            <?php echo csrf_field(); ?>
+
                                                             <input type="hidden" name="_method" value="put">
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                                                             <input type="hidden" name="weekly_session_timing_id" value="<?= $result->id ?>">
                                                             <div class="row">
                                                                 <div class="col-md-12">
@@ -237,22 +226,19 @@
 
                                     </td>
                                 </tr>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </tbody>
                         </table>
-<<<<<<< HEAD
-                        {!! Form::close() !!}
-=======
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
-                        {!! $results->appends(request()->except(['_token']))->links() !!}
+                        <?php echo $results->appends(request()->except(['_token']))->links(); ?>
+
                     </div>
                 </div>
             </div>
         </div>
         <!-- #END# Striped Rows -->
     </div>
-@endsection
-@section('custom_page_script')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('custom_page_script'); ?>
 
 
     <script type="text/javascript">
@@ -296,7 +282,7 @@
                         resolver:'custom',
                         events: {
                             search: function (qry, callback) {
-                                let url = '{!! url("item_suggestion") !!}' + '?q='+input.val();
+                                let url = '<?php echo url("item_suggestion"); ?>' + '?q='+input.val();
                                 axios.get(url).then(function (res) {
                                     callback(res.data)
                                 });
@@ -346,6 +332,8 @@
         })
 
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
 
 
+
+<?php echo $__env->make('admin.layouts.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
