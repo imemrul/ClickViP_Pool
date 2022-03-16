@@ -18,14 +18,12 @@ Route::get('admin', 'Admin@index');
 Route::get('/login','AuthController@index');
 Route::post('/login','AuthController@login');
 Route::get('/logout','AuthController@logout');
-
-Route::get('event',function(){
-   event(new TaskEvent('Hey how are you????'));
-});
-<<<<<<< HEAD
+Route::post('registration','AuthController@registration');
+Route::get('check_email_availibility','AuthController@check_email_availibility');
 Route::get('autocomplete', 'SearchController@autocomplete')->name('autocomplete');
-=======
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
+
+
+
 
 Route::get('get_contact_person','ClientCrud@get_contact_person');
 Route::get('get_contact_person_by_client/{client_id}','DealsController@get_contact_person_by_client');
@@ -48,46 +46,15 @@ Route::group(['prefix'=>'module'],function(){
     Route::resource('client','ClientCrud');
 
     Route::resource('weekly_session_time','WeeklySessionTime');
-<<<<<<< HEAD
-=======
     Route::delete('pool/delete_image/{image_id}','PoolController@delete_image');
     Route::delete('pool/delete_session_time_slot/{date}','PoolController@delete_session_time_slot');
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
     Route::resource('pool','PoolController');
 
     Route::any('executive/search_call_history','ExecutiveCrud@search_call_history');
     Route::resource('executive','ExecutiveCrud');
-
-<<<<<<< HEAD
-    Route::get('deal/activity/{deal_id}/{activity_type}','DealsController@deal_activity');
-    Route::any('deals/search','DealsController@search');
-    Route::resource('deals','DealsController');
-
-    Route::get('get_link_with_suggestion/{linked_with}','ActivityController@get_link_with_suggestion');
-    Route::get('get_details_of_linked_with/{linked_with}/{id}','ActivityController@get_details_of_linked_with');
-
-    Route::any('activity/search','ActivityController@search');
-    Route::resource('activity','ActivityController');
-
-    Route::any('campaign/search','CampaignController@search');
-    Route::get('campaign/creative/{creative_id}','CampaignController@creative_report');
-    Route::get('campaign/creative_preview/{creative_id}','CampaignController@creative_preview');
-    Route::resource('campaign','CampaignController');
-
-});
-
-Route::get('send_daily_activity','Admin@send_daily_activity');
-Route::get('send_daily_summary','Admin@send_daily_summary');
-Route::get('client_wise_summary','Admin@client_wise_summary');
-
-Route::get('vivo_campaign','LiveStatsController@vivo_campaign');
-=======
-
-
 });
 
 
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
 
 
 

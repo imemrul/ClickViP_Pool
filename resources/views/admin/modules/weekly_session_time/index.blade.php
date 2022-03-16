@@ -110,11 +110,7 @@
                         </div>
                     </div>
                     <div class="body table-responsive">
-<<<<<<< HEAD
-                        {!! Form::open(['url'=>URL::to('module/weekly_session_time'),'id'=>'table_form']) !!}
-=======
 
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                         <p>TOTAL SESSION TIME SLOT: {!! $results->count(); !!}</p>
                         <table class="table table-hover table-responsive">
                             <thead>
@@ -147,11 +143,7 @@
                                         ?>
                                     </td>
                                     <td>
-<<<<<<< HEAD
-                                        <a href="#" data-toggle="modal" data-target="#edit_session_timing_<?= $result->id ?>"  class="btn btn-info btn-xs btn-group-xs"><i class="fa fa-edit icon-only"></i></a>
-=======
                                         <a href="#" data-toggle="modal" data-target="#edit_session_timing_<?= $result->id ?>"  class="btn btn-info btn-xs btn-group-xs"><i class="material-icons">edit</i></a>
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
 
                                         <!-- Modal -->
                                         <div id="edit_session_timing_<?= $result->id ?>" class="modal fade" role="dialog">
@@ -164,13 +156,9 @@
                                                         <h4 class="modal-title">Update weekly session timing</h4>
                                                     </div>
                                                     <div class="modal-body">
-<<<<<<< HEAD
-                                                        <form method="POST" action="{!! url('module/weekly_session_time',$result->id) !!}" me>
-=======
                                                         <form method="post" action="{!! url('module/weekly_session_time',$result->id) !!}">
                                                             {!! csrf_field() !!}
                                                             <input type="hidden" name="_method" value="put">
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                                                             <input type="hidden" name="weekly_session_timing_id" value="<?= $result->id ?>">
                                                             <div class="row">
                                                                 <div class="col-md-12">
@@ -240,10 +228,6 @@
                             @endforeach
                             </tbody>
                         </table>
-<<<<<<< HEAD
-                        {!! Form::close() !!}
-=======
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                         {!! $results->appends(request()->except(['_token']))->links() !!}
                     </div>
                 </div>

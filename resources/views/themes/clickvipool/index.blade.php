@@ -306,15 +306,4 @@
             </div>
         </footer>
 
-    </div> <!--/wrapper-->
-
-    <!--JS files-->
-    <script src="{{ asset('public/themes/clickvipool/js/jquery.min.js')}}"></script>
-    <script src="{{ asset('public/themes/clickvipool/js/jquery-ui.js')}}"></script>
-    <script src="{{ asset('public/themes/clickvipool/js/jquery.bootstrap.js')}}"></script>
-    <script src="{{ asset('public/themes/clickvipool/js/jquery.magnific-popup.js')}}"></script>
-    <script src="{{ asset('public/themes/clickvipool/js/jquery.owl.carousel.js')}}"></script>
-    <script src="{{ asset('public/themes/clickvipool/js/main.js')}}"></script>
-</body>
-
-</html>
+@include('themes.clickvipool.footer')

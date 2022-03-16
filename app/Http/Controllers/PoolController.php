@@ -104,14 +104,9 @@ class PoolController extends Controller
      */
     public function edit($id)
     {
-<<<<<<< HEAD
-        $result =  Pool::find($id);
-        //return $result->facilities;
-=======
         $result =  Pool::with(['session_wise_price','session_wise_price.weekly_session_time_slot'])->find($id);
 
         //return $result->session_wise_price->groupBy('date');
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
         return view('admin.modules.pool.edit',compact('result'));
     }
 
@@ -124,9 +119,6 @@ class PoolController extends Controller
      */
     public function update(Request $request, $id)
     {
-<<<<<<< HEAD
-        //
-=======
         //delete_session_time_slotreturn 'test';
         $pool = Pool::find($id);
         //return $pool->location;
@@ -171,7 +163,6 @@ class PoolController extends Controller
         }
 
         return redirect('module/pool')->with('message','Pool updated...');
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
     }
 
     /**
@@ -184,9 +175,6 @@ class PoolController extends Controller
     {
         //
     }
-<<<<<<< HEAD
-}
-=======
     public function delete_image($id){
         $image = Pool_image::find($id);
         if(file_exists(public_path('uploads/'.$image->name))){
@@ -204,4 +192,3 @@ class PoolController extends Controller
     }
 }
 
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf

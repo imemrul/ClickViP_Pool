@@ -9,11 +9,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="block-header">
-<<<<<<< HEAD
-            <a href="{!! URL::to('module/client') !!}" class="font-bold"> My pool list</a>
-=======
             <a href="{!! URL::to('module/pool') !!}" class="font-bold"> My pool list</a>
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
             @if(Session::has('message'))
                 <div class="alert alert-success alert-dismissible show" role="alert">
                     <strong>Congratulation</strong> {!! Session::get('message') !!}
@@ -29,11 +25,7 @@
                 <div class="card">
                     <div class="body" id="app">
                         <div class="row clearfix">
-<<<<<<< HEAD
-                            {!! Form::model($result,['url'=>URL::to('module/pool'),'class'=>'form','files'=>'true']) !!}
-=======
                             {!! Form::model($result,['url'=>URL::to('module/pool',$result->id),'class'=>'form','files'=>'true','method'=>'put']) !!}
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                             <div class="col-xs-7">
                                 <div class="card">
                                     <div class="header">
@@ -96,8 +88,6 @@
                                     <div class="body">
                                         <div class="row">
                                             <div class="col-xs-12">
-<<<<<<< HEAD
-=======
                                                 <table class="table table-bordered">
                                                     <thead>
                                                     <tr>
@@ -124,17 +114,12 @@
                                                     </tbody>
                                                 </table>
                                                 <p class="text-muted">Want to add more price form the bellow time slot ? </p>
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                                                 <table class="table table-bordered" id="timeslot_table">
                                                     <thead>
                                                     <tr>
                                                         <th style="width: 160px;">Date</th>
                                                         <th>Time slot</th>
-<<<<<<< HEAD
-                                                        <th>
-=======
                                                         <th class="text-center">
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                                                             <a href="#" class="btn btn-xs btn-success" @click.prevent="addRow"><i class="material-icons">add</i></a>
                                                         </th>
                                                     </tr>
@@ -150,13 +135,9 @@
                                                             $weekly_timing_session = App\Weekly_session_timing::where('host_id', auth()->user()->id)->get();
                                                             ?>
                                                             @foreach($weekly_timing_session as $i=>$item)
-<<<<<<< HEAD
-                                                                
-=======
                                                                 <?php
                                                                         //$value =
                                                                 ?>
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                                                                 <label :for="'time_slot_checkbox_{!! $i !!}_'+index">{!! $item->title .'-'.$item->week_day.'-('. date('h:i a',strtotime($item->start_from)) . '-'. date('h:i a',strtotime($item->end_at)) .')' !!}</label>
                                                                 <input value="" type="text" :name="'weekly_session_timing['+index+'][{!! $item->id !!}]'"  :id="'time_slot_checkbox_{!! $i !!}_'+index" class="form-control">
                                                             @endforeach
@@ -232,11 +213,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-xs-12">
-<<<<<<< HEAD
-                                                <input type="checkbox" name="allow_instant_booking" id="allow_instant_book" value="Yes">
-=======
                                                 <input type="checkbox" name="allow_instant_booking" id="allow_instant_book" {!! $result->allow_instant_booking == 'Yes' ? 'checked' : '' !!} value="Yes">
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                                                 <label for="allow_instant_book">INSTANT BOOK</label>
                                                 <p>
                                                     By ticking this box you accept that your pool will be instantly booked without a confirmation from your side. If that is not what you wish kindly keep it unticked, you will receive a booking notification for your approval
@@ -266,8 +243,6 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-<<<<<<< HEAD
-=======
                                             @foreach($result->images as $image)
                                                 <tr>
                                                     <td>
@@ -279,7 +254,6 @@
                                                     </td>
                                                 </tr>
                                             @endforeach
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                                             <tr v-for="(item, index) in imageRow">
                                                 <td>
                                                     <input type="file" name="image[]" id="">
@@ -308,11 +282,7 @@
                                                 }
                                             ?>
                                             <input value="{!! $item->id !!}" type="checkbox" name="facility[]" {!! $ischecked !!}  id="fa_id_{!! $i !!}">
-<<<<<<< HEAD
-                                            <label for="fa_id_{!! $i !!}">{!! $item->name . ' - '. $ischecked !!}</label>
-=======
                                             <label for="fa_id_{!! $i !!}">{!! $item->name !!}</label>
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                                         @endforeach
                                     </div>
                                 </div>
@@ -372,12 +342,9 @@
                 removeImageRow:function (index) {
                     this.imageRow.splice(index,1)
                 },
-<<<<<<< HEAD
-=======
                 removeImage:function(_id){
                     delete_with_swal()
                 }
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
             }
         });
 

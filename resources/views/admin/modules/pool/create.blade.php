@@ -9,11 +9,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="block-header">
-<<<<<<< HEAD
-            <a href="{!! URL::to('module/client') !!}" class="font-bold"> My pool list</a>
-=======
             <a href="{!! URL::to('module/pool') !!}" class="font-bold"> My pool list</a>
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
             @if(Session::has('message'))
                 <div class="alert alert-success alert-dismissible show" role="alert">
                     <strong>Congratulation</strong> {!! Session::get('message') !!}
@@ -114,11 +110,7 @@
                                                             ?>
                                                             @foreach($weekly_timing_session as $i=>$item)
                                                                 <label :for="'time_slot_checkbox_{!! $i !!}_'+index">{!! $item->title .'-'.$item->week_day.'-('. date('h:i a',strtotime($item->start_from)) . '-'. date('h:i a',strtotime($item->end_at)) .')' !!}</label>
-<<<<<<< HEAD
-                                                                <input value="" type="text" :name="'weekly_session_timing['+index+'][{!! $item->id !!}]'"  :id="'time_slot_checkbox_{!! $i !!}_'+index" class="form-control">
-=======
                                                                 <input value="" type="text" :name="'weekly_session_timing['+index+'][{!! $item->id !!}]'"  :id="'time_slot_checkbox_{!! $i !!}_'+index" class="form-control" placeholder="Session wize price">
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                                                             @endforeach
                                                         </td>
                                                         <td>

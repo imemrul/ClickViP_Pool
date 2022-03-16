@@ -22,20 +22,13 @@ class AuthController extends Controller{
     public function index(){
         return view('admin.login');
     }
-    public function create(RegistrationForm $r){
-        $data = [
-            'full_name' => $r->full_name,
-            'phone' => $r->phone,
-            'email' => $r->email,
-            'password' => Hash::make($r->password),
-            'address' => $r->address,
-            'roll_id' => $r->roll_id,
-        ];
-        if(User::create($data)){
-            return redirect()->back()->with('redirect_message','Registration Successfull');
-        }else{
-            return redirect()->back()->with('redirect_message','Registration Fail');
-        }
+    public function registration(Request $request){
+        $input = $request->all();
+        $input['roll_id'] = 3;
+        $input['password'] = Hash::make($input['password']);
+        $user = User::create($input);
+        Auth::loginUsingId($user->id, $remember = true);
+        return redirect()->back()->with('success_message','Registration completed..');
     }
     public function login(Request $r){
         if(Auth::attempt(['email'=>$r->email,'password'=>$r->password])){
@@ -45,20 +38,18 @@ class AuthController extends Controller{
             return redirect()->back()->with('redirect_login_message',$r->email);
         }
     }
-    public function ajax_login(Request $r){
-        if(Auth::attempt(['email'=>$r->email,'password'=>$r->password])){
-            return 1;
-        }else{
+    public function check_email_availibility(){
+        if(User::where('email',request()->email)->first()){
             return 0;
+        }else{
+            return 1;
         }
     }
     public function logout(){
         Auth::logout();
         return redirect('/');
     }
-    public function form(){
-        return view('admin.form');
-    }
+
 
     
 }

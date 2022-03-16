@@ -19,11 +19,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="block-header">
-<<<<<<< HEAD
-            <a href="{!! URL::to('module/pool') !!}"><strong>List of Pool</strong></a>
-=======
             <a href="{!! URL::to('module/pool') !!}"><strong>My pool list</strong></a>
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
             @if(Session::has('message'))
                 <div class="alert bg-teal alert-dismissible m-t-20 animated fadeInDownBig" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -37,11 +33,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-<<<<<<< HEAD
-                        <a href="{!! URL::to('module/pool/create') !!}" class="btn btn-xs btn-primary"> <i class="material-icons">add_circle_outline</i> Create New Pool</a>
-=======
                         <a href="{!! URL::to('module/pool/create') !!}" class=""> <i class="material-icons" style="vertical-align: middle">add_circle_outline</i> Create new pool</a>
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                     </div>
                     <div class="body table-responsive">
                         <p>TOTAL POOL: {!! $results->total(); !!}</p>
@@ -67,12 +59,7 @@
                                 <td>{!! $row->occupancy !!}</td>
                                 <th>{!! $row->status !!}</th>
                                 <td style="width:100px;">
-<<<<<<< HEAD
-                                    <a data-toggle="tooltip" data-title="View" class="btn btn-xs btn-warning" href="{!! URL::to('module/pool/'.$row->id,'edit') !!}"><i class="material-icons">edit</i></a>
-                                    <a data-toggle="tooltip" data-title="Delete" class="btn btn-xs btn-danger delete_with_swal" href="{!! URL::to('module/pool',$row->id) !!}"><i class="material-icons">remove</i></a>
-=======
                                     <a data-toggle="tooltip" data-title="Edit & Update" class="btn btn-xs btn-primary" href="{!! URL::to('module/pool/'.$row->id,'edit') !!}"><i class="material-icons">edit</i></a>
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                                 </td>
                             </tr>
                             @endforeach

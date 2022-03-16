@@ -5,11 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<<<<<<< HEAD
-    <meta name="csrf-token" content="{{ Session::token() }}">
-=======
 
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
     <!-- Mobile Web-app fullscreen -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -49,7 +45,7 @@
 
     <div class="page-loader"></div>
 
-    <div class="wrapper">
+    <div class="wrapper" id="app">
 
         <header>
 
@@ -79,22 +75,16 @@
 
                     <div class="navigation-top-right">
                         <a class="box" href="#">
-                            <i class="icon icon-star"></i> 
+                            <i class="icon icon-star"></i>
                             Special offers
                         </a>
-<<<<<<< HEAD
-                        <a class="box" href="mailto:info@clickvipool.com">
-                            <i class="icon icon-envelope"></i> 
-                            info@clickvipool.com
-=======
                         <a class="box" href="#">
-                            <i class="icon icon-tag"></i> 
+                            <i class="icon icon-tag"></i>
                             Reservations
                         </a>
                         <a class="box" href="#">
-                            <i class="icon icon-phone-handset"></i> 
+                            <i class="icon icon-phone-handset"></i>
                             (01) 252-3333
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
                         </a>
                     </div>
                 </nav>
@@ -134,12 +124,21 @@
                         <!-- navigation-right -->
 
                         <ul class="navigation-right">
-                            <li>
-                                <a href="/login">Login</a>
-                            </li>
-                            <li>
-                                <a href="/registration">Registration</a>
-                            </li>
+                            @if(!auth()->check())
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#login_form">Login</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#registration_form">Registration</a>
+                                </li>
+                            @else
+                                <li>
+                                    <a href="#">My profile</a>
+                                </li>
+                                <li>
+                                    <a href="{!! url('logout') !!}">Logout</a>
+                                </li>
+                            @endif
                         </ul>
 
                     </div> <!--/navigation-block-->
@@ -148,3 +147,130 @@
             </div> <!--/container-->
 
         </header>
+
+        @if(session()->has('success_message'))
+        <section class="container" id="success_message">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="alert alert-success">{!! session()->get('success_message') !!}</h4>
+                </div>
+            </div>
+
+        </section>
+        @endif
+
+        <!-- Registration Modal -->
+        <div class="modal fade" id="registration_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {!! Form::open(['url'=>url('registration'),'class'=>'form','id'=>'registration_form','@submit'=>"setSubmitting"]) !!}
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="first_name">First name</label>
+                                    <input type="text" name="first_name" id="first_name" class="form-control" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="first_name">Last name</label>
+                                    <input type="text" name="first_name" class="form-control" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="first_name">Phone</label>
+                                    <input type="text" name="phone" id="first_name" class="form-control" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="first_name">Login ID / Email address</label>
+                                    <input type="text" name="email" id="email" class="form-control" autocomplete="off" @blur="checkEmailAvailibility" v-model="email" required>
+                                    <div v-if="error_mes_duplicate_email" class="alert alert-danger" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                        <span class="sr-only">Error:</span>
+                                        <span v-text="error_mes_duplicate_email"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="first_name">Password</label>
+                                    <input type="password" name="password" class="form-control" autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <button :disabled="submitting" type="submit" name="submission_type" value="guest" class="btn btn-md btn-block btn-primary" role="button">Register as a guest</button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button :disabled="submitting" type="submit" name="submission_type" value="host" class="btn btn-md btn-block btn-primary">Register as a host</button>
+                            </div>
+                        </div>
+
+                        {!! Form::close() !!}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {!! Form::open(['url'=>url('login'),'class'=>'form','id'=>'login_form']) !!}
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="first_name">Login ID / Email address</label>
+                                    <input type="text" name="email" id="first_name" class="form-control" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="first_name">Password</label>
+                                    <input type="password" name="password" id="first_name" class="form-control" autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <button type="submit" name="submission_type" value="guest" class="btn btn-md btn-block btn-primary" role="button">Guest Login</button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button type="submit" name="submission_type" value="host" class="btn btn-md btn-block btn-primary">Host Login</button>
+                            </div>
+                        </div>
+
+                        {!! Form::close() !!}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -18,12 +18,7 @@ class Pool extends Model
         return $this->hasMany('App\Pool_facility');
     }
     public function location(){
-<<<<<<< HEAD
-        return $this->belongsTo('App\Location');
-    }
-=======
         return $this->belongsTo('App\Location','emirates');
     }
 
->>>>>>> 88e6af949433281688a5863a52939b899109cbdf
 }

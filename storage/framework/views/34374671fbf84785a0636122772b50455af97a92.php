@@ -306,15 +306,4 @@
             </div>
         </footer>
 
-    </div> <!--/wrapper-->
-
-    <!--JS files-->
-    <script src="<?php echo e(asset('public/themes/clickvipool/js/jquery.min.js')); ?>"></script>
-    <script src="<?php echo e(asset('public/themes/clickvipool/js/jquery-ui.js')); ?>"></script>
-    <script src="<?php echo e(asset('public/themes/clickvipool/js/jquery.bootstrap.js')); ?>"></script>
-    <script src="<?php echo e(asset('public/themes/clickvipool/js/jquery.magnific-popup.js')); ?>"></script>
-    <script src="<?php echo e(asset('public/themes/clickvipool/js/jquery.owl.carousel.js')); ?>"></script>
-    <script src="<?php echo e(asset('public/themes/clickvipool/js/main.js')); ?>"></script>
-</body>
-
-</html>
+<?php echo $__env->make('themes.clickvipool.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
