@@ -106,7 +106,7 @@
                             <div class="location" data-text="Location">
                                 <strong>Select Location</strong>
                             <div class="form-group">
-                                <input type="text" value="" placeholder="" class="form-control" style="margin-top: 10px;margin-left: -10px;background: #cccccc6e;">
+                                <input type="text" value="" id="location" name="address" class="form-control" style="margin-top: 10px;margin-left: -10px;background: #cccccc6e;">
                             </div>
                             </div>
                         </div>
