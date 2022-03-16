@@ -22,6 +22,9 @@ Route::get('/logout','AuthController@logout');
 Route::get('event',function(){
    event(new TaskEvent('Hey how are you????'));
 });
+Route::group(['prefix'=>'search'],function(){
+    Route::get('autocomplete', 'SearchController@autocomplete')->name('autocomplete');
+});
 
 Route::get('get_contact_person','ClientCrud@get_contact_person');
 Route::get('get_contact_person_by_client/{client_id}','DealsController@get_contact_person_by_client');

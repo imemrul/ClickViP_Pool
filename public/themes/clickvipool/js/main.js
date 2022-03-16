@@ -164,14 +164,14 @@
 
         $(n).owlCarousel({
             autoHeight: false,
-            navigation: true,
+            navigation: false,
             navigationText: arrowIcons,
-            items: 1,
+            items: 3,
             singleItem: true,
             addClassActive: true,
             transitionStyle: "fadeUp",
             afterMove: animatetCaptions,
-            autoPlay: false,
+            autoPlay: true,
             stopOnHover: true
         });
 
@@ -444,6 +444,31 @@
     updateGuestNumber();
     // update number of guest list
 
+    //Location Search
+    // AJAX call for autocomplete 
+    $(document).ready(function(){
+        $("#haddress").keyup(function(){
+            $.ajax({
+            type: "POST",
+            url: "{{ route('search.autocomplete') }}",
+            data:'keyword='+$(this).val(),
+            beforeSend: function(){
+                $("#haddress").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+            },
+            success: function(data){
+                $("#suggesstion-box").show();
+                $("#suggesstion-box").html(data);
+                $("#haddress").css("background","#FFF");
+            }
+            });
+        });
+    });
+
+// To select Location
+function selectCountry(val) {
+$("#haddress").val(val);
+$("#suggesstion-box").hide();
+}
 
     // Guests 
     // -------------------------------------------------------

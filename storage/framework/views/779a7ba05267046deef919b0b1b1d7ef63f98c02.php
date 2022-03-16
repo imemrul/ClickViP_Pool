@@ -106,8 +106,9 @@
                             <div class="location" data-text="Location">
                                 <strong>Select Location</strong>
                             <div class="form-group">
-                                <input type="text" value="" placeholder="" class="form-control" style="margin-top: 10px;margin-left: -10px;background: #cccccc6e;">
+                                <input type="text" value="" id="location" name="haddress" class="typeahead form-control" style="margin-top: 10px;margin-left: -10px;background: #00000000;color:rgb(255, 255, 255);font-size:16px">
                             </div>
+                            <div id="suggesstion-box"></div> 
                             </div>
                         </div>
 
