@@ -98,7 +98,7 @@
                     <div class="logo animated fadeIn">
                         <a href="/">
                             <img class="logo-desktop" src="<?php echo e(asset('public/themes/clickvipool/assets/images/logo.png')); ?>" alt="Alternate Text" />
-                            <img class="logo-mobile" src="<?php echo e(asset('public/themes/assets/clickvipool/images/logo-mobile.png')); ?>" alt="Alternate Text" />
+                            <img class="logo-mobile" src="<?php echo e(asset('public/themes/clickvipool/assets/images/logo.png')); ?>" alt="Alternate Text" />
                         </a>
                     </div>
 

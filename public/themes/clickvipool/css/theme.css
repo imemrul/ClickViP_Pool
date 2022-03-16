@@ -3214,7 +3214,7 @@ section {
 
 @media (min-width: 992px) {
   .booking .booking-wrapper .guests .guest-list {
-    top: 108px;
+    top: -290px;
   }
 }
 

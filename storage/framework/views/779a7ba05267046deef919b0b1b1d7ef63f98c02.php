@@ -93,8 +93,8 @@
 
                         <!--=== date arrival ===-->
 
-                        <div class="col-xs-4 col-sm-3">
-                            <div class="date" id="dateArrival" data-text="Arrival">
+                        <div class="col-xs-4 col-sm-2">
+                            <div class="date" id="dateArrival" data-text="Select Date">
                                 <input class="datepicker" readonly="readonly" />
                                 <div class="date-value"></div>
                             </div>
@@ -102,10 +102,12 @@
 
                         <!--=== date departure ===-->
 
-                        <div class="col-xs-4 col-sm-3">
-                            <div class="date" id="dateDeparture" data-text="Departure">
-                                <input class="datepicker" readonly="readonly" />
-                                <div class="date-value"></div>
+                        <div class="col-xs-4 col-sm-4">
+                            <div class="location" data-text="Location">
+                                <strong>Select Location</strong>
+                            <div class="form-group">
+                                <input type="text" value="" placeholder="" class="form-control" style="margin-top: 10px;margin-left: -10px;background: #cccccc6e;">
+                            </div>
                             </div>
                         </div>
 
@@ -136,7 +138,7 @@
                                         </div>
 
                                         <div>
-                                            <span>Adults <small>16+ years</small></span>
+                                            <span>Select <small>Person</small></span>
                                         </div>
 
                                         <!--=== Add/remove quantity buttons ===-->
@@ -206,7 +208,7 @@
 
                         <div class="col-xs-12 col-sm-4">
                             <a href="#" class="btn btn-clean">
-                                Book now
+                                Find Your Pool
                                 <small>Best Prices Guaranteed</small>
                             </a>
                         </div>
