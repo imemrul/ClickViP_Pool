@@ -78,13 +78,9 @@
                             <i class="icon icon-star"></i> 
                             Special offers
                         </a>
-                        <a class="box" href="#">
-                            <i class="icon icon-tag"></i> 
-                            Reservations
-                        </a>
-                        <a class="box" href="#">
-                            <i class="icon icon-phone-handset"></i> 
-                            (01) 252-3333
+                        <a class="box" href="mailto:info@clickvipool.com">
+                            <i class="icon icon-envelope"></i> 
+                            info@clickvipool.com
                         </a>
                     </div>
                 </nav>

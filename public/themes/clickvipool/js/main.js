@@ -446,29 +446,26 @@
 
     //Location Search
     // AJAX call for autocomplete 
-    $(document).ready(function(){
-        $("#haddress").keyup(function(){
+        $("#location").keyup(function(){
+            var path = "/cvpms/autocomplete";
             $.ajax({
-            type: "POST",
-            url: "{{ route('search.autocomplete') }}",
+            type: "GET",
+            url: path,
             data:'keyword='+$(this).val(),
             beforeSend: function(){
-                $("#haddress").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+                $("#location").css("background","#FFF url(public/LoaderIcon.gif) no-repeat 165px");
             },
             success: function(data){
                 $("#suggesstion-box").show();
                 $("#suggesstion-box").html(data);
-                $("#haddress").css("background","#FFF");
+                $("#location").css("background","#FFF");
             }
             });
         });
-    });
+        
 
-// To select Location
-function selectCountry(val) {
-$("#haddress").val(val);
-$("#suggesstion-box").hide();
-}
+
+
 
     // Guests 
     // -------------------------------------------------------

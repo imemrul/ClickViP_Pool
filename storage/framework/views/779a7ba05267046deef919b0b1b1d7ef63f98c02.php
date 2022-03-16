@@ -106,12 +106,18 @@
                             <div class="location" data-text="Location">
                                 <strong>Select Location</strong>
                             <div class="form-group">
-                                <input type="text" value="" id="location" name="haddress" class="typeahead form-control" style="margin-top: 10px;margin-left: -10px;background: #00000000;color:rgb(255, 255, 255);font-size:16px">
+                                <input type="text" value="" id="location" name="haddress" class="typeahead form-control" style="margin-top: 10px;margin-left: -10px;background: #00000000;font-size:16px">
                             </div>
                             <div id="suggesstion-box"></div> 
                             </div>
                         </div>
-
+                        <script>
+                            // To select Location
+                            function selectCountry(val) {
+                                $("#location").val(val);
+                                $("#suggesstion-box").hide();
+                                }
+                        </script>
                         <!--=== guests ===-->
 
                         <div class="col-xs-4 col-sm-2">

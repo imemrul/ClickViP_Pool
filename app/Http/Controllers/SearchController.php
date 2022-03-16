@@ -11,7 +11,16 @@ class SearchController extends Controller
         $data = Pool::select("address")
                 ->where("address","LIKE","%{$request->input('address')}%")
                 ->get();
-   
-        return response()->json($data);
+                if(!empty($data)) {
+                    ?>
+                    <ul id="country-list">
+                    <?php
+                    foreach($data as $country) {
+                    ?>
+                    <li onClick="selectCountry('<?php echo $country->address; ?>');"><?php echo $country->address; ?></li>
+                    <?php } ?>
+                    </ul>
+                    <?php } 
+        // return response()->json($data);
     }
 }
