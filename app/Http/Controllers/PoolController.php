@@ -7,7 +7,7 @@ use App\Pool_facility;
 use App\Pool_image;
 use App\Weekly_session_timing;
 use App\Weekly_session_wise_pool_price;
-use Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class PoolController extends Controller
@@ -46,6 +46,7 @@ class PoolController extends Controller
         //return $request->all();
         $pool_master = $request->all();
         $pool_master['host_id'] = auth()->user()->id;
+        $pool_master['slug'] = Str::slug($pool_master->title);
         if($request->has('allow_instant_booking')){
             $pool_master['allow_instant_booking'] = 'Yes';
         }
@@ -124,7 +125,9 @@ class PoolController extends Controller
         $pool = Pool::find($id);
         //return $pool->location;
         $pool_master = $request->all();
+        
         $pool_master['allow_instant_booking'] = 'No';
+        $pool_master['slug'] = Str::slug($request->title, '-');
         if($request->has('allow_instant_booking')){
             $pool_master['allow_instant_booking'] = 'Yes';
         }
