@@ -7,6 +7,7 @@ use App\Pool_facility;
 use App\Pool_image;
 use App\Weekly_session_timing;
 use App\Weekly_session_wise_pool_price;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 
 class PoolController extends Controller

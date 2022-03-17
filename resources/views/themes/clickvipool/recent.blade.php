@@ -28,7 +28,7 @@
                             </div>
                             <div class="details">
                                 <div class="text">
-                                    <h3 class="title"><a href="#">{{$recentpool->title}}</a></h3>
+                                    <h3 class="title"><a href="{!! url('pool_details',$recentpool->slug) !!}">{{$recentpool->title}}</a></h3>
                                     <p>Total Session: {{$recentpool->session_wise_price->count()}}</p>
                                 </div>
                                 <div class="book">
