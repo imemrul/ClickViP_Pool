@@ -23,7 +23,6 @@
 
     <!-- Morris Chart Css-->
     <link href="{!! URL::to('public/plugins/morrisjs/morris.css') !!}" rel="stylesheet" />
-
     <!-- Custom Css -->
     <link href="{!! URL::to('public/css/style.css') !!}" rel="stylesheet">
 
@@ -84,10 +83,6 @@
 <!-- Custom Js -->
 <script src="{!! URL::to('public/js/admin.js') !!}"></script>
 <script src="{!! URL::to('public/js/pages/index.js') !!}"></script>
-
-
-
-
 </body>
 
 </html>
