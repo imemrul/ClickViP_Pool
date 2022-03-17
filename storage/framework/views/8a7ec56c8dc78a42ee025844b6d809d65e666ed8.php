@@ -23,10 +23,10 @@
                         <a href="#"><span data-text="Room & rates"></span></a>
                     </li>
                     <li class="col-md-4">
-                        <a href="<?php echo url('pool/payment',$recentpool->slug); ?>"><span data-text="Reservation"></span></a>
+                        <a href="<?php echo url('pool/payment',$result->slug); ?>"><span data-text="Reservation"></span></a>
                     </li>
                     <li class="col-md-4">
-                        <a href="<?php echo url('pool/payment/confirmation',$recentpool->slug); ?>"><span data-text="Checkout"></span></a>
+                        <a href="<?php echo url('pool/payment/confirmation',$result->slug); ?>"><span data-text="Checkout"></span></a>
                     </li>
                 </ul>
             </div>

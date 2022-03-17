@@ -21,13 +21,13 @@
             <div class="stepper">
                 <ul class="row">
                     <li class="col-md-4 active">
-                        <a href="reservation-1.html"><span data-text="Room &amp; rates"></span></a>
+                        <a href="{!! url('pool_details',$result->slug) !!}"><span data-text="Room & rates"></span></a>
                     </li>
-                    <li class="col-md-4 active">
-                        <a href="reservation-2.html"><span data-text="Reservation"></span></a>
+                    <li class="col-md-4">
+                        <a href="{!! url('pool/payment',$result->slug) !!}"><span data-text="Reservation"></span></a>
                     </li>
-                    <li class="col-md-4 active">
-                        <a href="reservation-3.html"><span data-text="Checkout"></span></a>
+                    <li class="col-md-4">
+                        <a href="#"><span data-text="Checkout"></span></a>
                     </li>
                 </ul>
             </div>
