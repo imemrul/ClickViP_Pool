@@ -30,6 +30,16 @@ class HomeController extends Controller
         //return $result;
         return view('themes.clickvipool.pool_details',compact('result'));
     }
+    public function payment($uri){
+        $result = Pool::where('uri',$uri)->first();
+        //return $result;
+        return view('themes.clickvipool.payment',compact('result'));
+    }
+    public function paymentConfirm($uri){
+        $result = Pool::where('uri',$uri)->first();
+        //return $result;
+        return view('themes.clickvipool.payment_confirm',compact('result'));
+    }
 
 
 }

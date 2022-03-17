@@ -21,7 +21,9 @@ Route::post('/ajax_login','AuthController@ajax_login');
 Route::get('/logout','AuthController@logout');
 Route::post('registration','AuthController@registration');
 Route::get('check_email_availibility','AuthController@check_email_availibility');
-Route::get('pool_details/{pool_id}','HomeController@pool_details');
+Route::get('pool_details/{uri}','HomeController@pool_details');
+Route::get('pool/payment/{uri}','HomeController@payment');
+Route::get('pool/payment/confirmation/{uri}','HomeController@paymentConfirm');
 Route::get('autocomplete', 'SearchController@autocomplete')->name('autocomplete');
 
 
