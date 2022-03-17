@@ -75,16 +75,12 @@
 
                     <div class="navigation-top-right">
                         <a class="box" href="#">
-                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i> 
                             Special offers
                         </a>
-                        <a class="box" href="#">
-                            <i class="icon icon-tag"></i>
-                            Reservations
-                        </a>
-                        <a class="box" href="#">
-                            <i class="icon icon-phone-handset"></i>
-                            (01) 252-3333
+                        <a class="box" href="mailto:info@clickvipool.com">
+                            <i class="icon icon-envelope"></i> 
+                            info@clickvipool.com
                         </a>
                     </div>
                 </nav>
@@ -164,7 +160,7 @@
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -222,7 +218,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-primary">Login</button>
                     </div>
                 </div>
             </div>
@@ -234,7 +230,7 @@
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -269,7 +265,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-primary">Login</button>
                     </div>
                 </div>
             </div>

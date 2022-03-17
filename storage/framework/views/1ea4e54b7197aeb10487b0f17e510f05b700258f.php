@@ -22,7 +22,7 @@
                     <div class="item">
                         <article>
                             <div class="image">
-                                <a href="<?php echo url('pool_details',$recentpool->id); ?>">
+                                <a href="<?php echo url('pool_details',$recentpool->uri); ?>">
                                     <img src="<?php echo e(asset('public/uploads/'.$recentpool->images->first()->name)); ?>" alt="" />
                                 </a>
                             </div>
