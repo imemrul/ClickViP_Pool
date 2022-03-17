@@ -22,7 +22,9 @@
                     <div class="item">
                         <article>
                             <div class="image">
-                                <img src="<?php echo e(asset('public/uploads/'.$recentpool->images->first()->name)); ?>" alt="" />
+                                <a href="<?php echo url('pool_details',$recentpool->id); ?>">
+                                    <img src="<?php echo e(asset('public/uploads/'.$recentpool->images->first()->name)); ?>" alt="" />
+                                </a>
                             </div>
                             <div class="details">
                                 <div class="text">
@@ -31,7 +33,7 @@
                                 </div>
                                 <div class="book">
                                     <div>
-                                        <a href="#" class="btn btn-main">Book now</a>
+                                        <a href="<?php echo url('pool_details',$recentpool->uri); ?>" class="btn btn-main">Book now</a>
                                     </div>
                                     <div>
                                         <span class="price h4">AED <?php echo e($recentpool->session_wise_price->first()->price); ?></span>

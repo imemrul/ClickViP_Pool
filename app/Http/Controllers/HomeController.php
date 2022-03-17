@@ -25,6 +25,11 @@ class HomeController extends Controller
         // dd($facilities);
         return view('themes.clickvipool.index',compact('recentPools','facilities'));
     }
+    public function pool_details($uri){
+        $result = Pool::where('uri',$uri)->first();
+        //return $result;
+        return view('themes.clickvipool.pool_details',compact('result'));
+    }
 
 
 }

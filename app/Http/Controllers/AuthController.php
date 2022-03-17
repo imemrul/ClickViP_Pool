@@ -31,11 +31,20 @@ class AuthController extends Controller{
         return redirect()->back()->with('success_message','Registration completed..');
     }
     public function login(Request $r){
+        //return $r->all();
         if(Auth::attempt(['email'=>$r->email,'password'=>$r->password])){
 
             return redirect('admin');
         }else{
-            return redirect()->back()->with('redirect_login_message',$r->email);
+            return redirect()->back()->with('error_message',$r->email);
+        }
+    }
+    public function ajax_login(Request $r){
+
+        if(Auth::attempt(['email'=>$r->email,'password'=>$r->password])){
+            return 1;
+        }else{
+            return 0;
         }
     }
     public function check_email_availibility(){

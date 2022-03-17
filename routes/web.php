@@ -17,10 +17,13 @@ Route::get('/', 'HomeController@index');
 Route::get('admin', 'Admin@index');
 Route::get('/login','AuthController@index');
 Route::post('/login','AuthController@login');
+Route::post('/ajax_login','AuthController@ajax_login');
 Route::get('/logout','AuthController@logout');
 Route::post('registration','AuthController@registration');
 Route::get('check_email_availibility','AuthController@check_email_availibility');
+Route::get('pool_details/{pool_id}','HomeController@pool_details');
 Route::get('autocomplete', 'SearchController@autocomplete')->name('autocomplete');
+
 
 
 
@@ -52,6 +55,9 @@ Route::group(['prefix'=>'module'],function(){
 
     Route::any('executive/search_call_history','ExecutiveCrud@search_call_history');
     Route::resource('executive','ExecutiveCrud');
+
+
+
 });
 
 

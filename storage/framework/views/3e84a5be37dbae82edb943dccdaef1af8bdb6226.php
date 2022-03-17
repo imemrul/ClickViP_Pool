@@ -110,7 +110,6 @@
                         </div>
                     </div>
                     <div class="body table-responsive">
-                        <?php echo Form::open(['url'=>URL::to('module/weekly_session_time'),'id'=>'table_form']); ?>
 
                         <p>TOTAL SESSION TIME SLOT: <?php echo $results->count();; ?></p>
                         <table class="table table-hover table-responsive">
@@ -144,7 +143,7 @@
                                         ?>
                                     </td>
                                     <td>
-                                        <a href="#" data-toggle="modal" data-target="#edit_session_timing_<?= $result->id ?>"  class="btn btn-info btn-xs btn-group-xs"><i class="fa fa-edit icon-only"></i></a>
+                                        <a href="#" data-toggle="modal" data-target="#edit_session_timing_<?= $result->id ?>"  class="btn btn-info btn-xs btn-group-xs"><i class="material-icons">edit</i></a>
 
                                         <!-- Modal -->
                                         <div id="edit_session_timing_<?= $result->id ?>" class="modal fade" role="dialog">
@@ -157,7 +156,10 @@
                                                         <h4 class="modal-title">Update weekly session timing</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <form method="POST" action="<?php echo url('module/weekly_session_time',$result->id); ?>" me>
+                                                        <form method="post" action="<?php echo url('module/weekly_session_time',$result->id); ?>">
+                                                            <?php echo csrf_field(); ?>
+
+                                                            <input type="hidden" name="_method" value="put">
                                                             <input type="hidden" name="weekly_session_timing_id" value="<?= $result->id ?>">
                                                             <div class="row">
                                                                 <div class="col-md-12">
@@ -227,8 +229,6 @@
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </tbody>
                         </table>
-                        <?php echo Form::close(); ?>
-
                         <?php echo $results->appends(request()->except(['_token']))->links(); ?>
 
                     </div>

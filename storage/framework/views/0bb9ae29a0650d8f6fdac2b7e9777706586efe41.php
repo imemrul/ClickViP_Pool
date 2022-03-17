@@ -9,7 +9,7 @@
 <?php $__env->startSection('content'); ?>
     <div class="container-fluid">
         <div class="block-header">
-            <a href="<?php echo URL::to('module/client'); ?>" class="font-bold"> My pool list</a>
+            <a href="<?php echo URL::to('module/pool'); ?>" class="font-bold"> My pool list</a>
             <?php if(Session::has('message')): ?>
                 <div class="alert alert-success alert-dismissible show" role="alert">
                     <strong>Congratulation</strong> <?php echo Session::get('message'); ?>
@@ -26,7 +26,7 @@
                 <div class="card">
                     <div class="body" id="app">
                         <div class="row clearfix">
-                            <?php echo Form::model($result,['url'=>URL::to('module/pool'),'class'=>'form','files'=>'true']); ?>
+                            <?php echo Form::model($result,['url'=>URL::to('module/pool',$result->id),'class'=>'form','files'=>'true','method'=>'put']); ?>
 
                             <div class="col-xs-7">
                                 <div class="card">
@@ -94,12 +94,38 @@
                                     <div class="body">
                                         <div class="row">
                                             <div class="col-xs-12">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <td style="width: 100px;">Date</td>
+                                                        <td colspan="2">Price</td>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <?php $__currentLoopData = $result->session_wise_price->groupBy('date'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index=>$date): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                        <tr>
+                                                            <td><?php echo $index; ?></td>
+                                                            <td>
+                                                            <?php $__currentLoopData = $date; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $date_row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                                <p><strong><?php echo $date_row->price; ?> AED</strong> - <small><?php echo $date_row->weekly_session_time_slot->title .'-'.$date_row->weekly_session_time_slot->week_day.'-('. date('h:i a',strtotime($date_row->weekly_session_time_slot->start_from)) . '-'. date('h:i a',strtotime($date_row->weekly_session_time_slot->end_at)) .')'; ?></small></p>
+                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                                            </td>
+                                                            <td style="width: 50px;" class="text-center">
+                                                                <a href="#" class="btn btn-xs btn-danger" onclick="delete_with_swal('<?php echo url('module/pool/delete_session_time_slot?pool_id='.$result->id,$index); ?>','<?php echo csrf_token(); ?>',$(this).closest('tr'))"><i class="material-icons">remove</i></a>
+
+                                                            </td>
+
+                                                        </tr>
+                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                                    </tbody>
+                                                </table>
+                                                <p class="text-muted">Want to add more price form the bellow time slot ? </p>
                                                 <table class="table table-bordered" id="timeslot_table">
                                                     <thead>
                                                     <tr>
                                                         <th style="width: 160px;">Date</th>
                                                         <th>Time slot</th>
-                                                        <th>
+                                                        <th class="text-center">
                                                             <a href="#" class="btn btn-xs btn-success" @click.prevent="addRow"><i class="material-icons">add</i></a>
                                                         </th>
                                                     </tr>
@@ -115,7 +141,9 @@
                                                             $weekly_timing_session = App\Weekly_session_timing::where('host_id', auth()->user()->id)->get();
                                                             ?>
                                                             <?php $__currentLoopData = $weekly_timing_session; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i=>$item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                                
+                                                                <?php
+                                                                        //$value =
+                                                                ?>
                                                                 <label :for="'time_slot_checkbox_<?php echo $i; ?>_'+index"><?php echo $item->title .'-'.$item->week_day.'-('. date('h:i a',strtotime($item->start_from)) . '-'. date('h:i a',strtotime($item->end_at)) .')'; ?></label>
                                                                 <input value="" type="text" :name="'weekly_session_timing['+index+'][<?php echo $item->id; ?>]'"  :id="'time_slot_checkbox_<?php echo $i; ?>_'+index" class="form-control">
                                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -196,7 +224,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <input type="checkbox" name="allow_instant_booking" id="allow_instant_book" value="Yes">
+                                                <input type="checkbox" name="allow_instant_booking" id="allow_instant_book" <?php echo $result->allow_instant_booking == 'Yes' ? 'checked' : ''; ?> value="Yes">
                                                 <label for="allow_instant_book">INSTANT BOOK</label>
                                                 <p>
                                                     By ticking this box you accept that your pool will be instantly booked without a confirmation from your side. If that is not what you wish kindly keep it unticked, you will receive a booking notification for your approval
@@ -226,6 +254,17 @@
                                             </tr>
                                             </thead>
                                             <tbody>
+                                            <?php $__currentLoopData = $result->images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <tr>
+                                                    <td>
+                                                        <img src="<?php echo asset('public/uploads/'.$image->name); ?>"
+                                                             alt="Pool image" style="width: 100px;">
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-xs btn-danger" onclick="delete_with_swal('<?php echo url('module/pool/delete_image',$image->id); ?>','<?php echo csrf_token(); ?>',$(this).closest('tr'))"><i class="material-icons">remove</i></a>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             <tr v-for="(item, index) in imageRow">
                                                 <td>
                                                     <input type="file" name="image[]" id="">
@@ -254,7 +293,7 @@
                                                 }
                                             ?>
                                             <input value="<?php echo $item->id; ?>" type="checkbox" name="facility[]" <?php echo $ischecked; ?>  id="fa_id_<?php echo $i; ?>">
-                                            <label for="fa_id_<?php echo $i; ?>"><?php echo $item->name . ' - '. $ischecked; ?></label>
+                                            <label for="fa_id_<?php echo $i; ?>"><?php echo $item->name; ?></label>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </div>
                                 </div>
@@ -315,6 +354,9 @@
                 removeImageRow:function (index) {
                     this.imageRow.splice(index,1)
                 },
+                removeImage:function(_id){
+                    delete_with_swal()
+                }
             }
         });
 

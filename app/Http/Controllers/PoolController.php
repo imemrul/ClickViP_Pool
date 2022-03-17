@@ -173,7 +173,10 @@ class PoolController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pool = Pool::find($id);
+        // dd($pool->images[0]->id);
+        $this->delete_image($pool->images[0]->id);
+        $pool->delete();
     }
     public function delete_image($id){
         $image = Pool_image::find($id);
