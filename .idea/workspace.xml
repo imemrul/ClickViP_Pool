@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff1fbce8-7701-46e8-a401-d90aa1bcc57c" name="Default Changelist" comment="Edit File Check">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/subscrib.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/subscrib.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/86d20fd49bea0ff51c5ec1629fff7e582a0979c9.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/86d20fd49bea0ff51c5ec1629fff7e582a0979c9.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/9fc3b39eb1594354f1cd84a597aae7f59729d4fc.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/9fc3b39eb1594354f1cd84a597aae7f59729d4fc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/f69befd867d6d368ee7aafe33893c68192898573.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f69befd867d6d368ee7aafe33893c68192898573.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +182,7 @@
       <workItem from="1647424927978" duration="132000" />
       <workItem from="1647425472328" duration="4769000" />
       <workItem from="1647430565969" duration="10559000" />
-      <workItem from="1647520914800" duration="2240000" />
+      <workItem from="1647520914800" duration="3279000" />
     </task>
     <task id="LOCAL-00001" summary="Added Sub Them File">
       <created>1647522102131</created>
@@ -208,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647523144823</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Edit File Check">
+      <created>1647523183792</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647523183792</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Edit File Check">
+      <created>1647523253446</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647523253446</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,17 +274,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1647433626775" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647522898360">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647523267298">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647522898360" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647523267298" />
     <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1647523122941">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1647523122941" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1647441613318">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1647523468768">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1647441613318" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1647523468768" />
   </component>
 </project>

@@ -22,16 +22,18 @@
                     <div class="item">
                         <article>
                             <div class="image">
-                                <img src="<?php echo e(asset('public/uploads/'.$recentpool->images->first()->name)); ?>" alt="" />
+                                <a href="<?php echo url('pool_details',$recentpool->slug); ?>">
+                                    <img src="<?php echo e(asset('public/uploads/'.$recentpool->images->first()->name)); ?>" alt="" />
+                                </a>
                             </div>
                             <div class="details">
                                 <div class="text">
-                                    <h3 class="title"><a href="#"><?php echo e($recentpool->title); ?></a></h3>
+                                    <h3 class="title"><a href="<?php echo url('pool_details',$recentpool->slug); ?>"><?php echo e($recentpool->title); ?></a></h3>
                                     <p>Total Session: <?php echo e($recentpool->session_wise_price->count()); ?></p>
                                 </div>
                                 <div class="book">
                                     <div>
-                                        <a href="#" class="btn btn-main">Book now</a>
+                                        <a href="<?php echo url('pool_details',$recentpool->slug); ?>" class="btn btn-main">Book now</a>
                                     </div>
                                     <div>
                                         <span class="price h4">AED <?php echo e($recentpool->session_wise_price->first()->price); ?></span>
