@@ -5,7 +5,7 @@
 
                 <!-- === slide item === -->
 
-                <div class="item" style="background-image:url({{ asset('public/themes/clickvipool/assets/images/slide-2.jpg')}})">
+                <div class="item" style="background-image:url(<?php echo e(asset('public/themes/clickvipool/assets/images/slide-2.jpg')); ?>)">
                     <!-- <div class="box text-center">
                         <div class="container">
                             <div class="rating animated" data-animation="fadeInDown">
@@ -33,7 +33,7 @@
 
                 <!-- === slide item === -->
 
-                <div class="item" style="background-image:url({{ asset('public/themes/clickvipool/assets/images/slide-1.jpg')}})">
+                <div class="item" style="background-image:url(<?php echo e(asset('public/themes/clickvipool/assets/images/slide-1.jpg')); ?>)">
                     <!-- <div class="box text-center">
                         <div class="container">
                             <h2 class="title animated h1" data-animation="fadeInDown">
@@ -53,7 +53,7 @@
 
                 <!-- === slide item === -->
 
-                <div class="item" style="background-image:url({{ asset('public/themes/clickvipool/assets/images/slide-3.jpg')}})">
+                <div class="item" style="background-image:url(<?php echo e(asset('public/themes/clickvipool/assets/images/slide-3.jpg')); ?>)">
                     <!-- <div class="box text-center">
                         <div class="container">
                             <div class="rating animated" data-animation="fadeInDown">

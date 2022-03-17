@@ -13,22 +13,22 @@
     <!-- Meta tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{{ asset('public/themes/clickvipool/favicon.ico') }}">
+    <link rel="icon" href="<?php echo e(asset('public/themes/clickvipool/favicon.ico')); ?>">
 
     <!--Title-->
     <title>Rent Privet Pool in Dubai</title>
 
     <!--CSS styles-->
-    <link rel="stylesheet" media="all" href="{{ asset('public/themes/clickvipool/css/bootstrap.css') }}" />
-    <link rel="stylesheet" media="all" href="{{ asset('public/themes/clickvipool/css/animate.css') }}" />
-    <link rel="stylesheet" media="all" href="{{ asset('public/themes/clickvipool/css/font-awesome.css') }}" />
-    <link rel="stylesheet" media="all" href="{{ asset('public/themes/clickvipool/css/linear-icons.css') }}" />
-    <link rel="stylesheet" media="all" href="{{ asset('public/themes/clickvipool/css/hotel-icons.css') }}" />
-    <link rel="stylesheet" media="all" href="{{ asset('public/themes/clickvipool/css/magnific-popup.css') }}" />
-    <link rel="stylesheet" media="all" href="{{ asset('public/themes/clickvipool/css/owl.carousel.css') }}" />
-    <link rel="stylesheet" media="all" href="{{ asset('public/themes/clickvipool/css/datepicker.css') }}" />
-    <link rel="stylesheet" media="all" href="{{ asset('public/themes/clickvipool/css/theme.css') }}" />
-    <link rel="stylesheet" media="all" href="{{ asset('public/themes/clickvipool/css/f_custom_style.css') }}" />
+    <link rel="stylesheet" media="all" href="<?php echo e(asset('public/themes/clickvipool/css/bootstrap.css')); ?>" />
+    <link rel="stylesheet" media="all" href="<?php echo e(asset('public/themes/clickvipool/css/animate.css')); ?>" />
+    <link rel="stylesheet" media="all" href="<?php echo e(asset('public/themes/clickvipool/css/font-awesome.css')); ?>" />
+    <link rel="stylesheet" media="all" href="<?php echo e(asset('public/themes/clickvipool/css/linear-icons.css')); ?>" />
+    <link rel="stylesheet" media="all" href="<?php echo e(asset('public/themes/clickvipool/css/hotel-icons.css')); ?>" />
+    <link rel="stylesheet" media="all" href="<?php echo e(asset('public/themes/clickvipool/css/magnific-popup.css')); ?>" />
+    <link rel="stylesheet" media="all" href="<?php echo e(asset('public/themes/clickvipool/css/owl.carousel.css')); ?>" />
+    <link rel="stylesheet" media="all" href="<?php echo e(asset('public/themes/clickvipool/css/datepicker.css')); ?>" />
+    <link rel="stylesheet" media="all" href="<?php echo e(asset('public/themes/clickvipool/css/theme.css')); ?>" />
+    <link rel="stylesheet" media="all" href="<?php echo e(asset('public/themes/clickvipool/css/f_custom_style.css')); ?>" />
 
     <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500&amp;subset=latin-ext" rel="stylesheet">
@@ -97,8 +97,8 @@
 
                     <div class="logo animated fadeIn">
                         <a href="/">
-                            <img class="logo-desktop" src="{{ asset('public/themes/clickvipool/assets/images/logo.png')}}" alt="Alternate Text" />
-                            <img class="logo-mobile" src="{{ asset('public/themes/clickvipool/assets/images/logo.png')}}" alt="Alternate Text" />
+                            <img class="logo-desktop" src="<?php echo e(asset('public/themes/clickvipool/assets/images/logo.png')); ?>" alt="Alternate Text" />
+                            <img class="logo-mobile" src="<?php echo e(asset('public/themes/clickvipool/assets/images/logo.png')); ?>" alt="Alternate Text" />
                         </a>
                     </div>
 
@@ -124,21 +124,21 @@
                         <!-- navigation-right -->
 
                         <ul class="navigation-right">
-                            @if(!auth()->check())
+                            <?php if(!auth()->check()): ?>
                                 <li>
                                     <a href="#" data-toggle="modal" data-target="#login_form">Login</a>
                                 </li>
                                 <li>
                                     <a href="#" data-toggle="modal" data-target="#registration_form">Registration</a>
                                 </li>
-                            @else
+                            <?php else: ?>
                                 <li>
                                     <a href="#">My profile</a>
                                 </li>
                                 <li>
-                                    <a href="{!! url('logout') !!}">Logout</a>
+                                    <a href="<?php echo url('logout'); ?>">Logout</a>
                                 </li>
-                            @endif
+                            <?php endif; ?>
                         </ul>
 
                     </div> <!--/navigation-block-->
@@ -148,16 +148,16 @@
 
         </header>
 
-        @if(session()->has('success_message'))
+        <?php if(session()->has('success_message')): ?>
         <section class="container" id="success_message">
             <div class="row">
                 <div class="col-xs-12">
-                    <h4 class="alert alert-success">{!! session()->get('success_message') !!}</h4>
+                    <h4 class="alert alert-success"><?php echo session()->get('success_message'); ?></h4>
                 </div>
             </div>
 
         </section>
-        @endif
+        <?php endif; ?>
 
         <!-- Registration Modal -->
         <div class="modal fade" id="registration_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:9999">
@@ -170,7 +170,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        {!! Form::open(['url'=>url('registration'),'class'=>'form','id'=>'registration_form','@submit'=>"setSubmitting"]) !!}
+                        <?php echo Form::open(['url'=>url('registration'),'class'=>'form','id'=>'registration_form','@submit'=>"setSubmitting"]); ?>
+
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
@@ -218,7 +219,8 @@
                             </div>
                         </div>
 
-                        {!! Form::close() !!}
+                        <?php echo Form::close(); ?>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -240,7 +242,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        {!! Form::open(['url'=>url('login'),'class'=>'form','id'=>'login_form']) !!}
+                        <?php echo Form::open(['url'=>url('login'),'class'=>'form','id'=>'login_form']); ?>
+
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
@@ -265,7 +268,8 @@
                             </div>
                         </div>
 
-                        {!! Form::close() !!}
+                        <?php echo Form::close(); ?>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
