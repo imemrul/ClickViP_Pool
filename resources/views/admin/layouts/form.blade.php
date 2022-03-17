@@ -46,7 +46,8 @@
     <!-- noUISlider Css -->
     <link href="{!! URL::to('public/plugins/nouislider/nouislider.min.css') !!}" rel="stylesheet" />
     <link href="{!! URL::to('public/plugins/print_this/css/print_this.css') !!}" rel="stylesheet" />
-
+    {{-- Editor Summernote --}}
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <!-- Custom Css -->
     <link href="{!! URL::to('public/css/style.css') !!}" rel="stylesheet">
 
@@ -127,6 +128,8 @@
 <script src="{!! URL::asset('public/plugins/vuejs_paginator/vuejs_paginator.min.js') !!}"></script>
 <script src="{!! URL::asset('public/plugins/print_this/js/printthis.js') !!}"></script>
 <script src="{!! URL::to('public/js/helpers.js') !!}" type="text/javascript"></script>
+{{-- Editor Summernote --}}
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
 <script type="text/javascript">
     $('document').ready(function(){

@@ -1,16 +1,16 @@
-@extends('admin.layouts.form')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="container-fluid">
         <div class="block-header">
-            <a href="{!! URL::to('module/pages') !!}" class="btn btn-sm btn-primary"> <i class="material-icons">list</i> lists of Page</a>
-            @if(Session::has('message'))
+            <a href="<?php echo URL::to('module/pages'); ?>" class="btn btn-sm btn-primary"> <i class="material-icons">list</i> lists of Page</a>
+            <?php if(Session::has('message')): ?>
                 <div class="alert alert-success alert-dismissible show" role="alert">
-                    <strong>Congratulation</strong> {!! Session::get('message') !!}
+                    <strong>Congratulation</strong> <?php echo Session::get('message'); ?>
+
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-            @endif
+            <?php endif; ?>
         </div>
         <!-- Color Pickers -->
         <div class="row clearfix">
@@ -23,7 +23,8 @@
                     </div>
                     <div class="body" id="app">
                         <div class="row clearfix">
-                            {!! Form::open(['url'=>URL::to('module/page'),'class'=>'form']) !!}
+                            <?php echo Form::open(['url'=>URL::to('module/page'),'class'=>'form']); ?>
+
                             <div class="col-xs-12">
                                 <div class="card">
                                     <div class="header">
@@ -38,7 +39,8 @@
                                                         <i class="material-icons">title</i>
                                                     </span>
                                                     <div class="form-line focused" style="margin-bottom: 0px;">
-                                                        {!! Form::text('title',null,['class'=>'form-control','placeholder'=>'Title','autocomplete'=>"off",'required'=>'required']) !!}
+                                                        <?php echo Form::text('title',null,['class'=>'form-control','placeholder'=>'Title','autocomplete'=>"off",'required'=>'required']); ?>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -58,7 +60,8 @@
                                 </div>
 
                             </div>
-                            {!! Form::close() !!}
+                            <?php echo Form::close(); ?>
+
                         </div>
 
                     </div>
@@ -70,11 +73,11 @@
 
 
 
-@endsection
-@section('custom_page_style')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('custom_page_style'); ?>
 
-@endsection
-@section('custom_page_script')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('custom_page_script'); ?>
     <script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.5/dist/latest/bootstrap-autocomplete.min.js"></script>
 
     <script type="text/javascript">
@@ -92,13 +95,13 @@
 
         $('.client_name_autoCompleter').autoComplete({
             resolverSettings: {
-                url: '{!! URL::to('get_clients') !!}'
+                url: '<?php echo URL::to('get_clients'); ?>'
             },
             minLength:2,
             preventEnter:true
         }).on('autocomplete.select', function (evt, item) {
             console.log(item.value);
-            axios.get('{!! URL::to('get_contact_person_by_client') !!}/'+item.value).then(function(res){
+            axios.get('<?php echo URL::to('get_contact_person_by_client'); ?>/'+item.value).then(function(res){
                 app.client_id = item.value;
                 app.contact_persons = res.data;
             })
@@ -112,4 +115,5 @@
         });
     });
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.layouts.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
