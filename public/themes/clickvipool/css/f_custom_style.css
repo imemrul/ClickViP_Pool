@@ -1,0 +1,61 @@
+.pool_info_box img{
+
+}
+.padding_left_0{
+    padding-left: 0!important;
+}
+.padding_right_0{
+    padding-right: 0!important;
+}
+.padding_top_0{
+    padding-top: 0!important;
+}
+.padding_bottom_0{
+    padding-bottom: 0!important;
+}
+.padding_0{
+    padding:0!important;
+}
+.margin_bottom_0{
+    margin-bottom: 0!important;
+}
+.margin_bottom_2{
+    margin-bottom: 2px!important;
+}
+.pool_image{
+    width:100%;
+}
+.table thead th{
+    vertical-align: middle!important;
+}
+.time_slot_box h2{
+    margin-bottom: 0px;
+}
+.time_slot_box .box_container{
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    position: relative;
+}
+.shadow_for_available_slot{
+    -moz-box-shadow: 2px 2px 4px #009877;
+    -webkit-box-shadow: 2px 2px 4px #009877;
+    box-shadow: 2px 2px 4px #009877;
+}
+.shadow_for_reserved_slot{
+    -moz-box-shadow: 2px 2px 4px #ada100;
+    -webkit-box-shadow: 2px 2px 4px #ada100;
+    box-shadow: 2px 2px 4px #ada100;
+}
+.shadow_for_booked_slot{
+    -moz-box-shadow: 2px 2px 4px #c1002b;
+    -webkit-box-shadow: 2px 2px 4px #c1002b;
+    box-shadow: 2px 2px 4px #c1002b;
+}
+.time_slot_radio{
+    position: absolute;
+    top: -8px;
+    right: 4px
+}
+.time_slot_box .status{
+    margin-bottom: 10px;
+}

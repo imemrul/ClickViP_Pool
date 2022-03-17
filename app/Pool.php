@@ -20,5 +20,8 @@ class Pool extends Model
     public function location(){
         return $this->belongsTo('App\Location','emirates');
     }
+    public function host(){
+        return $this->belongsTo('App\User','host_id');
+    }
 
 }

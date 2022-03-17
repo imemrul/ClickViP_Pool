@@ -40,6 +40,23 @@ class HomeController extends Controller
         //return $result;
         return view('themes.clickvipool.payment_confirm',compact('result'));
     }
+    public function get_available_slot($date){
+        $pool = Pool::find(request()->pool_id);
+        //return $pool->session_wise_price->where('date',$date)->groupBy('date');
+        $arr = [];
+        foreach($pool->session_wise_price->where('date',$date)->groupBy('date') as $index=>$date){
+            $arr[$index] = [];
+            foreach($date as $i=>$date_row){
+                $arr[$index][$i]['id'] = $date_row->id;
+                $arr[$index][$i]['status'] = $date_row->status;
+                $arr[$index][$i]['price'] = $date_row->price;
+                $arr[$index][$i]['title'] = $date_row->weekly_session_time_slot->title;
+                $arr[$index][$i]['start_from'] = date('h:i a',strtotime($date_row->weekly_session_time_slot->start_from));
+                $arr[$index][$i]['end_at'] = date('h:i a',strtotime($date_row->weekly_session_time_slot->end_at));
+            }
+        }
+        return $arr;
+    }
 
 
 }

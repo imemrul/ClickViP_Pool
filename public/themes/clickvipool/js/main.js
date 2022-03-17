@@ -393,7 +393,7 @@
     // ------------------------------------------------------
 
     // Default calendar namespaces
-    var dateFormat = "<span class='day'>d</span> <span class='month'>M</span> <span class='year'>yy</span>",
+    var dateFormat = "yy-mm-dd",
         dateArrival = '#dateArrival input',
         dateDeparture = '#dateDeparture input',
         dateArrivalVal = '#dateArrival .date-value',
@@ -406,6 +406,7 @@
         // get value on selected date for departure
         onSelect: function (txt, inst) {
             // get arrival value
+            //$(this).val(txt);
             $(dateArrivalVal).html($(dateArrival).val());
             // set date format
             $(dateDepartureVal).html(txt);
@@ -435,7 +436,9 @@
     });
 
     // set current date
-    $('.datepicker').datepicker('setDate', 'today');
+    $('.datepicker').datepicker({
+
+    });
     // get current value from departure 
     $(dateArrivalVal).html($(dateArrival).val());
     // get current value from return

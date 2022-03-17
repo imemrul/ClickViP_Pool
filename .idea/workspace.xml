@@ -20,11 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff1fbce8-7701-46e8-a401-d90aa1bcc57c" name="Default Changelist" comment="Edit File Check">
+      <change afterPath="$PROJECT_DIR$/public/themes/clickvipool/css/f_custom_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pmpg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pmpg.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/subscrib.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/subscrib.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/86d20fd49bea0ff51c5ec1629fff7e582a0979c9.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/86d20fd49bea0ff51c5ec1629fff7e582a0979c9.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Pool.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pool.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Weekly_session_wise_pool_price.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Weekly_session_wise_pool_price.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/themes/clickvipool/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/themes/clickvipool/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/pool_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/pool_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/slider.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/10542e76ffd76831f825db5900059e21c21c0636.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/10542e76ffd76831f825db5900059e21c21c0636.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/9fc3b39eb1594354f1cd84a597aae7f59729d4fc.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/9fc3b39eb1594354f1cd84a597aae7f59729d4fc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/f69befd867d6d368ee7aafe33893c68192898573.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f69befd867d6d368ee7aafe33893c68192898573.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +49,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -126,6 +137,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/vendor/cviebrock/eloquent-sluggable" />
     </include_path>
   </component>
   <component name="ProjectId" id="25Sa5J72O9VHOnX4FcLyRqcECia" />
@@ -142,6 +155,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -182,7 +196,7 @@
       <workItem from="1647424927978" duration="132000" />
       <workItem from="1647425472328" duration="4769000" />
       <workItem from="1647430565969" duration="10559000" />
-      <workItem from="1647520914800" duration="3279000" />
+      <workItem from="1647520914800" duration="24491000" />
     </task>
     <task id="LOCAL-00001" summary="Added Sub Them File">
       <created>1647522102131</created>
@@ -226,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647523253446</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Edit File Check">
+      <created>1647524315367</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647524315367</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,17 +295,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1647433626775" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647523267298">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647524373222">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647523267298" />
-    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1647523122941">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647524373222" />
+    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1647524360964">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1647523122941" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1647523468768">
+    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1647524360964" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1647548694338">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1647523468768" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1647548694338" />
   </component>
 </project>
