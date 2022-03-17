@@ -7,6 +7,7 @@
     "require": {
         "php": ">=7.4",
         "ammadeuss/laravel-html-dom-parser": "^1.1",
+        "cviebrock/eloquent-sluggable": "*",
         "guzzlehttp/guzzle": "~6.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
