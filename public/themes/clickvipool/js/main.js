@@ -450,7 +450,7 @@
     //Location Search
     // AJAX call for autocomplete 
         $("#location").keyup(function(){
-            var path = "/cvpms/autocomplete";
+            var path = "autocomplete";
             $.ajax({
             type: "GET",
             url: path,
