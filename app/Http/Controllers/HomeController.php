@@ -25,18 +25,18 @@ class HomeController extends Controller
         // dd($facilities);
         return view('themes.clickvipool.index',compact('recentPools','facilities'));
     }
-    public function pool_details($uri){
-        $result = Pool::where('uri',$uri)->first();
+    public function pool_details($slug){
+        $result = Pool::where('slug',$slug)->first();
         //return $result;
         return view('themes.clickvipool.pool_details',compact('result'));
     }
-    public function payment($uri){
-        $result = Pool::where('uri',$uri)->first();
+    public function payment($slug){
+        $result = Pool::where('slug',$slug)->first();
         //return $result;
         return view('themes.clickvipool.payment',compact('result'));
     }
-    public function paymentConfirm($uri){
-        $result = Pool::where('uri',$uri)->first();
+    public function paymentConfirm($slug){
+        $result = Pool::where('slug',$slug)->first();
         //return $result;
         return view('themes.clickvipool.payment_confirm',compact('result'));
     }
