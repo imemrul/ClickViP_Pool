@@ -53,6 +53,7 @@
                                 <th>{!! $row->status !!}</th>
                                 <td style="width:100px;">
                                     <a data-toggle="tooltip" data-title="Edit & Update" class="btn btn-xs btn-primary" href="{!! URL::to('module/page/'.$row->id,'edit') !!}"><i class="material-icons">edit</i></a>
+                                    <a data-toggle="tooltip" target="_blank" data-title="View Page" class="btn btn-xs btn-warning" href="{!! URL::to(''.$row->slug) !!}"><i class="material-icons">visibility</i></a>
                                 </td>
                             </tr>
                             @endforeach

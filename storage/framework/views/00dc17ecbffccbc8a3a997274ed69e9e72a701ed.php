@@ -54,6 +54,7 @@
                                 <th><?php echo $row->status; ?></th>
                                 <td style="width:100px;">
                                     <a data-toggle="tooltip" data-title="Edit & Update" class="btn btn-xs btn-primary" href="<?php echo URL::to('module/page/'.$row->id,'edit'); ?>"><i class="material-icons">edit</i></a>
+                                    <a data-toggle="tooltip" target="_blank" data-title="View Page" class="btn btn-xs btn-warning" href="<?php echo URL::to(''.$row->slug); ?>"><i class="material-icons">visibility</i></a>
                                 </td>
                             </tr>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
