@@ -138,8 +138,8 @@ function menu_array(){
             ]
         ],
 
-         /**=======AGENT MENU========**/
-         [
+        /**=======HOST MENU========**/
+        [
             'label'=>'My Account',
             'roll_id'=>2,
             'icon'=>'perm_identity',
@@ -168,6 +168,52 @@ function menu_array(){
             ]
         ],
 
+        /**=======GUEST MENU========**/
+        [
+            'label'=>'My Account',
+            'roll_id'=>3,
+            'icon'=>'perm_identity',
+            'link'=>url('my_account'),
+        ],
+        [
+            'label'=>'My Booking',
+            'roll_id'=>3,
+            'icon'=>'book',
+            'link'=>url('module/guest/booking'),
+        ],
+        [
+            'label'=>'My Payment',
+            'roll_id'=>3,
+            'icon'=>'money',
+            'link'=>'#',
+            'sub'=>[
+                [
+                    'label'=>'Paid Invoice',
+                    'link'=>URL::to('module/guest/paid')
+                ],
+                [
+                    'label'=>'All Invoice',
+                    'link'=>URL::to('module/guest')
+                ],
+            ]
+        ],
+        [
+            'label'=>'Coustomer Service',
+            'roll_id'=>3,
+            'icon'=>'call',
+            'link'=>'#',
+            'sub'=>[
+                [
+                    'label'=>'All Ticket',
+                    'link'=>URL::to('module/guest/ticket')
+                ],
+                [
+                    'label'=>'Create Ticket',
+                    'link'=>URL::to('module/guest/ticket/create')
+                ],
+            ]
+        ],
+        
         
 
 
