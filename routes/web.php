@@ -14,7 +14,7 @@
 use App\Events\TaskEvent;
 
 Route::get('/', 'HomeController@index');
-Route::get('admin', 'Admin@index');
+Route::get('dashboard', 'Admin@index');
 Route::get('/login','AuthController@index');
 Route::post('/login','AuthController@login');
 Route::post('/ajax_login','AuthController@ajax_login');

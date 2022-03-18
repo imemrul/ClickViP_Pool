@@ -15,7 +15,7 @@ class RedirectIfAuthenticate
      */
     public function handle($request, Closure $next){
         if(Auth::check()){
-            return redirect('/admin');
+            return redirect('/dahsboard');
         }
         return $next($request);
     }
