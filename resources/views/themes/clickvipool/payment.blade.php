@@ -4,7 +4,7 @@
 
             <!-- ===  Page header === -->
 
-            <div class="page-header" style="background-image:url(assets/images/header-1.jpg)">
+            <div class="page-header" style="background-image:url({{ asset('public/themes/clickvipool/assets/images/header-1.jpg')}})">
                 <div class="container">
                     <h2 class="title">Confirm your reservation</h2>
                     <p>Guest information</p>
@@ -20,7 +20,7 @@
                             <li class="col-md-4 active">
                                 <a href="{!! url('pool_details',$result->slug) !!}"><span data-text="Room & rates"></span></a>
                             </li>
-                            <li class="col-md-4">
+                            <li class="col-md-4 active">
                                 <a href="#"><span data-text="Reservation"></span></a>
                             </li>
                             <li class="col-md-4">
