@@ -10,6 +10,8 @@
     <div class="container-fluid">
         <div class="block-header">
             <div class="row">
+                
+                <?php if(Auth::user()->roll_id === 1 || Auth::user()->roll_id === 2): ?>
                 <div class="col-xs-4">
                     <div class="info-box bg-pink hover-expand-effect">
                         <div class="icon">
@@ -21,6 +23,9 @@
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
+                
+                <?php if(Auth::user()->roll_id === 1): ?>
                 <div class="col-xs-4">
                     <div class="info-box bg-light-green hover-expand-effect">
                         <div class="icon">
@@ -32,6 +37,9 @@
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
+                
+                <?php if(Auth::user()->roll_id === 1): ?>
                 <div class="col-xs-4">
                     <div class="info-box bg-brown hover-expand-effect">
                         <div class="icon">
@@ -43,6 +51,9 @@
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
+                
+                <?php if(Auth::user()->roll_id === 1 || Auth::user()->roll_id === 2): ?>
                 <div class="col-xs-4">
                     <div class="info-box bg-blue hover-expand-effect">
                         <div class="icon">
@@ -65,6 +76,9 @@
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
+                
+                <?php if(Auth::user()->roll_id === 1): ?>
                 <div class="col-xs-4">
                     <div class="info-box bg-red hover-expand-effect">
                         <div class="icon">
@@ -76,8 +90,11 @@
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
+        
+        <?php if(Auth::user()->roll_id === 1 || Auth::user()->roll_id === 2): ?>
         <div class="row clearfix">
             <div class="col-xs-12">
                 <div class="card">
@@ -114,6 +131,7 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
     </div>
 
 <?php $__env->stopSection(); ?>

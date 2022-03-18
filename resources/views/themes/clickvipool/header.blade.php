@@ -133,7 +133,7 @@
                                 </li>
                             @else
                                 <li>
-                                    <a href="#">My profile</a>
+                                    <a href="{!! url('dashboard') !!}">My profile</a>
                                 </li>
                                 <li>
                                     <a href="{!! url('logout') !!}">Logout</a>

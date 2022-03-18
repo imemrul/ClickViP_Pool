@@ -133,7 +133,7 @@
                                 </li>
                             <?php else: ?>
                                 <li>
-                                    <a href="#">My profile</a>
+                                    <a href="<?php echo url('dashboard'); ?>">My profile</a>
                                 </li>
                                 <li>
                                     <a href="<?php echo url('logout'); ?>">Logout</a>
