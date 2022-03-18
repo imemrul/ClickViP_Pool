@@ -95,7 +95,7 @@
 
                         <div class="col-xs-4 col-sm-2">
                             <div class="date" id="dateArrival" data-text="Select Date">
-                                <input class="datepicker" readonly="readonly" />
+                                <input class="datepicker"  />
                                 <div class="date-value"></div>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                             <div id="suggesstion-box"></div> 
                             </div>
                         </div>
-                        <script>
+                        <script type="application/javascript">
                             // To select Location
                             function selectCountry(val) {
                                 $("#location").val(val);

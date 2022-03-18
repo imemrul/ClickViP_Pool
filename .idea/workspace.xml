@@ -20,21 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff1fbce8-7701-46e8-a401-d90aa1bcc57c" name="Default Changelist" comment="Edit File Check">
-      <change afterPath="$PROJECT_DIR$/public/themes/clickvipool/css/f_custom_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Booking_payment_detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2_164763759465.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/stripe_payment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/pmpg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pmpg.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PoolController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Pool.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pool.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Weekly_session_wise_pool_price.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Weekly_session_wise_pool_price.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/themes/clickvipool/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/themes/clickvipool/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Pool_facility.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pool_facility.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/payment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/payment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/payment_confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/payment_confirm.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/pool_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/pool_details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/slider.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/10542e76ffd76831f825db5900059e21c21c0636.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/10542e76ffd76831f825db5900059e21c21c0636.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/1b2b5812ba185ffcb398365e37076f36a5baf794.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1b2b5812ba185ffcb398365e37076f36a5baf794.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/7bd4dc14d50875dc9b7ea4ba5485caf3508adff7.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/7bd4dc14d50875dc9b7ea4ba5485caf3508adff7.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/86d20fd49bea0ff51c5ec1629fff7e582a0979c9.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/86d20fd49bea0ff51c5ec1629fff7e582a0979c9.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/88c8a36085a66b92cb4d7b984b0b09db38239ad6.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/88c8a36085a66b92cb4d7b984b0b09db38239ad6.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/9fc3b39eb1594354f1cd84a597aae7f59729d4fc.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/9fc3b39eb1594354f1cd84a597aae7f59729d4fc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/b061dd15baf73466ccc37d3bc0225bfb5c6c94be.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b061dd15baf73466ccc37d3bc0225bfb5c6c94be.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +156,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
       <path value="$PROJECT_DIR$/vendor/cviebrock/eloquent-sluggable" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="25Sa5J72O9VHOnX4FcLyRqcECia" />
@@ -150,11 +168,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -196,7 +215,9 @@
       <workItem from="1647424927978" duration="132000" />
       <workItem from="1647425472328" duration="4769000" />
       <workItem from="1647430565969" duration="10559000" />
-      <workItem from="1647520914800" duration="24491000" />
+      <workItem from="1647520914800" duration="25256000" />
+      <workItem from="1647577747507" duration="43000" />
+      <workItem from="1647600198111" duration="27986000" />
     </task>
     <task id="LOCAL-00001" summary="Added Sub Them File">
       <created>1647522102131</created>
@@ -247,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647524315367</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Edit File Check">
+      <created>1647550565313</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647550565313</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +294,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added Sub Them File" />
     <MESSAGE value="Edit File Check" />
     <option name="LAST_COMMIT_MESSAGE" value="Edit File Check" />
@@ -283,29 +312,41 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1645735995360" />
-    <state x="129" y="55" key="DiffContextDialog" timestamp="1647522794095">
+    <state x="129" y="55" key="DiffContextDialog" timestamp="1647636400351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1647522794095" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1646887090571">
+    <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1647636400351" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1647577790471">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1646887090571" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1647433626775">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647577790471" />
+    <state x="129" y="55" key="MergeDialog" timestamp="1647636624852">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1647433626775" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647524373222">
+    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1647636624852" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1647612360602">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647524373222" />
-    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1647524360964">
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1647612360602" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647640815070">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1647524360964" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1647548694338">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647640815070" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1647636565841">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1647548694338" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1647636565841" />
+    <state x="484" y="152" key="git4idea.merge.GitMergeDialog" timestamp="1647636500538">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="484" y="152" key="git4idea.merge.GitMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1647636500538" />
+    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1647635798723">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1647635798723" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1647638877198">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1647638877198" />
   </component>
 </project>

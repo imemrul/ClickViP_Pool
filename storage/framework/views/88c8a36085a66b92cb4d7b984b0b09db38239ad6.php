@@ -18,7 +18,7 @@
 <?php $__env->startSection('content'); ?>
     <div class="container-fluid">
         <div class="block-header">
-            <a href="<?php echo URL::to('module/pool'); ?>"><strong>List of Pool</strong></a>
+            <a href="<?php echo URL::to('module/pool'); ?>"><strong>My pool list</strong></a>
             <?php if(Session::has('message')): ?>
                 <div class="alert bg-teal alert-dismissible m-t-20 animated fadeInDownBig" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -33,7 +33,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                        <a href="<?php echo URL::to('module/pool/create'); ?>" class="btn btn-xs btn-primary"> <i class="material-icons">add_circle_outline</i> Create New Pool</a>
+                        <a href="<?php echo URL::to('module/pool/create'); ?>" class=""> <i class="material-icons" style="vertical-align: middle">add_circle_outline</i> Create new pool</a>
                     </div>
                     <div class="body table-responsive">
                         <p>TOTAL POOL: <?php echo $results->total();; ?></p>
@@ -60,8 +60,7 @@
                                 <td><?php echo $row->occupancy; ?></td>
                                 <th><?php echo $row->status; ?></th>
                                 <td style="width:100px;">
-                                    <a data-toggle="tooltip" data-title="View" class="btn btn-xs btn-warning" href="<?php echo URL::to('module/pool/'.$row->id,'edit'); ?>"><i class="material-icons">edit</i></a>
-                                    <a data-toggle="tooltip" data-title="Delete" class="btn btn-xs btn-danger delete_with_swal" href="<?php echo URL::to('module/pool',$row->id); ?>"><i class="material-icons">remove</i></a>
+                                    <a data-toggle="tooltip" data-title="Edit & Update" class="btn btn-xs btn-primary" href="<?php echo URL::to('module/pool/'.$row->id,'edit'); ?>"><i class="material-icons">edit</i></a>
                                 </td>
                             </tr>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
