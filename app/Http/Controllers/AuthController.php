@@ -34,7 +34,7 @@ class AuthController extends Controller{
         //return $r->all();
         if(Auth::attempt(['email'=>$r->email,'password'=>$r->password])){
 
-            return redirect('admin');
+            return redirect('dashboard');
         }else{
             return redirect()->back()->with('error_message',$r->email);
         }
