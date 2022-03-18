@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd10e9a4199e9754206da357e91f92b401d3e416c',
+        'reference' => '77113a5deb67754420d302b1e36a005ba9647d45',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -352,7 +352,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd10e9a4199e9754206da357e91f92b401d3e416c',
+            'reference' => '77113a5deb67754420d302b1e36a005ba9647d45',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -730,6 +730,15 @@
             'aliases' => array(),
             'reference' => '99732be0ddb3361e16ad77b68ba41efc8e979019',
             'dev_requirement' => true,
+        ),
+        'stripe/stripe-php' => array(
+            'pretty_version' => 'v7.116.0',
+            'version' => '7.116.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../stripe/stripe-php',
+            'aliases' => array(),
+            'reference' => '7a39f594f213ed3f443a95adf769d1ecbc8393e7',
+            'dev_requirement' => false,
         ),
         'sunra/php-simple-html-dom-parser' => array(
             'pretty_version' => 'v1.5.2',

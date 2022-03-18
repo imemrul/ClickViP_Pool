@@ -1,0 +1,116 @@
+Index: resources/views/themes/clickvipool/subscrib.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!-- ========================  Subscribe ======================== -->\r\n\r\n<section class=\"subscribe\">\r\n    <div class=\"container\">\r\n        <div class=\"box\">\r\n            <h2 class=\"title\">Subscribe</h2>\r\n            <div class=\"text\">\r\n                <p>& receive free premium gifts</p>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <input type=\"text\" value=\"\" placeholder=\"Subscribe\" class=\"form-control\" />\r\n                <button class=\"btn btn-sm btn-main\">Go</button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n{{--test Comment--}}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- resources/views/themes/clickvipool/subscrib.blade.php	(revision 3a1d6f51b9a6e3176d2ec16b8aff97042119c957)
++++ resources/views/themes/clickvipool/subscrib.blade.php	(date 1647522687702)
+@@ -14,5 +14,3 @@
+         </div>
+     </div>
+ </section>
+-
+-{{--test Comment--}}
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"ff1fbce8-7701-46e8-a401-d90aa1bcc57c\" name=\"Default Changelist\" comment=\"Added Sub Them File\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/php.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/php.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\" doNotAsk=\"true\" synchronizationState=\"SYNCHRONIZE\">\r\n    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>\r\n    <execution />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"PhpWorkspaceProjectConfiguration\">\r\n    <include_path>\r\n      <path value=\"$PROJECT_DIR$/vendor/paragonie/sodium_compat\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/laravel/tinker\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/paragonie/random_compat\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/type-resolver\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-foundation\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/laravel/framework\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-common\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-mbstring\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/debug\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/yaml\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-kernel\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/var-dumper\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/console\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/finder\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/instantiator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/phpunit\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/css-selector\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/inflector\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/process\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/routing\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-file-iterator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-timer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-code-coverage\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/vlucas/phpdotenv\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-text-template\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-token-stream\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/mtdowling/cron-expression\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/mockery/mockery\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/myclabs/deep-copy\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/ammadeuss/laravel-html-dom-parser\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/fzaninotto/faker\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/nesbot/carbon\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/jakub-onderka/php-console-color\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psy/psysh\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/webmozart/assert\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/guzzle\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/psr7\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/nikic/php-parser\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/promises\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/http-message\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/log\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/erusev/parsedown\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/hamcrest/hamcrest-php\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/ramsey/uuid\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/league/flysystem\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sunra/php-simple-html-dom-parser\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/swiftmailer/swiftmailer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/monolog/monolog\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/pusher/pusher-php-server\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/laravelcollective/html\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/version\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/object-enumerator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/exporter\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/comparator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/environment\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/recursion-context\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpspec/prophecy\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/resource-operations\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/diff\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/global-state\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/ralouphie/getallheaders\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/league/mime-type-detection\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php80\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/kylekatarnls/update-helper\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-ctype\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php72\" />\r\n    </include_path>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"25Sa5J72O9VHOnX4FcLyRqcECia\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/app\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\xampp\\htdocs\\cvpms\\app\" />\r\n      <recent name=\"E:\\xampp\\htdocs\\cvpms\\resources\\views\\admin\\modules\\pool\" />\r\n      <recent name=\"E:\\xampp\\htdocs\\medicine\\public\" />\r\n      <recent name=\"E:\\xampp\\htdocs\\medicine\\resources\\views\\admin\\modules\\client\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"ff1fbce8-7701-46e8-a401-d90aa1bcc57c\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1645522756232</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1645522756232</updated>\r\n      <workItem from=\"1645522758310\" duration=\"5067000\" />\r\n      <workItem from=\"1645543649200\" duration=\"6354000\" />\r\n      <workItem from=\"1645607523391\" duration=\"5701000\" />\r\n      <workItem from=\"1645671814392\" duration=\"604000\" />\r\n      <workItem from=\"1645696066824\" duration=\"3500000\" />\r\n      <workItem from=\"1645727841185\" duration=\"12382000\" />\r\n      <workItem from=\"1645849137224\" duration=\"11060000\" />\r\n      <workItem from=\"1645932031748\" duration=\"17437000\" />\r\n      <workItem from=\"1645965921481\" duration=\"4806000\" />\r\n      <workItem from=\"1646017128064\" duration=\"20000\" />\r\n      <workItem from=\"1646748376116\" duration=\"1690000\" />\r\n      <workItem from=\"1646755620487\" duration=\"2552000\" />\r\n      <workItem from=\"1646760312757\" duration=\"14000\" />\r\n      <workItem from=\"1646884065228\" duration=\"733000\" />\r\n      <workItem from=\"1646887006869\" duration=\"88000\" />\r\n      <workItem from=\"1646888123191\" duration=\"4139000\" />\r\n      <workItem from=\"1646901738559\" duration=\"1072000\" />\r\n      <workItem from=\"1647424927978\" duration=\"132000\" />\r\n      <workItem from=\"1647425472328\" duration=\"4769000\" />\r\n      <workItem from=\"1647430565969\" duration=\"10559000\" />\r\n      <workItem from=\"1647520914800\" duration=\"1374000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Added Sub Them File\">\r\n      <created>1647522102131</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1647522102131</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Added Sub Them File\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Added Sub Them File\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"422\" y=\"166\" key=\"#com.intellij.fileTypes.FileTypeChooser\" timestamp=\"1647433619532\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"422\" y=\"166\" key=\"#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728\" timestamp=\"1647433619532\" />\r\n    <state x=\"413\" y=\"119\" key=\"#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog\" timestamp=\"1645735995360\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"413\" y=\"119\" key=\"#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728\" timestamp=\"1645735995360\" />\r\n    <state x=\"463\" y=\"119\" key=\"FileChooserDialogImpl\" timestamp=\"1646887090571\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"463\" y=\"119\" key=\"FileChooserDialogImpl/0.0.1366.728@0.0.1366.728\" timestamp=\"1646887090571\" />\r\n    <state x=\"517\" y=\"287\" key=\"NewPhpFileDialog\" timestamp=\"1647433626775\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"517\" y=\"287\" key=\"NewPhpFileDialog/0.0.1366.728@0.0.1366.728\" timestamp=\"1647433626775\" />\r\n    <state x=\"275\" y=\"97\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1647522106966\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"275\" y=\"97\" key=\"Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728\" timestamp=\"1647522106966\" />\r\n    <state x=\"346\" y=\"49\" width=\"672\" height=\"678\" key=\"search.everywhere.popup\" timestamp=\"1647441613318\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"346\" y=\"49\" width=\"672\" height=\"678\" key=\"search.everywhere.popup/0.0.1366.728@0.0.1366.728\" timestamp=\"1647441613318\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 3a1d6f51b9a6e3176d2ec16b8aff97042119c957)
++++ .idea/workspace.xml	(date 1647522841498)
+@@ -19,9 +19,10 @@
+     <select />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="ff1fbce8-7701-46e8-a401-d90aa1bcc57c" name="Default Changelist" comment="Added Sub Them File">
+-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
++    <list default="true" id="ff1fbce8-7701-46e8-a401-d90aa1bcc57c" name="Default Changelist" comment="Edit File Check">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/EmuGit.Blade.php" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/subscrib.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/subscrib.blade.php" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -179,7 +180,7 @@
+       <workItem from="1647424927978" duration="132000" />
+       <workItem from="1647425472328" duration="4769000" />
+       <workItem from="1647430565969" duration="10559000" />
+-      <workItem from="1647520914800" duration="1374000" />
++      <workItem from="1647520914800" duration="1909000" />
+     </task>
+     <task id="LOCAL-00001" summary="Added Sub Them File">
+       <created>1647522102131</created>
+@@ -188,7 +189,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1647522102131</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="Added Sub Them File">
++      <created>1647522351800</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1647522351800</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Edit File Check">
++      <created>1647522603437</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1647522603437</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -208,9 +223,14 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Added Sub Them File" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Added Sub Them File" />
++    <MESSAGE value="Edit File Check" />
++    <option name="LAST_COMMIT_MESSAGE" value="Edit File Check" />
+   </component>
+   <component name="WindowStateProjectService">
++    <state x="568" y="227" key="#Notifications" timestamp="1647522841103">
++      <screen x="0" y="0" width="1366" height="728" />
++    </state>
++    <state x="568" y="227" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1647522841103" />
+     <state x="422" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1647433619532">
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+@@ -219,6 +239,10 @@
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1645735995360" />
++    <state x="129" y="55" key="DiffContextDialog" timestamp="1647522794095">
++      <screen x="0" y="0" width="1366" height="728" />
++    </state>
++    <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1647522794095" />
+     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1646887090571">
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+@@ -227,10 +251,14 @@
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1647433626775" />
+-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647522106966">
++    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647522612764">
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647522106966" />
++    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647522612764" />
++    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1647522828936">
++      <screen x="0" y="0" width="1366" height="728" />
++    </state>
++    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1647522828936" />
+     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1647441613318">
+       <screen x="0" y="0" width="1366" height="728" />
+     </state>
+diff --git resources/views/themes/clickvipool/EmuGit.Blade.php resources/views/themes/clickvipool/EmuGit.Blade.php
+deleted file mode 100644

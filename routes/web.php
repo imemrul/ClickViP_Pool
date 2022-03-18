@@ -40,6 +40,10 @@ Route::get('delete_contact_person/{id}','ClientCrud@delete_contact_person');
 Route::get('get_clients','ClientCrud@get_clients');
 Route::get('download_client','ClientCrud@download_client');
 Route::get('check_existing_client','ClientCrud@check_existing_client');
+Route::get('booking/payment_form','BookingController@payment_form');
+Route::post('booking/post_payment','BookingController@post_payment');
+Route::get('booking/payment_success/{booking_id}','BookingController@payment_success');
+Route::resource('booking','BookingController');
 
 Route::group(['prefix'=>'module'],function(){
 
@@ -60,9 +64,6 @@ Route::group(['prefix'=>'module'],function(){
 
     Route::any('executive/search_call_history','ExecutiveCrud@search_call_history');
     Route::resource('executive','ExecutiveCrud');
-
-
-
 });
 
 Route::get('{slug}', 'HomeController@page');

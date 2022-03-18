@@ -133,7 +133,7 @@
                                 </li>
                             <?php else: ?>
                                 <li>
-                                    <a href="#">My profile</a>
+                                    <a href="<?php echo url('dashboard'); ?>">My profile</a>
                                 </li>
                                 <li>
                                     <a href="<?php echo url('logout'); ?>">Logout</a>
@@ -160,11 +160,11 @@
         <?php endif; ?>
 
         <!-- Registration Modal -->
-        <div class="modal fade" id="registration_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="registration_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:9999">
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -175,14 +175,14 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label for="first_name">First name</label>
-                                    <input type="text" name="first_name" id="first_name" class="form-control" autocomplete="off" required>
+                                    <label for="full_name">Full Name</label>
+                                    <input type="text" name="full_name" id="full_name" class="form-control" autocomplete="off" required>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label for="first_name">Last name</label>
-                                    <input type="text" name="first_name" class="form-control" autocomplete="off" required>
+                                    <label for="address">Address</label>
+                                    <input type="text" name="address" class="form-control" autocomplete="off" required>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12">
@@ -232,7 +232,7 @@
 
 
         <!-- Login Modal -->
-        <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:9999">
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header">

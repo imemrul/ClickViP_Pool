@@ -46,7 +46,7 @@ class PoolController extends Controller
         //return $request->all();
         $pool_master = $request->all();
         $pool_master['host_id'] = auth()->user()->id;
-        $pool_master['slug'] = Str::slug($pool_master->title);
+        $pool_master['slug'] = Str::slug($request->title,'-'); /// I know nothing about this
         if($request->has('allow_instant_booking')){
             $pool_master['allow_instant_booking'] = 'Yes';
         }
