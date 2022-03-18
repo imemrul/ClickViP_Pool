@@ -10,6 +10,7 @@
     <div class="container-fluid">
         <div class="block-header">
             <div class="row">
+                @if()
                 <div class="col-xs-4">
                     <div class="info-box bg-pink hover-expand-effect">
                         <div class="icon">
