@@ -14,12 +14,13 @@
 use App\Events\TaskEvent;
 
 Route::get('/', 'HomeController@index');
-Route::get('{slug}', 'HomeController@page');
 Route::get('dashboard', 'Admin@index');
 Route::get('/login','AuthController@index');
 Route::post('/login','AuthController@login');
 Route::post('/ajax_login','AuthController@ajax_login');
 Route::get('/logout','AuthController@logout');
+
+
 Route::post('registration','AuthController@registration');
 Route::get('check_email_availibility','AuthController@check_email_availibility');
 Route::get('pool_details/{slug}','HomeController@pool_details');
@@ -64,7 +65,7 @@ Route::group(['prefix'=>'module'],function(){
 
 });
 
-
+Route::get('{slug}', 'HomeController@page');
 
 
 
