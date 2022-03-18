@@ -29,7 +29,38 @@
                         </ul>
                     </div>
                     <div class="body table-responsive">
-                     
+                        <p>TOTAL Page: <?php echo $results->total();; ?></p>
+                        <table class="table table-striped table-bordered table-hover table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Page ID</th>
+                                <th style="width:250px;">Title</th>
+                                <th>Published</th>
+                                <th>Update</th>
+                                <th>Status</th>
+                                <th style="width:100px;">Option</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i=>$row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <tr class="font-12">
+                                <td>PID_<?php echo $row->id; ?></td>
+                                <td style="width:250px;position:relative;">
+                                    <?php echo $row->title; ?>
+
+                                </td>
+                                <td><?php echo isset($row->created_at) ? $row->created_at : 'N/A'; ?></td>
+                                <td><?php echo $row->updated_at; ?></td>
+                                <th><?php echo $row->status; ?></th>
+                                <td style="width:100px;">
+                                    <a data-toggle="tooltip" data-title="Edit & Update" class="btn btn-xs btn-primary" href="<?php echo URL::to('module/page/'.$row->id,'edit'); ?>"><i class="material-icons">edit</i></a>
+                                </td>
+                            </tr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            </tbody>
+                        </table>
+                        <?php echo $results->appends(request()->except(['_token']))->links(); ?>
+
                     </div>
                 </div>
             </div>

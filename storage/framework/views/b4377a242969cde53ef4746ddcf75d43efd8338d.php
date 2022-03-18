@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
     <div class="container-fluid">
         <div class="block-header">
-            <a href="<?php echo URL::to('module/pages'); ?>" class="btn btn-sm btn-primary"> <i class="material-icons">list</i> lists of Page</a>
+            <a href="<?php echo URL::to('module/page'); ?>" class="btn btn-sm btn-primary"> <i class="material-icons">list</i> lists of Page</a>
             <?php if(Session::has('message')): ?>
                 <div class="alert alert-success alert-dismissible show" role="alert">
                     <strong>Congratulation</strong> <?php echo Session::get('message'); ?>
@@ -47,9 +47,9 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <label for="">Page Body</label>
+                                                <label for="">Page Post</label>
                                                 <div class="form-group">
-                                                    <textarea class="form-control" name="body" id="summernote"></textarea>
+                                                    <textarea class="form-control" name="post" id="summernote"></textarea>
                                                 </div>
                                             </div>
                                         </div>

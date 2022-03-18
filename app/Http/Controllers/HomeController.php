@@ -7,6 +7,7 @@ use App\Pool;
 use App\Facility;
 use App\Pool_image;
 use App\User;
+use App\Page;
 use App\Weekly_session_timing;
 use App\Weekly_session_wise_pool_price;
 use Illuminate\Http\Request;
@@ -39,6 +40,11 @@ class HomeController extends Controller
         $result = Pool::where('slug',$slug)->first();
         //return $result;
         return view('themes.clickvipool.payment_confirm',compact('result'));
+    }
+    public function page($slug){
+        $result = Page::where('slug',$slug)->first();
+        //return $result;
+        return view('themes.clickvipool.page',compact('result'));
     }
     public function get_available_slot($date){
         $pool = Pool::find(request()->pool_id);

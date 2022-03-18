@@ -14,6 +14,7 @@ class CreatePagesTable extends Migration
     public function up()
     {
         Schema::create('pages', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->bigInteger('user_id') 
             ->foreign('user_id')
             ->references('id')

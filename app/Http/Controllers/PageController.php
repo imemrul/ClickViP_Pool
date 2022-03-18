@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Page;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -13,7 +15,9 @@ class PageController extends Controller
      */
     public function index()
     {
-        return view("admin.modules.pages.index");
+        $results = Page::orderBy('id','desc')->paginate(10);
+        //return $pools;
+        return view("admin.modules.pages.index",compact('results'));
     }
 
     /**
@@ -35,8 +39,25 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd($request);
+        //return $request->all();
+        $page_master = $request->all();
+        $page_master['slug'] = Str::slug($request->title);
+        $page_master['user_id'] = auth()->user()->id;
+        $page = Page::create($page_master);
+        // if($request->hasFile('image')){
+        //     foreach($request->file('image') as $file)
+        //     {
+        //         if($file){
+        //             $name = $pool->id.'_'.time().rand(1,100).'.'.$file->extension();
+        //             $file->move(public_path('uploads'), $name);
+        //             $image = new Pool_image();
+        //             $image->name = $name;
+        //             $pool->images()->save($image);
+        //         }
+        //     }
+        // }
+
+        return redirect('module/page')->with('message','Page created');
     }
 
     /**
@@ -58,7 +79,10 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $result =  Page::find($id);
+
+        //return $result->session_wise_price->groupBy('date');
+        return view('admin.modules.pages.edit',compact('result'));
     }
 
     /**
@@ -70,7 +94,11 @@ class PageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $page = Page::find($id);
+        $page_master = $request->all();
+        $page_master['slug'] = Str::slug($request->title);
+        $page->fill($page_master)->save();
+        return redirect('module/page')->with('message','Page Updated');
     }
 
     /**

@@ -29,7 +29,36 @@
                         </ul>
                     </div>
                     <div class="body table-responsive">
-                     
+                        <p>TOTAL Page: {!! $results->total(); !!}</p>
+                        <table class="table table-striped table-bordered table-hover table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Page ID</th>
+                                <th style="width:250px;">Title</th>
+                                <th>Published</th>
+                                <th>Update</th>
+                                <th>Status</th>
+                                <th style="width:100px;">Option</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($results as $i=>$row)
+                            <tr class="font-12">
+                                <td>PID_{!! $row->id !!}</td>
+                                <td style="width:250px;position:relative;">
+                                    {!! $row->title !!}
+                                </td>
+                                <td>{!! $row->created_at or 'N/A' !!}</td>
+                                <td>{!! $row->updated_at !!}</td>
+                                <th>{!! $row->status !!}</th>
+                                <td style="width:100px;">
+                                    <a data-toggle="tooltip" data-title="Edit & Update" class="btn btn-xs btn-primary" href="{!! URL::to('module/page/'.$row->id,'edit') !!}"><i class="material-icons">edit</i></a>
+                                </td>
+                            </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                        {!! $results->appends(request()->except(['_token']))->links() !!}
                     </div>
                 </div>
             </div>
