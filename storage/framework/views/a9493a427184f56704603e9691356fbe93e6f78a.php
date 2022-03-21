@@ -75,7 +75,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <strong>Email</strong><br>
-                                                        <span><?php echo auth()->user()->full_name; ?></span>
+                                                        <span><?php echo auth()->user()->email; ?></span>
                                                     </div>
                                                 </div>
 
@@ -256,7 +256,7 @@
                                                             <div class="col-xs-12">
 
                                                                 <button class="btn btn-primary btn-lg btn-block"
-                                                                        type="submit">Pay Now ($100)
+                                                                        type="submit">Pay Now (AED 100)
                                                                 </button>
 
                                                             </div>

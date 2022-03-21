@@ -18,6 +18,8 @@ Route::get('dashboard', 'Admin@index');
 Route::get('/login','AuthController@index');
 Route::post('/login','AuthController@login');
 Route::post('/ajax_login','AuthController@ajax_login');
+Route::get('/my_account','GuestController@index');
+Route::get('/my_booking','BookingController@guest');
 Route::get('/logout','AuthController@logout');
 
 

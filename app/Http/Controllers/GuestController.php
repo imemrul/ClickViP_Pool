@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Guest;
+use App\User;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
@@ -14,7 +19,8 @@ class GuestController extends Controller
      */
     public function index()
     {
-        //
+        $profile = auth()->user();
+        return view('admin.modules.guest.index', compact('profile'));
     }
 
     /**
