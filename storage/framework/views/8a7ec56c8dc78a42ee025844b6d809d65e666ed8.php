@@ -1,4 +1,3 @@
-
 <?php echo $__env->make('themes.clickvipool.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
@@ -26,7 +25,8 @@
                         <a href="<?php echo url('pool/payment',$result->slug); ?>"><span data-text="Reservation"></span></a>
                     </li>
                     <li class="col-md-4">
-                        <a href="<?php echo url('pool/payment/confirmation',$result->slug); ?>"><span data-text="Checkout"></span></a>
+                        <a href="<?php echo url('pool/payment/confirmation',$result->slug); ?>"><span
+                                    data-text="Checkout"></span></a>
                     </li>
                 </ul>
             </div>
@@ -42,6 +42,9 @@
             <div class="clearfix">
 
                 <!-- ========================  Cart wrapper ======================== -->
+                <?php echo Form::open(['url'=>url('booking'),'file'=>true]); ?>
+
+                <?php echo Form::hidden('pool_id',$result->id); ?>
 
                 <div class="cart-wrapper pool_info_box padding_top_0">
 
@@ -56,7 +59,9 @@
                     <div class="row">
 
                         <div class="col-xs-12 col-sm-6">
-                            <a href="#" @click.prevent><img class="img-fluid img-responsive pool_image" src="<?php echo asset('public/uploads/'.$result->images->first()->name); ?>" alt=""/></a>
+                            <a href="#" @click.prevent><img class="img-fluid img-responsive pool_image"
+                                                            src="<?php echo asset('public/uploads/'.$result->images->first()->name); ?>"
+                                                            alt=""/></a>
                         </div>
                         <div class="col-xs-12 col-sm-6">
 
@@ -114,17 +119,18 @@
                                     </th>
                                     <th>
                                         <?php
-                                            $facilities = \App\Facility::orderBy('name','desc')->get();
+                                        $facilities = \App\Facility::orderBy('name', 'desc')->get();
                                         ?>
                                         <?php $__currentLoopData = $facilities->chunk(2); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $items): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <div class="row">
                                                 <?php $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i=>$item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                <div class="col-xs-6">
+                                                    <div class="col-xs-6">
                                                     <span class="checkbox">
-                                                        <input name="facilities[]" value="<?php echo $item->id; ?>" type="checkbox" id="fa_id_<?php echo $i; ?>">
+                                                        <input name="facilities[]" value="<?php echo $item->id; ?>"
+                                                               type="checkbox" id="fa_id_<?php echo $i; ?>">
                                                         <label for="fa_id_<?php echo $i; ?>"><?php echo $item->name; ?></label>
                                                     </span>
-                                                </div>
+                                                    </div>
                                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </div>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -149,8 +155,9 @@
                                 <div class="row">
                                     <div class="col-xs-12 margin_bottom_2">
                                         <div class="date" id="dateArrival" data-text="Select Date">
-                                            <input class="datepicker form-control" placeholder="Select a date" @blur="calendar_input_for_booking(<?php echo $result->id; ?>)" id="booking_date" />
-                                            <input type="hidden" name="hidden_date_available_time_slot" id="hidden_date_available_time_slot" class="date-value">
+                                            <input name="booking_date" class="datepicker form-control" placeholder="Select a date"
+                                                   @blur="calendar_input_for_booking(<?php echo $result->id; ?>)"
+                                                   id="booking_date"/>
                                         </div>
                                         <hr>
                                     </div>
@@ -160,10 +167,13 @@
                                         <div class="col-xs-3 text-center time_slot_box" v-for="(item,i) in items">
                                             <div :class="'box_container '+ check_available_slot_status(item.status)">
                                                 <h2 v-text="index"></h2>
-                                                <p><span v-text="item.title"></span> - <strong v-text="item.price+' AED'"></strong></p>
+                                                <p><span v-text="item.title"></span> - <strong
+                                                            v-text="item.price+' AED'"></strong></p>
                                                 <p v-text="item.start_from+'-'+item.end_at"></p>
-                                                <span class="checkbox time_slot_radio" v-if="item.status === 'Available'">
-                                                    <input name="time_slot_id" :value="item.id" type="radio" :id="'slot_id_'+i">
+                                                <span class="checkbox time_slot_radio"
+                                                      v-if="item.status === 'Available'">
+                                                    <input name="time_slot_id" :value="item.id" type="radio"
+                                                           :id="'slot_id_'+i">
                                                     <label :for="'slot_id_'+i"></label>
                                                 </span>
                                                 <span class="status badge" v-text="item.status"></span>
@@ -185,14 +195,20 @@
                                 <div class="row">
                                     <div class="col-xs-6">
                                         <div class="form-group">
-                                            <label for="">Barbecue price -  <small>(<?php echo $result->barbecue_per_booking; ?> AED / Person)</small></label>
-                                            <input type="number" name="barbeque_qty" class="form-control" placeholder="Quantity">
+                                            <label for="">Barbecue price - <small>(<?php echo $result->barbecue_per_booking; ?>
+
+                                                    AED / Person)</small></label>
+                                            <input type="number" name="barbeque_qty" class="form-control"
+                                                   placeholder="Quantity">
                                         </div>
                                     </div>
                                     <div class="col-xs-6">
                                         <div class="form-group">
-                                            <label for="">Towel price -  <small>(<?php echo $result->towel_price_per_person; ?> AED / Person)</small></label>
-                                            <input type="number" name="towels_qty" class="form-control" placeholder="Quantity">
+                                            <label for="">Towel price - <small>(<?php echo $result->towel_price_per_person; ?>
+
+                                                    AED / Person)</small></label>
+                                            <input type="number" name="towels_qty" class="form-control"
+                                                   placeholder="Quantity">
                                         </div>
                                     </div>
                                 </div>
@@ -208,19 +224,22 @@
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label for="">NO of adult</label>
-                                            <input type="number" name="adult_qty" class="form-control" placeholder="Quantity">
+                                            <input type="number" name="adult_qty" class="form-control"
+                                                   placeholder="Quantity">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label for="">NO of children</label>
-                                            <input type="number" name="children_qty" class="form-control" placeholder="Quantity">
+                                            <input type="number" name="children_qty" class="form-control"
+                                                   placeholder="Quantity">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label for="">NO of infants</label>
-                                            <input type="number" name="infants_qty" class="form-control" placeholder="Quantity">
+                                            <input type="number" name="infants_qty" class="form-control"
+                                                   placeholder="Quantity">
                                         </div>
                                     </div>
 
@@ -228,7 +247,6 @@
                             </div>
                         </div>
                     </div>
-
 
 
                     <!-- ========================  Cart navigation ======================== -->
@@ -239,17 +257,35 @@
                                 <a href="#" class="btn btn-clean-dark">Change</a>
                             </div>
                             <div>
-                                <a href="reservation-2.html" class="btn btn-main">Reservation <span
-                                            class="icon icon-chevron-right"></span></a>
+                                <input type="submit" value="BOOK" class="btn btn-main">
                             </div>
                         </div>
                     </div>
 
                 </div>
+                <?php echo Form::close(); ?>
+
             </div>
 
         </div> <!--/container-->
     </div> <!--/checkout-->
 
+</section>
+
+<!-- ========================  Subscribe ======================== -->
+
+<section class="subscribe">
+    <div class="container">
+        <div class="box">
+            <h2 class="title">Subscribe</h2>
+            <div class="text">
+                <p>& receive free premium gifts</p>
+            </div>
+            <div class="form-group">
+                <input type="text" value="" placeholder="Subscribe" class="form-control"/>
+                <button class="btn btn-sm btn-main">Go</button>
+            </div>
+        </div>
+    </div>
 </section>
 <?php echo $__env->make('themes.clickvipool.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
