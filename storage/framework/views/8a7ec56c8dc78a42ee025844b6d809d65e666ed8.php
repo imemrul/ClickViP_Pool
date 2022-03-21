@@ -109,31 +109,34 @@
                                         Host on premise
                                     </th>
                                     <th>
-                                        <p><strong><?php echo $result->host_on_premise; ?></strong></p>
-                                        <p>Rules: <?php echo $result->rules_at_premise; ?></p>
+                                        <p><?php echo $result->host_on_premise; ?></p>
                                     </th>
+                                </tr>
+                                <tr>
+                                    <th style="width: 150px;">
+                                        Rules
+                                    </th>
+                                    <th><?php echo $result->rules_at_premise; ?></th>
                                 </tr>
                                 <tr>
                                     <th style="width: 150px;">
                                         Facilities
                                     </th>
                                     <th>
-                                        <?php
-                                        $facilities = \App\Facility::orderBy('name', 'desc')->get();
-                                        ?>
-                                        <?php $__currentLoopData = $facilities->chunk(2); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $items): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                       
                                             <div class="row">
-                                                <?php $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i=>$item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                    <div class="col-xs-6">
+                                                <?php $__currentLoopData = $result->facilities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $items => $val): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <?php  $facility = \App\Facility::where('id', $val['facility_id'])->first();  ?>
+                                                    <div class="col-xs-3">
                                                     <span class="checkbox">
-                                                        <input name="facilities[]" value="<?php echo $item->id; ?>"
-                                                               type="checkbox" id="fa_id_<?php echo $i; ?>">
-                                                        <label for="fa_id_<?php echo $i; ?>"><?php echo $item->name; ?></label>
+                                                        <input name="facilities[]" value="<?php echo $facility->id; ?>"
+                                                               type="checkbox" id="fa_id_<?php echo $items; ?>" checked>
+                                                        <label for="fa_id_<?php echo $items; ?>"><?php echo $facility->name; ?></label>
                                                     </span>
                                                     </div>
                                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </div>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        
                                     </th>
                                 </tr>
 

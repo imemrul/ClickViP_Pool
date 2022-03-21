@@ -103,31 +103,34 @@
                                         Host on premise
                                     </th>
                                     <th>
-                                        <p><strong>{!! $result->host_on_premise !!}</strong></p>
-                                        <p>Rules: {!! $result->rules_at_premise !!}</p>
+                                        <p>{!! $result->host_on_premise !!}</p>
                                     </th>
+                                </tr>
+                                <tr>
+                                    <th style="width: 150px;">
+                                        Rules
+                                    </th>
+                                    <th>{!! $result->rules_at_premise !!}</th>
                                 </tr>
                                 <tr>
                                     <th style="width: 150px;">
                                         Facilities
                                     </th>
                                     <th>
-                                        <?php
-                                        $facilities = \App\Facility::orderBy('name', 'desc')->get();
-                                        ?>
-                                        @foreach($facilities->chunk(2) as $items)
+                                       
                                             <div class="row">
-                                                @foreach($items as $i=>$item)
-                                                    <div class="col-xs-6">
+                                                @foreach($result->facilities as $items => $val)
+                                                @php $facility = \App\Facility::where('id', $val['facility_id'])->first(); @endphp
+                                                    <div class="col-xs-3">
                                                     <span class="checkbox">
-                                                        <input name="facilities[]" value="{!! $item->id !!}"
-                                                               type="checkbox" id="fa_id_{!! $i !!}">
-                                                        <label for="fa_id_{!! $i !!}">{!! $item->name !!}</label>
+                                                        <input name="facilities[]" value="{!! $facility->id !!}"
+                                                               type="checkbox" id="fa_id_{!! $items !!}" checked>
+                                                        <label for="fa_id_{!! $items !!}">{!! $facility->name !!}</label>
                                                     </span>
                                                     </div>
                                                 @endforeach
                                             </div>
-                                        @endforeach
+                                        
                                     </th>
                                 </tr>
 

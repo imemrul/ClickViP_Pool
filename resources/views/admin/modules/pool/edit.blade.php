@@ -223,7 +223,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" name="submit" value="CREATE" class="btn btn-success btn-block">
+                                    <input type="submit" name="submit" value="UPDATE" class="btn btn-success btn-block">
                                 </div>
 
                             </div>
