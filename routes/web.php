@@ -19,7 +19,7 @@ Route::get('/login','AuthController@index');
 Route::post('/login','AuthController@login');
 Route::post('/ajax_login','AuthController@ajax_login');
 Route::get('/my_account','GuestController@index');
-Route::get('/my_booking','BookingController@guest');
+
 Route::get('/logout','AuthController@logout');
 
 
@@ -29,6 +29,7 @@ Route::get('pool_details/{slug}','HomeController@pool_details');
 Route::get('pool/payment/{slug}','HomeController@payment');
 Route::get('pool/payment/confirmation/{slug}','HomeController@paymentConfirm');
 Route::get('autocomplete', 'SearchController@autocomplete')->name('autocomplete');
+Route::get('/findpool', 'SearchController@findPool')->name('findPool');
 Route::get('get_available_slot/{date}','HomeController@get_available_slot');
 
 
@@ -66,6 +67,10 @@ Route::group(['prefix'=>'module'],function(){
 
     Route::any('executive/search_call_history','ExecutiveCrud@search_call_history');
     Route::resource('executive','ExecutiveCrud');
+
+    Route::get('/guest/booking','BookingController@guestBooking');
+    Route::get('/guest/paid','BookingController@guestPaid');
+    Route::get('/guest/allinvoice','BookingController@guestPaidAll');
 });
 
 Route::get('{slug}', 'HomeController@page');

@@ -151,7 +151,7 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-xs-12 margin_bottom_2">
-                                        <div class="date" id="dateArrival" data-text="Select Date">
+                                        <div class="date" id="dateSession" data-text="Select Date">
                                             <input name="booking_date" class="datepicker form-control" placeholder="Select a date"
                                                    @blur="calendar_input_for_booking({!! $result->id !!})"
                                                    id="booking_date"/>

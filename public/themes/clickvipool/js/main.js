@@ -393,11 +393,15 @@
     // ------------------------------------------------------
 
     // Default calendar namespaces
-    var dateFormat = "yy-mm-dd",
+    var dateFormat = "<span class='day'>d</span> <span class='month'>M</span> <span class='year'>yy</span>",
         dateArrival = '#dateArrival input',
+        dateSession = '#dateSession input',
         dateDeparture = '#dateDeparture input',
         dateArrivalVal = '#dateArrival .date-value',
         dateDepartureVal = '#dateDeparture .date-value';
+
+    // Show Session calendar
+    $(dateSession).datepicker({minDate: 'D',dateFormat: "yy-mm-dd",});
 
     // Show arrival calendar
     $(dateArrival).datepicker({
@@ -406,15 +410,15 @@
         // get value on selected date for departure
         onSelect: function (txt, inst) {
             // get arrival value
-            //$(this).val(txt);
             $(dateArrivalVal).html($(dateArrival).val());
-            // set date format
+            // var bookingDate = $(".year").text()+"-"+$(".month").text()+"-"+$(".date").text();
+            $("#bookingDate").val($(".year").text()+"-"+$(".month").text()+"-"+$(".day").text());
+             // set date format
             $(dateDepartureVal).html(txt);
             // set day after
             var NewDay = $(dateDepartureVal).find('.day'),
                 NewDayVal = NewDay.html();
             NewDay.html(parseInt(NewDayVal) + 1);
-
         },
         onClose: function (selectedDate) {
             var myDate = $(this).datepicker('getDate');
@@ -435,14 +439,24 @@
         }
     });
 
-    // set current date
-    $('.datepicker').datepicker({
-
+    // Show departure calendar
+    $(dateDeparture).datepicker({
+        minDate: 'D+1',
+        dateFormat: dateFormat,
+        // get value on selected date for return
+        onSelect: function (txt, inst) {
+            $(dateDepartureVal).html(txt);
+            $(dateDepartureVal).html($(dateDeparture).val());
+        }
     });
-    // get current value from departure 
-    $(dateArrivalVal).html($(dateArrival).val());
-    // get current value from return
-    $(dateDepartureVal).html($(dateDeparture).val());
+
+     // set current date
+     $('.datepicker').datepicker('setDate', 'today');
+     // get current value from departure 
+     $(dateArrivalVal).html($(dateArrival).val());
+     // get current value from return
+     $(dateDepartureVal).html($(dateDeparture).val());
+ 
     // hide return input field
     updateGuestNumber();
     // update number of guest list
@@ -539,6 +553,25 @@
         // DOM results
         $('#qty-result-text').text(qty.val());
     }
+    // AJAX Submit Find Pool 
+    $("#findPool").click(function(){
+        var bookingDate = $("#bookingDate").val();
+        var Poolloccation = $("#location").val();
+        var qty = $("#qty-result-text").text();
+        var path = "findpool";
+        var data = {'date':bookingDate,'address':Poolloccation,'guest': qty};
+        $.ajax({
+        type: "GET",
+        url: path,
+        data:data,
+        beforeSend: function(){
+            $("#location").css("background","#FFF url(public/LoaderIcon.gif) no-repeat 165px");
+        },
+        success: function(data){
+            console.log(data);
+        }
+        });
+    });
 
 
 });
@@ -548,6 +581,3 @@ $(window).on('load', function () {
         $('.page-loader').addClass('loaded');
     }, 1000);
 });
-
-
-

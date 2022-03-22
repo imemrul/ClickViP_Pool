@@ -193,7 +193,7 @@ function menu_array(){
                 ],
                 [
                     'label'=>'All Invoice',
-                    'link'=>URL::to('module/guest')
+                    'link'=>URL::to('module/guest/allinvoice')
                 ],
             ]
         ],

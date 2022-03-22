@@ -13,14 +13,19 @@ class SearchController extends Controller
                 ->get();
                 if(!empty($data)) {
                     ?>
-                    <ul id="country-list">
+                    <ul id="pooladd-list">
                     <?php
-                    foreach($data as $country) {
+                    foreach($data as $poolLocation) {
                     ?>
-                    <li onClick="selectCountry('<?php echo $country->address; ?>');"><?php echo $country->address; ?></li>
+                    <li onClick="selectPoolAdd('<?php echo $poolLocation->address; ?>');"><?php echo $poolLocation->address; ?></li>
                     <?php } ?>
                     </ul>
                     <?php } 
         // return response()->json($data);
+    }
+    public function findPool(Request $request){
+        print_r($request->all());
+        // $data = Pool::where("address","LIKE","%{$request->input('address')}%")->where('occupancy', )->where('')->get();
+                
     }
 }

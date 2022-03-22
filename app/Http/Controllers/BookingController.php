@@ -171,7 +171,15 @@ class BookingController extends Controller
         $booking_session_time_slot = $result->pool->session_wise_price()->find($result->session_wise_pool_id)->weekly_session_time_slot;
         return view('themes.clickvipool.payment_confirm',compact('result','booking_session_time_slot'));
     }
-    public function guest(){
+    public function guestBooking(){
+        $booking = Booking::where('guest_id',auth()->user()->id)->get();
+        return view('admin.modules.guest.booking.index', compact('booking'));
+    }
+    public function guestPaid(){
+        $booking = Booking::where('guest_id',auth()->user()->id)->get();
+        return view('admin.modules.guest.booking.index', compact('booking'));
+    }
+    public function guestPaidAll(){
         $booking = Booking::where('guest_id',auth()->user()->id)->get();
         return view('admin.modules.guest.booking.index', compact('booking'));
     }

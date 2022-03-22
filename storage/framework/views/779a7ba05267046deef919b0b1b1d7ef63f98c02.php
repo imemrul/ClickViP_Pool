@@ -92,14 +92,13 @@
                     <div class="row">
 
                         <!--=== date arrival ===-->
-
                         <div class="col-xs-4 col-sm-2">
                             <div class="date" id="dateArrival" data-text="Select Date">
-                                <input class="datepicker"  />
+                                <input class="datepicker" readonly="readonly" />
                                 <div class="date-value"></div>
+                                <input type="hidden" id="bookingDate" name="booking_date" value="">
                             </div>
                         </div>
-
                         <!--=== date departure ===-->
 
                         <div class="col-xs-4 col-sm-4">
@@ -113,7 +112,7 @@
                         </div>
                         <script type="application/javascript">
                             // To select Location
-                            function selectCountry(val) {
+                            function selectPoolAdd(val) {
                                 $("#location").val(val);
                                 $("#suggesstion-box").hide();
                                 }
@@ -214,7 +213,7 @@
                         <!--=== button ===-->
 
                         <div class="col-xs-12 col-sm-4">
-                            <a href="#" class="btn btn-clean">
+                            <a href="#" class="btn btn-clean" id="findPool">
                                 Find Your Pool
                                 <small>Best Prices Guaranteed</small>
                             </a>
