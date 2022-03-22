@@ -211,14 +211,19 @@
                         </div>
 
                         <!--=== button ===-->
-
+                        {!! Form::open(['url'=>URL::to('findpool'),'class'=>'form','files'=>'false']) !!}
+                        <input type="hidden" id="date" name="booking_date">
+                        <input type="hidden" id="address" name="address">
+                        <input type="hidden" id="guest" name="guest">
                         <div class="col-xs-12 col-sm-4">
-                            <a href="#" class="btn btn-clean" id="findPool">
+                            <button class="btn btn-clean" id="findPool">Find Your Pool
+                                <small>Best Prices Guaranteed</small></button>
+                            {{-- <a href="#" class="btn btn-clean" id="findPool">
                                 Find Your Pool
                                 <small>Best Prices Guaranteed</small>
-                            </a>
+                            </a> --}}
                         </div>
-
+                        {!! Form::close() !!}
                     </div> <!--/row-->
                 </div><!--/booking-wrapper-->
             </div> <!--/container-->

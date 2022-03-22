@@ -29,7 +29,7 @@ Route::get('pool_details/{slug}','HomeController@pool_details');
 Route::get('pool/payment/{slug}','HomeController@payment');
 Route::get('pool/payment/confirmation/{slug}','HomeController@paymentConfirm');
 Route::get('autocomplete', 'SearchController@autocomplete')->name('autocomplete');
-Route::get('/findpool', 'SearchController@findPool')->name('findPool');
+Route::POST('/findpool', 'SearchController@findPool')->name('findPool');
 Route::get('get_available_slot/{date}','HomeController@get_available_slot');
 
 

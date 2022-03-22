@@ -552,25 +552,29 @@
         qty.val(parseInt(adult, 10) + parseInt(children, 10) + parseInt(infants, 10));
         // DOM results
         $('#qty-result-text').text(qty.val());
+        $('#qty-result-text').val(qty.val());
     }
     // AJAX Submit Find Pool 
     $("#findPool").click(function(){
         var bookingDate = $("#bookingDate").val();
         var Poolloccation = $("#location").val();
         var qty = $("#qty-result-text").text();
-        var path = "findpool";
-        var data = {'date':bookingDate,'address':Poolloccation,'guest': qty};
-        $.ajax({
-        type: "GET",
-        url: path,
-        data:data,
-        beforeSend: function(){
-            $("#location").css("background","#FFF url(public/LoaderIcon.gif) no-repeat 165px");
-        },
-        success: function(data){
-            console.log(data);
-        }
-        });
+        $("#date").val(bookingDate);
+        $("#address").val(Poolloccation);
+        $("#guest").val(qty);
+        // var path = "findpool";
+        // var data = {'date':bookingDate,'address':Poolloccation,'guest': qty};
+        // $.ajax({
+        // type: "POST",
+        // url: path,
+        // data:data,
+        // beforeSend: function(){
+        //     // $("#location").css("background","#FFF url(public/LoaderIcon.gif) no-repeat 165px");
+        // },
+        // success: function(response){
+        //     // $("html").html(response);
+        // }
+        // });
     });
 
 
