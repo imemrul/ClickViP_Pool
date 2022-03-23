@@ -139,7 +139,6 @@ class BookingController extends Controller
                     'city'=>'Dubai',
                 ]
             ]);
-            dd($request->total);
             $booking = Booking::find($request->booking_id);
             if($payment_status->status === 'succeeded'){
                 $booking->pool->session_wise_price()->find($booking->session_wise_pool_id)->fill(['status'=>'Booked'])->save();
