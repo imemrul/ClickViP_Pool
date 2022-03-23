@@ -148,7 +148,7 @@
                                                           id="payment-form">
                                                         <?php echo Form::hidden('booking_id',$result->id); ?>
 
-                                                        <?php echo Form::hidden('total',$result->total); ?>
+                                                        <?php echo Form::hidden('amount',$result->total); ?>
 
                                                         <div class='form-row row'>
                                                             <div class='col-xs-12 form-group required'>

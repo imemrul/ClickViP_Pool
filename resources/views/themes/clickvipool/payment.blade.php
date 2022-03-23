@@ -147,7 +147,7 @@
                                                           data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
                                                           id="payment-form">
                                                         {!! Form::hidden('booking_id',$result->id) !!}
-                                                        {!! Form::hidden('total',$result->total) !!}
+                                                        {!! Form::hidden('amount',$result->total) !!}
                                                         <div class='form-row row'>
                                                             <div class='col-xs-12 form-group required'>
                                                                 <label class='control-label'>Name on Card</label> <input class='form-control' size='4' type='text' value="Demo account for payment testing">

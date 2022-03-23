@@ -127,18 +127,21 @@ class BookingController extends Controller
         return view('themes.clickvipool.payment',compact('result'));
     }
     public function post_payment(Request $request){
-             try {
+        //return $request->all();
+        try {
+
             Stripe::setApiKey(env('STRIPE_SECRET'));
             $payment_status = Charge::create ([
-                "amount" => $request->total.".00",
+                "amount" => $request->amount,
                 "currency" => "AED",
                 "source" => $request->stripeToken,
                 "description" => "Test Payment",
                 'metadata'=>[
-                    'address' =>'Dubai',
+                    'address' =>'Satwa, Dubai',
                     'city'=>'Dubai',
                 ]
             ]);
+
             $booking = Booking::find($request->booking_id);
             if($payment_status->status === 'succeeded'){
                 $booking->pool->session_wise_price()->find($booking->session_wise_pool_id)->fill(['status'=>'Booked'])->save();
