@@ -109,7 +109,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <strong>Booking ID</strong> <br>
-                                                <a href="{!! url('module/guest/invoice',$result->id) !!}">PBS-{!! $result->id; !!}</a>
+                                                <a href="{!! url('pool_details',$result->slug) !!}">PBS-{!! $result->id; !!}</a>
                                             </div>
                                         </div>
 
@@ -186,6 +186,4 @@
     </div> <!--/checkout-->
 
 </section>
-
-
 @include('themes.clickvipool.footer')

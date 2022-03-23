@@ -109,7 +109,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <strong>Booking ID</strong> <br>
-                                                <a href="<?php echo url('pool_details',$result->slug); ?>">PBS-<?php echo $result->id;; ?></a>
+                                                <a href="<?php echo url('module/guest/invoice',$result->id); ?>">PBS-<?php echo $result->id;; ?></a>
                                             </div>
                                         </div>
 

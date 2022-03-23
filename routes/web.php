@@ -46,6 +46,7 @@ Route::get('check_existing_client','ClientCrud@check_existing_client');
 Route::get('booking/payment_form','BookingController@payment_form');
 Route::post('booking/post_payment','BookingController@post_payment');
 Route::get('booking/payment_success/{booking_id}','BookingController@payment_success');
+Route::get('booking/payment_unsuccess/{booking_id}','BookingController@payment_unsuccess');
 Route::resource('booking','BookingController');
 
 Route::group(['prefix'=>'module'],function(){
@@ -71,6 +72,7 @@ Route::group(['prefix'=>'module'],function(){
     Route::get('/guest/booking','BookingController@guestBooking');
     Route::get('/guest/paid','BookingController@guestPaid');
     Route::get('/guest/allinvoice','BookingController@guestPaidAll');
+    Route::get('/guest/invoice/{id}','BookingController@guestInvoice');
 });
 
 Route::get('{slug}', 'HomeController@page');

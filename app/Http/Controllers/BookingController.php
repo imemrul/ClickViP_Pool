@@ -188,4 +188,7 @@ class BookingController extends Controller
         $booking = Booking::where('guest_id',auth()->user()->id)->get();
         return view('admin.modules.guest.booking.index', compact('booking'));
     }
+    public function guestInvoice($id){
+        return $id;
+    }
 }
