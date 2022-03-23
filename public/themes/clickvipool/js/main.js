@@ -576,7 +576,37 @@
         // }
         // });
     });
-
+    $('#LoginForm').on('submit',function(e){
+        e.preventDefault();
+        let email = $('#loginEmail').val();
+        let password = $('#loginPass').val();
+        $.ajax({
+        url: "/ajax_login",
+        type:"POST",
+        data:{
+            "_token": "{{ csrf_token() }}",
+            email:email,
+            password:password,
+        },
+        success:function(response){
+            // $('#successMsg').show();
+            // $('#login_form').modal('hide');
+            if(response == 1){
+                location.reload();
+            }
+            else{
+                alert("Login Error Check your Email/Password");
+            }
+            console.log(response);
+        },
+        error: function(response) {
+            $('#emailErrorMsg').text(response.responseJSON.errors.email);
+            $('#passwordErrorMsg').text(response.responseJSON.errors.mobile);
+            $('#messageErrorMsg').text(response.responseJSON.errors.message);
+        },
+        });
+        });
+ 
 
 });
 

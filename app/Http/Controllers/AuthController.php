@@ -40,7 +40,6 @@ class AuthController extends Controller{
         }
     }
     public function ajax_login(Request $r){
-
         if(Auth::attempt(['email'=>$r->email,'password'=>$r->password])){
             return 1;
         }else{

@@ -242,44 +242,25 @@
                             </div>
                         </div>
                     </div>
-
-
                     <!-- ========================  Cart navigation ======================== -->
-
                     <div class="clearfix">
                         <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
                             <div>
                                 <a href="#" class="btn btn-clean-dark">Change</a>
                             </div>
                             <div>
+                                @if (Auth::check())
                                 <input type="submit" value="BOOK" class="btn btn-main">
+                                @else
+                                <a href="#" data-toggle="modal" data-target="#login_form" class="btn btn-main">Login for Booking</a>
+                                @endif
                             </div>
                         </div>
                     </div>
-
                 </div>
                 {!! Form::close() !!}
             </div>
-
         </div> <!--/container-->
     </div> <!--/checkout-->
-
-</section>
-
-<!-- ========================  Subscribe ======================== -->
-
-<section class="subscribe">
-    <div class="container">
-        <div class="box">
-            <h2 class="title">Subscribe</h2>
-            <div class="text">
-                <p>& receive free premium gifts</p>
-            </div>
-            <div class="form-group">
-                <input type="text" value="" placeholder="Subscribe" class="form-control"/>
-                <button class="btn btn-sm btn-main">Go</button>
-            </div>
-        </div>
-    </div>
 </section>
 @include('themes.clickvipool.footer')
