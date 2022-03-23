@@ -23,8 +23,7 @@
                         <a href="#"><span data-text="Reservation"></span></a>
                     </li>
                     <li class="col-md-4">
-                        <a href="#"><span
-                                    data-text="Checkout"></span></a>
+                        <a href="#"><span data-text="Checkout"></span></a>
                     </li>
                 </ul>
             </div>
@@ -101,34 +100,25 @@
                             <!-- === right content === -->
 
                             <div class="col-md-6">
-
                                 <div class="white-block">
-
                                     <div class="h4">Payment section</div>
-
                                     <hr/>
                                     <div class="row">
-
                                         <div class="col-xs-12">
                                             <strong>Powered by Stripe</strong> <br/>
                                             <p>
                                                 <small>(MasterCard, Maestro, Visa, Visa Electron, JCB and American Express)</small>
                                             </p>
                                         </div>
-
                                         <div class="col-md-12">
-
                                             <div class="panel panel-default credit-card-box">
-
                                                 <div class="panel-heading display-table">
-
                                                     <div class="row">
                                                         <div class="col-xs-6">
                                                             <h3 class="panel-title display-td">Payment Details</h3>
                                                         </div>
                                                         <div class="col-xs-6 text-right">
                                                             <div class="display-td">
-
                                                                 <div>
                                                                     <i class="fa fa-cc-visa"></i>
                                                                     <i class="fa fa-cc-mastercard"></i>
@@ -136,160 +126,85 @@
                                                                     <i class="fa fa-cc-amex"></i>
                                                                     <i class="fa fa-cc-diners-club"></i>
                                                                 </div>
-
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
-
                                                 <div class="panel-body">
-
                                                     <?php if(Session::has('error_message')): ?>
-
                                                         <div class="alert alert-danger text-center">
-
                                                             <a href="#" class="close" data-dismiss="alert"
                                                                aria-label="close">×</a>
-
                                                             <p><?php echo e(Session::get('error_message')); ?></p>
                                                             <?php if(Session::has('transaction_error')): ?>
                                                                 <p><?php echo Session::get('transaction_error'); ?></p>
                                                             <?php endif; ?>
-
                                                         </div>
-
                                                     <?php endif; ?>
-
                                                     <form role="form" action="<?php echo url('booking/post_payment'); ?>"
                                                           method="post" class="require-validation"
-
                                                           data-cc-on-file="false"
-
                                                           data-stripe-publishable-key="<?php echo e(env('STRIPE_KEY')); ?>"
-
                                                           id="payment-form">
                                                         <?php echo Form::hidden('booking_id',$result->id); ?>
 
-                                                        <div class='form-row row'>
+                                                        <?php echo Form::hidden('total',$result->total); ?>
 
+                                                        <div class='form-row row'>
                                                             <div class='col-xs-12 form-group required'>
-
                                                                 <label class='control-label'>Name on Card</label> <input class='form-control' size='4' type='text' value="Demo account for payment testing">
-
                                                             </div>
-
                                                         </div>
-
-
                                                         <div class='form-row row'>
-
                                                             <div class='col-xs-12 form-group card required'>
-
                                                                 <label class='control-label'>Card Number</label>
                                                                 <input autocomplete='off' class='form-control card-number' size='20' value="4242424242424242 " type='text'>
-
                                                             </div>
-
                                                         </div>
-
-
                                                         <div class='form-row row'>
-
                                                             <div class='col-xs-12 col-md-4 form-group cvc required'>
-
                                                                 <label class='control-label'>CVC</label>
-                                                                <input
-                                                                        autocomplete='off'
-
-                                                                        class='form-control card-cvc'
+                                                                <input autocomplete='off' class='form-control card-cvc'
                                                                         placeholder='ex. 311' size='4'
                                                                         value="111"
                                                                         type='text'>
-
                                                             </div>
-
                                                             <div class='col-xs-12 col-md-4 form-group expiration required'>
-
                                                                 <label class='control-label'>Expiration Month</label>
-                                                                <input
-
-                                                                        class='form-control card-expiry-month'
-                                                                        placeholder='MM' size='2'
-                                                                        value="12"
-                                                                        type='text'>
-
+                                                                <input class='form-control card-expiry-month' placeholder='MM' size='2' value="12" type='text'>
                                                             </div>
-
                                                             <div class='col-xs-12 col-md-4 form-group expiration required'>
-
                                                                 <label class='control-label'>Expiration Year</label>
-                                                                <input
-
-                                                                        class='form-control card-expiry-year'
-                                                                        placeholder='YYYY' size='4'
-                                                                        value="2025"
-                                                                        type='text'>
-
+                                                                <input class='form-control card-expiry-year' placeholder='YYYY' size='4' value="2025" type='text'>
                                                             </div>
-
                                                         </div>
-
-
                                                         <div class='form-row row'>
-
                                                             <div class='col-md-12 error form-group hide'>
-
-                                                                <div class='alert-danger alert'>Please correct the
-                                                                    errors and try
-
-                                                                    again.
+                                                                <div class='alert-danger alert'>Please correct the errors and try again.
                                                                 </div>
-
                                                             </div>
-
                                                         </div>
-
-
                                                         <div class="row">
-
                                                             <div class="col-xs-12">
-
                                                                 <button class="btn btn-primary btn-lg btn-block"
-                                                                        type="submit">Pay Now (AED 100)
+                                                                        type="submit">Pay Now (AED <?php echo e($result->total); ?>)
                                                                 </button>
-
                                                             </div>
-
                                                         </div>
-
-
                                                     </form>
-
                                                 </div>
-
                                             </div>
-
                                         </div>
-
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
-
                 <!-- ========================  Cart wrapper ======================== -->
-
-
-
             </div>
-
         </div> <!--/container-->
     </div> <!--/checkout-->
-
 </section>
 
 

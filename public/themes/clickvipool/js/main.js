@@ -576,6 +576,7 @@
         // }
         // });
     });
+    // Ajax Login
     $('#LoginForm').on('submit',function(e){
         e.preventDefault();
         let email = $('#loginEmail').val();

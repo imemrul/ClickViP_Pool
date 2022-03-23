@@ -29,11 +29,11 @@
                     <thead>
                         <tr>
                             <th class="col-xs-2">Date</th>
-                            <th class="col-xs-2">Transaction Id</th>
+                            {{-- <th class="col-xs-2">Transaction Id</th> --}}
                             <th class="col-xs-2">Guest Name</th>
                             <th class="col-xs-2">Amount</th>
                             <th class="col-xs-2">Book Status</th>
-                            <th class="col-xs-2">Payment Details</th>
+                            <th class="col-xs-2">Payment Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,7 +41,7 @@
                         @foreach($booking as $book)
                         <tr>
                             <td>{!!$book->created_at!!}</td>
-                            <td>{{\App\Booking_payment_detail::where('booking_id', $book->id)->first()->transaction_id}}</td>
+                            {{-- <td></td> --}}
                             <td>{!!auth()->user()->full_name!!}</td>
                             <td>AED {!!$book->total!!}</td>
                             <td>{!!$book->booking_status!!}</td>

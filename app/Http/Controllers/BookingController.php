@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Stripe\Charge;
 use Stripe\Stripe;
+use Cache;
 
 class BookingController extends Controller
 {
@@ -72,7 +73,7 @@ class BookingController extends Controller
                 $booking->facilities()->save($booking_facility);
             }
         }
-        $result = $booking;
+        $result = $booking; 
         return view('themes.clickvipool.payment',compact('pool','result'));
     }
 
@@ -126,21 +127,19 @@ class BookingController extends Controller
         return view('themes.clickvipool.payment',compact('result'));
     }
     public function post_payment(Request $request){
-        //return $request->all();
-        try {
-
+             try {
             Stripe::setApiKey(env('STRIPE_SECRET'));
             $payment_status = Charge::create ([
-                "amount" => 100 * 100,
+                "amount" => $request->total.".00",
                 "currency" => "AED",
                 "source" => $request->stripeToken,
                 "description" => "Test Payment",
                 'metadata'=>[
-                    'address' =>'Dhaka, Khilkhet',
-                    'city'=>'Dhaka',
+                    'address' =>'Dubai',
+                    'city'=>'Dubai',
                 ]
             ]);
-
+            dd($request->total);
             $booking = Booking::find($request->booking_id);
             if($payment_status->status === 'succeeded'){
                 $booking->pool->session_wise_price()->find($booking->session_wise_pool_id)->fill(['status'=>'Booked'])->save();
@@ -176,7 +175,7 @@ class BookingController extends Controller
         return view('admin.modules.guest.booking.index', compact('booking'));
     }
     public function guestPaid(){
-        $booking = Booking::where('guest_id',auth()->user()->id)->get();
+        $booking = Booking::where('guest_id',auth()->user()->id)->where('payment_status', 'Done')->get();
         return view('admin.modules.guest.booking.index', compact('booking'));
     }
     public function guestPaidAll(){
