@@ -71,7 +71,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <strong>Email</strong><br>
-                                                <span>{!! auth()->user()->full_name !!}</span>
+                                                <span>{!! auth()->user()->email !!}</span>
                                             </div>
                                         </div>
 
@@ -154,7 +154,7 @@
                                         <div class="col-md-8">
                                             <div class="form-group">
                                                 <strong>Amount</strong><br>
-                                                <span>{!! $result->payment_details->amount !!}</span>
+                                                <span>AED {!! number_format($result->payment_details->amount,2) !!}</span>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -169,7 +169,7 @@
                                         <div class="col-md-8">
                                             <div class="form-group">
                                                 <strong>Paid status</strong><br>
-                                                <span class="badge">{!! $result->payment_details->paid_status ? 'Paid' : 'Due' !!}</span>
+                                                <span class="badge">{!!( $result->payment_details->paid_status == 1) ? 'Paid' : 'Due' !!}</span>
                                             </div>
                                         </div>
 

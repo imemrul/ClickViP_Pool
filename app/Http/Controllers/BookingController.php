@@ -141,7 +141,7 @@ class BookingController extends Controller
                     'city'=>'Dubai',
                 ]
             ]);
-
+            $paid_status = 0;
             $booking = Booking::find($request->booking_id);
             if($payment_status->status === 'succeeded'){
                 $booking->pool->session_wise_price()->find($booking->session_wise_pool_id)->fill(['status'=>'Booked'])->save();
@@ -149,6 +149,10 @@ class BookingController extends Controller
                     'booking_status'=>'Active',
                     'payment_status'=>'Done',
                 ])->save();
+                if($payment_status->amount == $payment_status->amount_captured){
+                    $paid_status = 1;
+                }
+                
                 $booking->payment_details()->create([
                     'transaction_id'=>$payment_status->id,
                     'receipt_url' => $payment_status->receipt_url,
@@ -156,7 +160,7 @@ class BookingController extends Controller
                     'amount'=>$payment_status->amount,
                     'amount_captured' => $payment_status->amount_captured,
                     'amount_refunded' => $payment_status->amount_refunded,
-                    'paid_status' => $payment_status->paid_status,
+                    'paid_status' => $paid_status,
                 ]);
                 return redirect('booking/payment_success/'.$booking->id);
             }else{
