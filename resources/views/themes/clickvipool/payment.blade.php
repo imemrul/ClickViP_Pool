@@ -23,8 +23,7 @@
                         <a href="#"><span data-text="Reservation"></span></a>
                     </li>
                     <li class="col-md-4">
-                        <a href="#"><span
-                                    data-text="Checkout"></span></a>
+                        <a href="#"><span data-text="Checkout"></span></a>
                     </li>
                 </ul>
             </div>
