@@ -5,20 +5,10 @@
 function menu_array(){
     return [
         [
-            'label'=>'Location',
+            'label'=>'Service Location',
             'roll_id'=>1,
             'icon'=>'location_on',
-            'link'=>'#',
-            'sub'=>[
-                [
-                    'label'=>'Create',
-                    'link'=>URL::to('module/location/create')
-                ],
-                [
-                    'label'=>'List',
-                    'link'=>URL::to('module/locations')
-                ],
-            ]
+            'link'=>url('module/location'),
         ],
         [
             'label'=>'Facilities',

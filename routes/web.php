@@ -61,6 +61,7 @@ Route::group(['prefix'=>'module'],function(){
     Route::get('client/search_medicine','ClientCrud@search_medicine');
     Route::resource('client','ClientCrud');
 
+    Route::resource('location','LocationController');
     Route::resource('weekly_session_time','WeeklySessionTime');
     Route::delete('pool/delete_image/{image_id}','PoolController@delete_image');
     Route::delete('pool/delete_session_time_slot/{date}','PoolController@delete_session_time_slot');
