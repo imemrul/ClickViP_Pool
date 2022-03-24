@@ -14,6 +14,9 @@ use Cache;
 
 class BookingController extends Controller
 {
+    public function __construct(){
+        // $this->middleware('RedirectIfAuthenticate',['except'=>'/']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -189,6 +192,7 @@ class BookingController extends Controller
         return view('admin.modules.guest.booking.index', compact('booking'));
     }
     public function guestInvoice($id){
-        return $id;
+        $booking = Booking::where('id',$id)->where('guest_id',auth()->user()->id)->get();
+        return view('admin.modules.guest.booking.invoice', compact('booking'));
     }
 }
