@@ -57,7 +57,7 @@ Route::group(['prefix'=>'module'],function(){
     Route::resource('client','ClientCrud');
 
     Route::resource('location','LocationController');
-    Route::resource('facility','FacilitController');
+    Route::resource('facility','FacilityController');
     Route::resource('weekly_session_time','WeeklySessionTime');
     Route::delete('pool/delete_image/{image_id}','PoolController@delete_image');
     Route::delete('pool/delete_session_time_slot/{date}','PoolController@delete_session_time_slot');

@@ -21,8 +21,8 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                        Location
-                        <a href="#" class="pull-right" data-toggle="modal" data-target="#myModal">CREATE NEW LOCATION</a>
+                        FACILITY
+                        <a href="#" class="pull-right" data-toggle="modal" data-target="#myModal">CREATE NEW FACILITY</a>
 
                         <!-- Modal -->
                         <div id="myModal" class="modal fade" role="dialog">
@@ -42,7 +42,7 @@
                                                         <thead>
                                                         <tr>
                                                             <th>Location</th>
-                                                            <th>Status</th>
+                                                            <th>Description</th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
@@ -52,11 +52,7 @@
                                                             </td>
                                                             <td>
                                                                 <div class="form-line">
-                                                                    <select v-model="row.status" name="status" class="selectpicker">
-                                                                        <option>Select Status</option>
-                                                                        <option value="active">Active</option>
-                                                                        <option value="inactive">Inactive</option>
-                                                                    </select>
+                                                                    <input v-model="row.description" type="text" class="form-control" name="description" required>
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -130,12 +126,8 @@
                                                                                 <input v-model="row.name ='<?= $result->name ?>'" type="text" name="name" class="form-control" placeholder="Location.." required>
                                                                             </td>
                                                                             <td>
-                                                                                <div class="form-line">
-                                                                                    <select v-model="row.status ='<?= $result->status ?>'" name="status">
-                                                                                        <option>Select Status</option>
-                                                                                        <option value="Active">Active</option>
-                                                                                        <option value="Inactive">Inactive</option>
-                                                                                    </select>
+                                                                                <div class="form-group">
+                                                                                    <input v-model="row.status ='<?= $result->status ?>'" type="text" class="form-control" name="status" required>
                                                                                 </div>
                                                                             </td>
                                                                         </tr>
@@ -254,6 +246,7 @@
                 //$('#table_form').submit();
             })
         })
+
     </script>
 @endsection
 

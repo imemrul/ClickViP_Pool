@@ -9,20 +9,10 @@ function menu_array(){
             'link'=>url('module/location'),
         ],
         [
-            'label'=>'Facilities',
+            'label'=>'Service Facility',
             'roll_id'=>1,
-            'icon'=>'list_alt',
-            'link'=>'#',
-            'sub'=>[
-                [
-                    'label'=>'Create',
-                    'link'=>URL::to('module/facility/create')
-                ],
-                [
-                    'label'=>'List',
-                    'link'=>URL::to('module/facilitys')
-                ],
-            ]
+            'icon'=>'waves',
+            'link'=>url('module/facility'),
         ],
         [
             'label'=>'Host',

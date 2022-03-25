@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 
-use App\Location;
+use App\Facility;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-class LocationController extends Controller
+class FacilityController extends Controller
 {
     public function __construct(){
         $this->middleware('RedirectIfNotAuthenticate');
@@ -19,9 +19,9 @@ class LocationController extends Controller
     public function index()
     {
 
-        $results = Location::orderBy('id','desc')->paginate(20);
+        $results = Facility::orderBy('id','desc')->paginate(20);
         //return auth()->user()->id;
-        return view('admin.modules.location.index',compact('results'));
+        return view('admin.modules.facility.index',compact('results'));
     }
 
     /**
@@ -85,7 +85,7 @@ class LocationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request->all());
+        //dd($request->all());
         //return $request->all();
         Location::find($id)->fill($request->all())->save();
         return redirect()->back()->with('message','Service Location Updated..');
