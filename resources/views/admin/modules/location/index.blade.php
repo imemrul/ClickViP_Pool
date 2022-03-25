@@ -16,14 +16,13 @@
                 </div>
             @endif
         </div>
-
         <!-- Striped Rows -->
         <div class="row clearfix" id="app">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
                         Location
-                        <a href="#" class="pull-right" data-toggle="modal" data-target="#myModal">CREATE NEW SESSION</a>
+                        <a href="#" class="pull-right" data-toggle="modal" data-target="#myModal">CREATE NEW LOCATION</a>
 
                         <!-- Modal -->
                         <div id="myModal" class="modal fade" role="dialog">
@@ -44,27 +43,17 @@
                                                         <tr>
                                                             <th>Location</th>
                                                             <th>Status</th>
-                                                            <th>
-                                                                <a @click.prevent="addRow" href="#" class="btn btn-xs btn-success">
-                                                                    <i class="material-icons">add</i>
-                                                                </a>
-                                                            </th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
                                                         <tr v-for="(row, index) in timing_arr">
                                                             <td>
-                                                                <input v-model="row.name" type="text" name="name[]" class="form-control" placeholder="Title.." required>
+                                                                <input v-model="row.name" type="text" name="name" class="form-control" placeholder="Name.." required>
                                                             </td>
                                                             <td>
                                                                 <div class="form-line">
-                                                                    <input v-model="row.status" type="time" class="form-control" name="status[]" required>
+                                                                    <input v-model="row.status" type="text" class="form-control" name="status" required>
                                                                 </div>
-                                                            </td>
-                                                            <td>
-                                                                <a @click.prevent="removeRow(index)" href="#" class="btn btn-xs btn-danger">
-                                                                    <i class="material-icons">remove</i>
-                                                                </a>
                                                             </td>
                                                         </tr>
                                                         </tbody>
@@ -78,21 +67,16 @@
                                                     </table>
                                                 </div>
                                             </div>
-
-
-
                                         </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="body table-responsive">
-
                         <p>TOTAL SESSION TIME SLOT: {!! $results->count(); !!}</p>
                         <table class="table table-hover table-responsive">
                             <thead>
@@ -158,19 +142,14 @@
                                                                     </table>
                                                                 </div>
                                                             </div>
-
-
-
                                                         </form>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
-
                                     </td>
                                 </tr>
                             @endforeach
@@ -185,8 +164,6 @@
     </div>
 @endsection
 @section('custom_page_script')
-
-
     <script type="text/javascript">
         let vueApp = new Vue({
             el:'#app',
@@ -248,8 +225,6 @@
                 submit:function(){
                     $('#disposition_form').submit();
                 },
-
-
             }
         });
 
@@ -259,11 +234,6 @@
                 return false;
             }
         });
-
-    </script>
-
-
-    <script type="text/javascript">
 
         $(document).ready(function(){
             $('#select_all').change(function() {

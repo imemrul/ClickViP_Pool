@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 
 use App\Location;
 use Illuminate\Http\Request;
-
-
+use Illuminate\Support\Facades\Validator;
 class LocationController extends Controller
 {
+    public function __construct(){
+        $this->middleware('RedirectIfNotAuthenticate');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -40,17 +42,15 @@ class LocationController extends Controller
      */
     public function store(Request $request)
     {
-        foreach($_POST['week_day'] as $i=>$item){
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'status' => 'required',
+        ]);
             Location::create(
                 [
-                    'week_day' => $item,
-                    'title' =>$_POST['title'][$i],
-                    'start_from' =>$_POST['start_from'][$i],
-                    'end_at' =>$_POST['end_at'][$i],
-                    'host_id' => auth()->user()->id,
-                ]
-            );
-        }
+                    'name' =>$request->name,
+                    'status' =>$request->status,
+                ]);
         return redirect()->back()->with('message','Service Location created');
     }
 

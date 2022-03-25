@@ -15,7 +15,7 @@ use Cache;
 class BookingController extends Controller
 {
     public function __construct(){
-        // $this->middleware('RedirectIfAuthenticate',['except'=>'/']);
+        $this->middleware('RedirectIfNotAuthenticate');
     }
     /**
      * Display a listing of the resource.

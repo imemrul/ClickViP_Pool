@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+    public function __construct(){
+        $this->middleware('RedirectIfNotAuthenticate');
+    }
     /**
      * Display a listing of the resource.
      *

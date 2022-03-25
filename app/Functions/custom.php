@@ -1,6 +1,4 @@
 <?php
-
-
 //Creat Menu
 function menu_array(){
     return [

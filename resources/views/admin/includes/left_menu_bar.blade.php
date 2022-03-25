@@ -23,9 +23,9 @@
             <ul class="list">
                 <li class="header">MAIN NAVIGATION</li>
                 <li class="active">
-                    <a href="{!! URL::to('/') !!}">
-                        <i class="material-icons">home</i>
-                        <span>HOME</span>
+                    <a href="{!! URL::to('/dashboard') !!}">
+                        <i class="material-icons">dashboard</i>
+                        <span>Dashboard</span>
                     </a>
                 </li>
                 @foreach(menu_array() as $i=>$item)
@@ -45,7 +45,7 @@
                             </ul>
                         </li>
                         @else
-                        <li class="<?= ($i==0) ? 'active': '' ?>">
+                        <li class="<?//= ($i==0) ? 'active': '' ?>">
                             <a href="{!! $item['link'] !!}">
                                 <i class="material-icons">{!! $item['icon'] !!}</i>
                                 <span>{!! $item['label'] !!}</span>
