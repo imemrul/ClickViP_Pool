@@ -118,6 +118,7 @@
                             @endif
                             </tbody>
                         </table>
+                        {!! $booking->appends(request()->except(['_token']))->links() !!}
                     </div>
                 </div>
             </div>

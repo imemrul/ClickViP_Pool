@@ -201,7 +201,7 @@ class BookingController extends Controller
 
     public function host_booking_list(){
         $pool_ids = Pool::where('host_id',auth()->user()->id)->pluck('id');
-        $booking = Booking::whereIn('pool_id',$pool_ids)->paginate(20);
+        $booking = Booking::whereIn('pool_id',$pool_ids)->paginate(10);
 
         return view('admin.modules.guest.booking.host_booking_list', compact('booking'));
     }
@@ -224,7 +224,7 @@ class BookingController extends Controller
             $date_wise_booking->where('status','<=',$request->booking_status);
         }
         $session_wise_pool_ids =  $date_wise_booking->pluck('id');
-        $booking = Booking::whereIn('session_wise_pool_id',$session_wise_pool_ids)->orderBy('id','desc')->paginate(20);
+        $booking = Booking::whereIn('session_wise_pool_id',$session_wise_pool_ids)->orderBy('id','desc')->paginate(10);
 
         return view('admin.modules.guest.booking.host_booking_list', compact('booking'));
     }
