@@ -26,7 +26,7 @@
     <header>
         <div class="row align-items-center">
             <div class="col-sm-7 text-center text-sm-start mb-3 mb-sm-0">
-                <p style="font-weight: 700; color: #009877;font-size: 55px; line-height: 90px;">ClickVIpool</p>
+                <img src="{!!asset('public/uploads/'.\App\Setting::first()->image)!!}" alt="">
             </div>
             <div class="col-sm-5 text-center text-sm-end">
                 <h4 class="mb-0">Invoice</h4>
@@ -153,6 +153,6 @@
     </footer>
 </div>
 <!-- Back to My Account Link -->
-<p class="text-center d-print-none"><a href="{!! url('admin') !!}">&laquo; Back to My Account</a></p>
+<p class="text-center d-print-none"><a href="{!! url('dashboard') !!}">&laquo; Back to My Account</a></p>
 </body>
 </html>
