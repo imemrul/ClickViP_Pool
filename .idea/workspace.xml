@@ -6,6 +6,11 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select>
       <path>
@@ -17,7 +22,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff1fbce8-7701-46e8-a401-d90aa1bcc57c" name="Default Changelist" comment="Edit File Check">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/invoice/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/invoice/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/modules/guest/booking/host_booking_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_17_2022_7_15_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_17_2022_7_15_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_19_2022_2_49_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_19_2022_2_49_AM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Booking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Functions/custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Functions/custom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/themes/clickvipool/pool_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/themes/clickvipool/pool_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/10542e76ffd76831f825db5900059e21c21c0636.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/10542e76ffd76831f825db5900059e21c21c0636.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/396d24d679bc24b3149fce434d853618fc8a4294.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/396d24d679bc24b3149fce434d853618fc8a4294.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/86d20fd49bea0ff51c5ec1629fff7e582a0979c9.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/86d20fd49bea0ff51c5ec1629fff7e582a0979c9.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/9fc3b39eb1594354f1cd84a597aae7f59729d4fc.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/9fc3b39eb1594354f1cd84a597aae7f59729d4fc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +51,9 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/vendor/stripe/stripe-php/.editorconfig" previewFile="$PROJECT_DIR$/vendor/stripe/stripe-php/phpdoc.dist.xml" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -37,6 +63,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -139,12 +171,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/modules/guest/booking" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\cvpms\resources\views\admin\modules\guest\booking" />
       <recent name="E:\xampp\htdocs\cvpms\app" />
       <recent name="E:\xampp\htdocs\cvpms\resources\views\admin\modules\pool" />
       <recent name="E:\xampp\htdocs\medicine\public" />
@@ -183,7 +216,10 @@
       <workItem from="1647430565969" duration="10559000" />
       <workItem from="1647520914800" duration="25256000" />
       <workItem from="1647577747507" duration="43000" />
-      <workItem from="1647600198111" duration="28592000" />
+      <workItem from="1647600198111" duration="29381000" />
+      <workItem from="1647874397158" duration="1928000" />
+      <workItem from="1648042256747" duration="866000" />
+      <workItem from="1648353743210" duration="16762000" />
     </task>
     <task id="LOCAL-00001" summary="Added Sub Them File">
       <created>1647522102131</created>
@@ -255,7 +291,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647641012651</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Edit File Check">
+      <created>1647641532940</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1647641532940</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Edit File Check">
+      <created>1648380471383</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648380471383</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,18 +338,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="422" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1647433619532" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1645735995360">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1648382422463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1645735995360" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1648382422463" />
     <state x="129" y="55" key="DiffContextDialog" timestamp="1647636400351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1647636400351" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1647577790471">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1648043128512">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647577790471" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1648043128512" />
     <state x="129" y="55" key="MergeDialog" timestamp="1647636624852">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -308,10 +358,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1647612360602" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647640815070">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1648380606343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647640815070" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1648380606343" />
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1647636565841">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -320,13 +370,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="152" key="git4idea.merge.GitMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1647636500538" />
-    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1647635798723">
+    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1648384823852">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1647635798723" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1647638877198">
+    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1648384823852" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1648384018155">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1647638877198" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1648384018155" />
   </component>
 </project>

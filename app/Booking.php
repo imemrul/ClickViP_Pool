@@ -21,6 +21,9 @@ class Booking extends Model
     public function pool(){
         return $this->belongsTo('App\Pool','pool_id');
     }
+    public function booking_session(){
+        return $this->belongsTo(Weekly_session_wise_pool_price::class,'session_wise_pool_id');
+    }
     public function facilities(){
         return $this->hasMany('App\Pool_facility');
     }

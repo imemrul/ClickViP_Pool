@@ -250,6 +250,7 @@
                             </div>
                             <div>
                                 @if (Auth::check())
+
                                 <input type="submit" value="BOOK" class="btn btn-main">
                                 @else
                                 <a href="#" data-toggle="modal" data-target="#login_form" class="btn btn-main">Login for Booking</a>

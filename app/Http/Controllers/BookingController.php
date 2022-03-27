@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Booking;
 use App\Booking_payment_detail;
+use App\Client_medicine_requisition;
 use App\Pool;
 use App\Pool_facility;
+use App\Weekly_session_wise_pool_price;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use PhpParser\Node\Expr\Cast\Bool_;
 use Stripe\Charge;
 use Stripe\Stripe;
 use Cache;
@@ -194,5 +197,35 @@ class BookingController extends Controller
     public function guestInvoice($id){
         $booking = Booking::where('id',$id)->where('guest_id',auth()->user()->id)->get();
         return view('admin.modules.guest.booking.invoice', compact('booking'));
+    }
+
+    public function host_booking_list(){
+        $pool_ids = Pool::where('host_id',auth()->user()->id)->pluck('id');
+        $booking = Booking::whereIn('pool_id',$pool_ids)->paginate(20);
+
+        return view('admin.modules.guest.booking.host_booking_list', compact('booking'));
+    }
+
+    public function print_view($booking_id){
+        $result = Booking::find($booking_id);
+        return view('admin.modules.guest.booking.print_view',compact('result'));
+    }
+    public function host_booking_search(Request $request){
+        $pool_ids = Pool::where('host_id',auth()->user()->id)->pluck('id');
+        //return $pool_ids;
+        $date_wise_booking = Weekly_session_wise_pool_price::whereIn('pool_id',$pool_ids);
+        if($request->from){
+            $date_wise_booking->where('date','>=',$request->from);
+        }
+        if($request->to){
+            $date_wise_booking->where('date','<=',$request->to);
+        }
+        if($request->booking_status){
+            $date_wise_booking->where('status','<=',$request->booking_status);
+        }
+        $session_wise_pool_ids =  $date_wise_booking->pluck('id');
+        $booking = Booking::whereIn('session_wise_pool_id',$session_wise_pool_ids)->orderBy('id','desc')->paginate(20);
+
+        return view('admin.modules.guest.booking.host_booking_list', compact('booking'));
     }
 }

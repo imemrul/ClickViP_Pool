@@ -193,8 +193,8 @@
                             </div>
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label for="first_name">Login ID / Email address</label>
-                                    <input type="text" name="email" id="email" class="form-control" autocomplete="off" @blur="checkEmailAvailibility" v-model="email" required>
+                                    <label for="first_name">Email address</label>
+                                    <input type="email" name="email" id="email" class="form-control" autocomplete="off" @blur="checkEmailAvailibility" v-model="email" required>
                                     <div v-if="error_mes_duplicate_email" class="alert alert-danger" role="alert">
                                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                                         <span class="sr-only">Error:</span>
@@ -224,7 +224,6 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Login</button>
                     </div>
                 </div>
             </div>
@@ -242,39 +241,36 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <?php echo Form::open(['url'=>url('login'),'class'=>'form','id'=>'login_form']); ?>
-
+                        
+                        <form id="LoginForm">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label for="first_name">Login ID / Email address</label>
-                                    <input type="text" name="email" id="first_name" class="form-control" autocomplete="off" required>
+                                    <label for="email">Login ID / Email address</label>
+                                    <input type="text" name="email" id="loginEmail" class="form-control" autocomplete="off" required>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label for="first_name">Password</label>
-                                    <input type="password" name="password" id="first_name" class="form-control" autocomplete="off" required>
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="loginPass" class="form-control" autocomplete="off" required>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-xs-6">
-                                <button type="submit" name="submission_type" value="guest" class="btn btn-md btn-block btn-primary" role="button">Guest Login</button>
+                                <button type="submit" name="submission_type" value="guest" class="btn btn-md btn-block btn-primary" role="button">Login</button>
                             </div>
-                            <div class="col-xs-6">
-                                <button type="submit" name="submission_type" value="host" class="btn btn-md btn-block btn-primary">Host Login</button>
-                            </div>
+                            
                         </div>
-
-                        <?php echo Form::close(); ?>
-
+                        </form>
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Login</button>
                     </div>
+                    
                 </div>
             </div>
         </div>

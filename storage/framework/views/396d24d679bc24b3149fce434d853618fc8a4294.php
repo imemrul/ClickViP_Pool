@@ -23,9 +23,9 @@
             <ul class="list">
                 <li class="header">MAIN NAVIGATION</li>
                 <li class="active">
-                    <a href="<?php echo URL::to('/'); ?>">
-                        <i class="material-icons">home</i>
-                        <span>HOME</span>
+                    <a href="<?php echo URL::to('/dashboard'); ?>">
+                        <i class="material-icons">dashboard</i>
+                        <span>Dashboard</span>
                     </a>
                 </li>
                 <?php $__currentLoopData = menu_array(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i=>$item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -45,7 +45,7 @@
                             </ul>
                         </li>
                         <?php else: ?>
-                        <li class="<?= ($i==0) ? 'active': '' ?>">
+                        <li class="<?//= ($i==0) ? 'active': '' ?>">
                             <a href="<?php echo $item['link']; ?>">
                                 <i class="material-icons"><?php echo $item['icon']; ?></i>
                                 <span><?php echo $item['label']; ?></span>

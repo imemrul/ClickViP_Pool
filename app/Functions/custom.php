@@ -120,19 +120,19 @@ function menu_array(){
         [
             'label'=>'My Account',
             'roll_id'=>2,
-            'icon'=>'perm_identity',
+            'icon'=>'vpn_key',
             'link'=>url('my_account'),
         ],
         [
             'label'=>'Weekly Session Timing',
             'roll_id'=>2,
-            'icon'=>'perm_identity',
+            'icon'=>'watch',
             'link'=>url('module/weekly_session_time'),
         ],
         [
             'label'=>'Manage Pool',
             'roll_id'=>2,
-            'icon'=>'perm_identity',
+            'icon'=>'pool',
             'link'=>'#',
             'sub'=>[
                 [
@@ -144,6 +144,12 @@ function menu_array(){
                     'link'=>URL::to('module/pool')
                 ],
             ]
+        ],
+        [
+            'label'=>'Booking List',
+            'roll_id'=>2,
+            'icon'=>'book',
+            'link'=>url('module/host/booking_list'),
         ],
 
         /**=======GUEST MENU========**/
