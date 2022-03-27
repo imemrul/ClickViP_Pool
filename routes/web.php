@@ -64,7 +64,7 @@ Route::group(['prefix'=>'module'],function(){
     Route::resource('pool','PoolController');
     Route::get('host/booking_list','BookingController@host_booking_list');
     Route::any('host/booking_search','BookingController@host_booking_search');
-
+    Route::any('host/revenue_report','BookingController@host_revenue_report');
     Route::any('executive/search_call_history','ExecutiveCrud@search_call_history');
     Route::resource('executive','ExecutiveCrud');
 

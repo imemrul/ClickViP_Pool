@@ -22,14 +22,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff1fbce8-7701-46e8-a401-d90aa1bcc57c" name="Default Changelist" comment="Edit File Check">
-      <change afterPath="$PROJECT_DIR$/public/uploads/3_164839580540.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/modules/guest/booking/revenue_report.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Functions/custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Functions/custom.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/modules/guest/booking/host_booking_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modules/guest/booking/host_booking_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/7bd4dc14d50875dc9b7ea4ba5485caf3508adff7.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/7bd4dc14d50875dc9b7ea4ba5485caf3508adff7.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/ba8ec4dcbe30c5543d5238a9891b0efdfa5bf2d3.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/ba8ec4dcbe30c5543d5238a9891b0efdfa5bf2d3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/modules/pool/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modules/pool/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/88c8a36085a66b92cb4d7b984b0b09db38239ad6.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/88c8a36085a66b92cb4d7b984b0b09db38239ad6.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,14 +159,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/modules/executive" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/modules/guest/booking" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\xampp\htdocs\cvpms\resources\views\admin\modules\executive" />
       <recent name="E:\xampp\htdocs\cvpms\resources\views\admin\modules\guest\booking" />
+      <recent name="E:\xampp\htdocs\cvpms\resources\views\admin\modules\executive" />
       <recent name="E:\xampp\htdocs\cvpms\app" />
       <recent name="E:\xampp\htdocs\cvpms\resources\views\admin\modules\pool" />
       <recent name="E:\xampp\htdocs\medicine\public" />
@@ -209,7 +208,7 @@
       <workItem from="1647874397158" duration="1928000" />
       <workItem from="1648042256747" duration="866000" />
       <workItem from="1648353743210" duration="17288000" />
-      <workItem from="1648393978405" duration="3720000" />
+      <workItem from="1648393978405" duration="7123000" />
     </task>
     <task id="LOCAL-00001" summary="Added Sub Them File">
       <created>1647522102131</created>
@@ -302,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648385036102</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Edit File Check">
+      <created>1648398023020</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1648398023020</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,10 +361,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1647612360602" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1648385068637">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1648398048886">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1648385068637" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1648398048886" />
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1647636565841">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -367,13 +373,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="152" key="git4idea.merge.GitMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1647636500538" />
-    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1648385050720">
+    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1648398031429">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1648385050720" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1648396577428">
+    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1648398031429" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1648400481028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1648396577428" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1648400481028" />
   </component>
 </project>

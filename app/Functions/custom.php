@@ -158,8 +158,8 @@ function menu_array(){
         [
             'label'=>'Revenue report',
             'roll_id'=>2,
-            'icon'=>'book',
-            'link'=>url('module/host/booking_list'),
+            'icon'=>'graphic_eq',
+            'link'=>url('module/host/revenue_report'),
         ],
 
         /**=======GUEST MENU========**/
@@ -242,6 +242,15 @@ function get_revenue($from=false,$to=false){
         $date_wise_booking->where('date','<=',$to);
     }
     return $date_wise_booking->where('status','Booked')->sum('price');
-
+}
+function pool_wise_revenue($pool_id, $from=false, $to=false){
+    $date_wise_booking = Weekly_session_wise_pool_price::where('pool_id',$pool_id);
+    if($from){
+        $date_wise_booking->where('date','>=',$from);
+    }
+    if($to){
+        $date_wise_booking->where('date','<=',$to);
+    }
+    return $date_wise_booking->where('status','Booked')->sum('price');
 }
 

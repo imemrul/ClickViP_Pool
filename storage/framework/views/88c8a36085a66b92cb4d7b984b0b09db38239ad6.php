@@ -51,7 +51,7 @@
                             <tbody>
                             <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i=>$row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr class="font-12">
-                                <td>PID_<?php echo $row->id; ?></td>
+                                <td>PID-<?php echo $row->id; ?></td>
                                 <td style="width:250px;position:relative;">
                                     <?php echo $row->title; ?>
 

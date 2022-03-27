@@ -51,7 +51,7 @@
                             <tbody>
                             @foreach($results as $i=>$row)
                             <tr class="font-12">
-                                <td>PID_{!! $row->id !!}</td>
+                                <td>PID-{!! $row->id !!}</td>
                                 <td style="width:250px;position:relative;">
                                     {!! $row->title !!}
                                 </td>
