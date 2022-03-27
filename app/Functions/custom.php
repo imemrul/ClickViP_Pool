@@ -150,7 +150,7 @@ function menu_array(){
             ]
         ],
         [
-            'label'=>'Booking List',
+            'label'=>'Booking Report',
             'roll_id'=>2,
             'icon'=>'book',
             'link'=>url('module/host/booking_list'),
