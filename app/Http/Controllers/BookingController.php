@@ -221,11 +221,31 @@ class BookingController extends Controller
             $date_wise_booking->where('date','<=',$request->to);
         }
         if($request->booking_status){
-            $date_wise_booking->where('status','<=',$request->booking_status);
+            $date_wise_booking->where('status',$request->booking_status);
         }
         $session_wise_pool_ids =  $date_wise_booking->pluck('id');
         $booking = Booking::whereIn('session_wise_pool_id',$session_wise_pool_ids)->orderBy('id','desc')->paginate(10);
 
         return view('admin.modules.guest.booking.host_booking_list', compact('booking'));
+    }
+
+    public function host_revenue_report(){
+        //return request()->pool_id;
+        $pool = Pool::select(['id','title','emirates','address'])->orderBy('title','desc');
+        if(request()->pool_id){
+            //return request()->pool_id;
+            $pool->where('id',request()->pool_id);
+        }
+        if(request()->emirates){
+            $pool->where('emirates',request()->emirates);
+        }
+        $results = $pool->where('host_id',auth()->user()->id)->get();
+        //return $results;
+        $results->each(function($item){
+            $item->total_revenue = pool_wise_revenue($item->id,request()->from,request()->to);
+            $item->location = $item->location->name or 'N/A';
+            return $item;
+        });
+        return view('admin.modules.guest.booking.revenue_report',compact('results'));
     }
 }
