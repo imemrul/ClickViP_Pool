@@ -1,4 +1,3 @@
-/storage/*
+storage/*
 .env
-.vscode/launch.json
-.env
+.vscode/*

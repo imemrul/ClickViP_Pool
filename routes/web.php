@@ -25,6 +25,7 @@ Route::get('/logout','AuthController@logout');
 
 Route::post('registration','AuthController@registration');
 Route::get('check_email_availibility','AuthController@check_email_availibility');
+Auth::routes(['verify' => true]);
 Route::get('pool_details/{slug}','HomeController@pool_details');
 Route::get('pool/payment/{slug}','HomeController@payment');
 Route::get('pool/payment/confirmation/{slug}','HomeController@paymentConfirm');

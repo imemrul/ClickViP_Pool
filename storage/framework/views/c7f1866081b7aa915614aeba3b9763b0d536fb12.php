@@ -95,7 +95,7 @@
                 </div>
                 <?php endif; ?>
                 
-                <?php if(Auth::user()->roll_id === 1 || Auth::user()->roll_id === 2): ?>
+                <?php if(Auth::user()->roll_id === 1): ?>
                 <div class="col-xs-4">
                     <div class="info-box bg-pink hover-expand-effect">
                         <div class="icon">
@@ -103,7 +103,7 @@
                         </div>
                         <div class="content">
                             <div class="text">TOTAL Guest</div>
-                            <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">0</div>
+                            <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20"><?php echo \App\User::where('roll_id',3)->count(); ?></div>
                         </div>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
                 </div>
                 <?php endif; ?>
                 
-                <?php if(Auth::user()->roll_id === 1 || Auth::user()->roll_id === 2): ?>
+                <?php if(Auth::user()->roll_id === 1): ?>
                 <div class="col-xs-4">
                     <div class="info-box bg-blue hover-expand-effect">
                         <div class="icon">
@@ -161,6 +161,74 @@
                     </div>
                 </div>
                 <?php endif; ?>
+
+                <?php if(Auth::user()->roll_id === 2): ?>
+                    <div class="col-xs-6">
+                        <div class="info-box bg-pink hover-expand-effect">
+                            <div class="icon">
+                                <i class="material-icons">perm_identity</i>
+                            </div>
+                            <div class="content">
+                                <div class="text">TOTAL Guest</div>
+                                <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20"><?php echo \App\User::where('roll_id',3)->count(); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="info-box bg-red hover-expand-effect">
+                            <div class="icon">
+                                <i>د.إ</i>
+                            </div>
+                            <div class="content">
+                                <div class="text">Daily Revenue</div>
+                                <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">
+                                    <?php echo get_revenue(\Carbon\Carbon::now()->toDateString(), \Carbon\Carbon::now()->toDateString()); ?> AED
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="info-box bg-red hover-expand-effect">
+                            <div class="icon">
+                                <i>د.إ</i>
+                            </div>
+                            <div class="content">
+                                <div class="text">Weekly Revenue <small><sup>last 7 days</sup></small></div>
+                                <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">
+                                    <?php echo get_revenue(\Carbon\Carbon::now()->subDays(7)->toDateString(), Carbon\Carbon::now()->toDateString()); ?> AED
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="info-box bg-red hover-expand-effect">
+                            <div class="icon">
+                                <i>د.إ</i>
+                            </div>
+                            <div class="content">
+                                <div class="text">Monthly Revenue  <small><sup>last 30 days</sup></small></div>
+                                <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">
+                                    <?php echo get_revenue(\Carbon\Carbon::now()->subDays(30)->toDateString(), Carbon\Carbon::now()->toDateString()); ?> AED
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="info-box bg-red hover-expand-effect">
+                            <div class="icon">
+                                <i>د.إ</i>
+                            </div>
+                            <div class="content">
+                                <div class="text">Yearly Revenue <small><sup>last 365 days</sup></small></div>
+                                <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">
+                                    <?php echo get_revenue(); ?> AED
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+
                 
                 <?php if(Auth::user()->roll_id === 1): ?>
                 <div class="col-xs-4">
@@ -175,6 +243,7 @@
                     </div>
                 </div>
                 <?php endif; ?>
+
             </div>
         </div>
         
