@@ -150,6 +150,12 @@ function menu_array(){
             ]
         ],
         [
+            'label'=>'Pool session alert',
+            'roll_id'=>2,
+            'icon'=>'add_alert',
+            'link'=>url('module/pool/session_alert'),
+        ],
+        [
             'label'=>'Booking Report',
             'roll_id'=>2,
             'icon'=>'book',
@@ -253,4 +259,3 @@ function pool_wise_revenue($pool_id, $from=false, $to=false){
     }
     return $date_wise_booking->where('status','Booked')->sum('price');
 }
-

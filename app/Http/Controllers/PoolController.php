@@ -7,6 +7,7 @@ use App\Pool_facility;
 use App\Pool_image;
 use App\Weekly_session_timing;
 use App\Weekly_session_wise_pool_price;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -197,8 +198,14 @@ class PoolController extends Controller
         Weekly_session_wise_pool_price::where('pool_id',request()->pool_id)->where('date',$date)->delete();
     }
 
-    public function  testfunction(){
-        return 'this function is to be delete';
+    public function pool_session_alert(){
+        //return Carbon::now()->addDay(1)->toDateString();
+        $results = Pool::where('host_id',auth()->user()->id)->paginate(20);
+        $results->each(function($item){
+           $item->total_booked_session = $item->session_wise_price()->where('date','>=',Carbon::now()->addDay(1)->toDateString())->where('status','Booked')->count();
+           $item->remaining_available_session = $item->session_wise_price()->where('date','>=',Carbon::now()->addDay(1)->toDateString())->where('status','Available')->count();
+        });
+        return view('admin.modules.pool.session_wise_pool_alert',compact('results'));
     }
 }
 

@@ -61,12 +61,14 @@ Route::group(['prefix'=>'module'],function(){
     Route::resource('weekly_session_time','WeeklySessionTime');
     Route::delete('pool/delete_image/{image_id}','PoolController@delete_image');
     Route::delete('pool/delete_session_time_slot/{date}','PoolController@delete_session_time_slot');
+    Route::get('pool/session_alert','PoolController@pool_session_alert');
     Route::resource('pool','PoolController');
     Route::get('host/booking_list','BookingController@host_booking_list');
     Route::any('host/booking_search','BookingController@host_booking_search');
     Route::any('host/revenue_report','BookingController@host_revenue_report');
     Route::any('executive/search_call_history','ExecutiveCrud@search_call_history');
     Route::resource('executive','ExecutiveCrud');
+
 
     Route::get('/guest/booking','BookingController@guestBooking');
     Route::get('/guest/paid','BookingController@guestPaid');
