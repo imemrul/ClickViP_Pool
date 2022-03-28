@@ -48,10 +48,18 @@
                                         <label for="">App Name</label>
                                         <div class="input-group">
                                             <span id="" class="input-group-addon">
-                                                <i class="material-icons">person</i>
+                                                <i class="material-icons">badge</i>
                                             </span>
                                             <div class="form-line" style="margin-bottom: 0px;">
                                                 {!! Form::text('name',null,['class'=>'form-control','placeholder'=>'App Name..','autocomplete'=>'off','required'=>'true']) !!}
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span id="" class="input-group-addon">
+                                                <i class="material-icons">location_on</i>
+                                            </span>
+                                            <div class="form-line" style="margin-bottom: 0px;">
+                                                {!! Form::text('address',null,['class'=>'form-control','placeholder'=>'Address..','autocomplete'=>'off','required'=>'true']) !!}
                                             </div>
                                         </div>
                                         <label for="">App Logo</label>

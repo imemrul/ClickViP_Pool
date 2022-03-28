@@ -23,7 +23,7 @@
 <!-- Container -->
 <div class="container-fluid invoice-container">
     <!-- Header -->
-    <header>
+    <header style="background-color: #8ccde3;padding: 10px 10px 0px 10px;">
         <div class="row align-items-center">
             <div class="col-sm-7 text-center text-sm-start mb-3 mb-sm-0">
                 <img src="{!!asset('public/uploads/'.\App\Setting::first()->image)!!}" alt="">
@@ -41,8 +41,7 @@
             <div class="col-sm-6 text-sm-end order-sm-1"> <strong>Pay To:</strong>
                 <address>
                     ClickVIpool<br />
-                    15 Hodges Mews, Airpot road<br />
-                    Uttra, Airport, Dhaka
+                    {!!\App\Setting::first()->address!!}
                 </address>
             </div>
             <div class="col-sm-6 order-sm-0"> <strong>Invoiced To:</strong>
