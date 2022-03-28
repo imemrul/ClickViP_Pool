@@ -14,6 +14,8 @@
 use App\Events\TaskEvent;
 
 Route::get('/', 'HomeController@index');
+Route::get('dashboard', [AuthController::class, 'dashboard'])->middleware(['auth', 'is_verify_email']);
+Route::get('account/verify/{token}', [AuthController::class, 'verifyAccount'])->name('user.verify');
 Route::get('dashboard', 'Admin@index');
 Route::get('/login','AuthController@index');
 Route::post('/login','AuthController@login');
@@ -25,7 +27,6 @@ Route::get('/logout','AuthController@logout');
 
 Route::post('registration','AuthController@registration');
 Route::get('check_email_availibility','AuthController@check_email_availibility');
-Auth::routes(['verify' => true]);
 Route::get('pool_details/{slug}','HomeController@pool_details');
 Route::get('pool/payment/{slug}','HomeController@payment');
 Route::get('pool/payment/confirmation/{slug}','HomeController@paymentConfirm');
@@ -51,12 +52,10 @@ Route::get('booking/payment_unsuccess/{booking_id}','BookingController@payment_u
 Route::resource('booking','BookingController');
 
 Route::group(['prefix'=>'module'],function(){
-
     Route::resource('setting','SettingController');
     Route::resource('page','PageController');  
     Route::any('client/search','ClientCrud@search');
     Route::resource('client','ClientCrud');
-
     Route::resource('location','LocationController');
     Route::resource('facility','FacilityController');
     Route::resource('weekly_session_time','WeeklySessionTime');
@@ -69,8 +68,6 @@ Route::group(['prefix'=>'module'],function(){
     Route::any('host/revenue_report','BookingController@host_revenue_report');
     Route::any('executive/search_call_history','ExecutiveCrud@search_call_history');
     Route::resource('executive','ExecutiveCrud');
-
-
     Route::get('/guest/booking','BookingController@guestBooking');
     Route::get('/guest/paid','BookingController@guestPaid');
     Route::get('/guest/allinvoice','BookingController@guestPaidAll');
