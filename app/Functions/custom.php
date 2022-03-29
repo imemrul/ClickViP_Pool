@@ -52,18 +52,28 @@ function menu_array(){
             ]
         ],
         [
-            'label'=>'Reminder',
+            'label'=>'Manage Pool',
             'roll_id'=>1,
-            'icon'=>'alarm',
+            'icon'=>'pool',
+            'link'=>url('module/pool'),
+        ],
+        [
+            'label'=>'Report',
+            'roll_id'=>1,
+            'icon'=>'article',
             'link'=>'#',
             'sub'=>[
                 [
-                    'label'=>'Call History',
-                    'link'=>url('module/activity')
+                    'label'=>'Revenue Report',
+                    'link'=>url('module/admin_revenue_report')
                 ],
                 [
-                    'label'=>'Reminder queue',
-                    'link'=>url('module/activity')
+                    'label'=>'Payment Report',
+                    'link'=>url('module/admin_payment_report')
+                ],
+                [
+                    'label'=>'Due Report',
+                    'link'=>url('module/page')
                 ],
             ]
         ],
@@ -247,7 +257,11 @@ function get_revenue($from=false,$to=false){
     if($to){
         $date_wise_booking->where('date','<=',$to);
     }
-    return $date_wise_booking->where('status','Booked')->sum('price');
+    $pool_price =  $date_wise_booking->where('status','Booked')->sum('price');
+    $confirmed_booked_id = $date_wise_booking->where('status','Booked')->pluck('id');
+    $barbecue_price =  Booking::whereIn('session_wise_pool_id',$confirmed_booked_id)->sum('barbeque_price');
+    $towel_price =  Booking::whereIn('session_wise_pool_id',$confirmed_booked_id)->sum('towel_price');
+    return $pool_price + $barbecue_price + $towel_price;
 }
 function pool_wise_revenue($pool_id, $from=false, $to=false){
     $date_wise_booking = Weekly_session_wise_pool_price::where('pool_id',$pool_id);
@@ -257,5 +271,26 @@ function pool_wise_revenue($pool_id, $from=false, $to=false){
     if($to){
         $date_wise_booking->where('date','<=',$to);
     }
-    return $date_wise_booking->where('status','Booked')->sum('price');
+    $pool_book_price =  $date_wise_booking->where('status','Booked')->sum('price');
+    $confirmed_booked_id = $date_wise_booking->where('status','Booked')->pluck('id');
+    $barbecue_price =  Booking::whereIn('session_wise_pool_id',$confirmed_booked_id)->sum('barbeque_price');
+    $towel_price =  Booking::whereIn('session_wise_pool_id',$confirmed_booked_id)->sum('towel_price');
+    return $pool_book_price + $barbecue_price + $towel_price;
+}
+
+function pool_wise_admin_revenue($pool_id, $from=false, $to=false){
+    $date_wise_booking = Weekly_session_wise_pool_price::where('pool_id',$pool_id);
+    if($from){
+        $date_wise_booking->where('date','>=',$from);
+    }
+    if($to){
+        $date_wise_booking->where('date','<=',$to);
+    }
+    $pool_book_price =  $date_wise_booking->where('status','Booked')->sum('price');
+    $confirmed_booked_id = $date_wise_booking->where('status','Booked')->pluck('id');
+    $barbecue_price =  Booking::whereIn('session_wise_pool_id',$confirmed_booked_id)->sum('barbeque_price');
+    $towel_price =  Booking::whereIn('session_wise_pool_id',$confirmed_booked_id)->sum('towel_price');
+
+    $total_revenue =  $pool_book_price + $barbecue_price + $towel_price;
+    return  round((\App\Setting::first()->commission * $total_revenue) / 100);
 }

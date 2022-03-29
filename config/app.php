@@ -179,7 +179,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
 
         // Html dom parser provider
-        Ammadeuss\LaravelHtmlDomParser\ServiceProvider::class,
+        //Ammadeuss\LaravelHtmlDomParser\ServiceProvider::class,
 
     ],
 

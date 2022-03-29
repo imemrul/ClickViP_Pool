@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Activity;
 
+use App\Booking_payment_detail;
 use App\Campaign;
 use App\Deal;
 use App\Mail\DailyActivity;
 use App\Mail\DailySummary;
+use App\Pool;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -112,6 +114,41 @@ class Admin extends Controller{
         curl_close ($ch);
         return 'Activity email was sent';
 
+    }
+
+
+    public function admin_revenue_report(){
+
+        //return request()->pool_id;
+        $pool = Pool::select(['id','title','emirates','address','host_id'])->orderBy('title','desc');
+        if(request()->pool_id){
+            //return request()->pool_id;
+            $pool->where('id',request()->pool_id);
+        }
+        if(request()->emirates){
+            $pool->where('emirates',request()->emirates);
+        }
+        $results = $pool->get();
+        //return $results;
+        $results->each(function($item){
+            $item->total_revenue = pool_wise_admin_revenue($item->id,request()->from,request()->to);
+            $item->location = $item->location->name or 'N/A';
+            return $item;
+        });
+
+        return view('admin.admin_revenue_report',compact('results'));
+    }
+
+    public function admin_payment_report(){
+        $results = Booking_payment_detail::orderBy('id','desc');
+        if(request()->from){
+            $results->where('created_at','>=',request()->from.' 00:00:00');
+        }
+        if(request()->to){
+            $results->where('created_at','<=',request()->to.' 23:23:59');
+        }
+        $results =  $results->get();
+        return view('admin.admin_payment_report',compact('results'));
     }
 
 

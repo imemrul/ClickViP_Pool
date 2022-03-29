@@ -23,9 +23,17 @@ class PoolController extends Controller
      */
     public function index()
     {
-        $results = Pool::where('host_id',auth()->user()->id)->orderBy('id','desc')->paginate(20);
-        //return $pools;
-        return view('admin.modules.pool.index',compact('results'));
+        //return auth()->user();
+        if(auth()->user()->roll_id ==1){
+            $results = Pool::orderBy('id','desc')->paginate(20);
+            //return $pools;
+            return view('admin.modules.pool.admin_manage_pool',compact('results'));
+        }else{
+            $results = Pool::where('host_id',auth()->user()->id)->orderBy('id','desc')->paginate(20);
+            //return $pools;
+            return view('admin.modules.pool.index',compact('results'));
+        }
+
     }
 
     /**
@@ -206,6 +214,12 @@ class PoolController extends Controller
            $item->remaining_available_session = $item->session_wise_price()->where('date','>=',Carbon::now()->addDay(1)->toDateString())->where('status','Available')->count();
         });
         return view('admin.modules.pool.session_wise_pool_alert',compact('results'));
+    }
+    public function status_update($pool_id){
+        Pool::find($pool_id)->fill([
+            'status' => request()->status
+        ])->save();
+        return 1;
     }
 }
 

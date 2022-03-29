@@ -52,7 +52,10 @@ Route::resource('booking','BookingController');
 Route::group(['prefix'=>'module'],function(){
 
     Route::resource('setting','SettingController');
-    Route::resource('page','PageController');  
+    Route::any('admin_revenue_report','Admin@admin_revenue_report');
+    Route::any('admin_payment_report','Admin@admin_payment_report');
+
+    Route::resource('page','PageController');
     Route::any('client/search','ClientCrud@search');
     Route::resource('client','ClientCrud');
 
@@ -62,6 +65,7 @@ Route::group(['prefix'=>'module'],function(){
     Route::delete('pool/delete_image/{image_id}','PoolController@delete_image');
     Route::delete('pool/delete_session_time_slot/{date}','PoolController@delete_session_time_slot');
     Route::get('pool/session_alert','PoolController@pool_session_alert');
+    Route::get('pool/status_update/{pool_id}','PoolController@status_update');
     Route::resource('pool','PoolController');
     Route::get('host/booking_list','BookingController@host_booking_list');
     Route::any('host/booking_search','BookingController@host_booking_search');

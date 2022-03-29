@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="body table-responsive">
-                        <p>TOTAL SESSION TIME SLOT: {!! $results->count(); !!}</p>
+                        <p>TOTAL: {!! $results->count(); !!}</p>
                         <table class="table table-hover table-responsive">
                             <thead>
                             <tr>

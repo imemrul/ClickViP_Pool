@@ -80,7 +80,7 @@
                             @if($booking)
                                 @foreach($booking as $book)
                                     <tr>
-                                        <td>ID-{!! $book->id !!}</td>
+                                        <td>BID-{!! $book->id !!}</td>
                                         <td>{!!$book->booking_session->date !!}</td>
                                         <td>{!! $book->guest->full_name !!}</td>
                                         <td class="text-center">AED {!!$book->total!!}</td>
