@@ -2,13 +2,14 @@
 
 namespace App;
 
-use Carbon\Carbon;
+use Illuminate\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use Notifiable;
+    use MustVerifyEmail, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'full_name', 'email', 'password','phone','photo','address','roll_id','account_type','referrer_commission','branch_id','status'
+        'full_name', 'email', 'password','phone','photo','address','roll_id','account_type','referrer_commission','branch_id','status','is_email_verified'
     ];
 
     /**
@@ -26,6 +27,9 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password', 'remember_token',
+    ];
+    protected $casts = [
+        'email_verified_at' => 'datetime',
     ];
 
     public function members(){

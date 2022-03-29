@@ -14,6 +14,8 @@
 use App\Events\TaskEvent;
 
 Route::get('/', 'HomeController@index');
+Route::get('dashboard', [AuthController::class, 'dashboard'])->middleware(['auth', 'is_verify_email']);
+Route::get('account/verify/{token}', [AuthController::class, 'verifyAccount'])->name('user.verify');
 Route::get('dashboard', 'Admin@index');
 Route::get('/login','AuthController@index');
 Route::post('/login','AuthController@login');
@@ -50,7 +52,6 @@ Route::get('booking/payment_unsuccess/{booking_id}','BookingController@payment_u
 Route::resource('booking','BookingController');
 
 Route::group(['prefix'=>'module'],function(){
-
     Route::resource('setting','SettingController');
     Route::any('admin_revenue_report','Admin@admin_revenue_report');
     Route::any('admin_payment_report','Admin@admin_payment_report');
@@ -58,7 +59,6 @@ Route::group(['prefix'=>'module'],function(){
     Route::resource('page','PageController');
     Route::any('client/search','ClientCrud@search');
     Route::resource('client','ClientCrud');
-
     Route::resource('location','LocationController');
     Route::resource('facility','FacilityController');
     Route::resource('weekly_session_time','WeeklySessionTime');
@@ -72,8 +72,6 @@ Route::group(['prefix'=>'module'],function(){
     Route::any('host/revenue_report','BookingController@host_revenue_report');
     Route::any('executive/search_call_history','ExecutiveCrud@search_call_history');
     Route::resource('executive','ExecutiveCrud');
-
-
     Route::get('/guest/booking','BookingController@guestBooking');
     Route::get('/guest/paid','BookingController@guestPaid');
     Route::get('/guest/allinvoice','BookingController@guestPaidAll');

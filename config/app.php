@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'Asia/Dhaka',
+    'timezone' => 'Asia/Dubai',
 
     /*
     |--------------------------------------------------------------------------
@@ -179,7 +179,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
 
         // Html dom parser provider
-        //Ammadeuss\LaravelHtmlDomParser\ServiceProvider::class,
+        // Ammadeuss\LaravelHtmlDomParser\ServiceProvider::class,
 
     ],
 
@@ -231,7 +231,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'HTMLDomParser' => Ammadeuss\LaravelHtmlDomParser\Facade::class,
         'Pusher' => Pusher\Pusher::class,
 
     ],
