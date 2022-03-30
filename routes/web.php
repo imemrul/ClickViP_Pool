@@ -21,6 +21,9 @@ Route::get('/login','AuthController@index');
 Route::post('/login','AuthController@login');
 Route::post('/ajax_login','AuthController@ajax_login');
 Route::get('/my_account','GuestController@index');
+Route::post('profile_update/{user_id}','AuthController@profile_update');
+Route::post('login_id_update/{user_id}','AuthController@login_id_update');
+Route::post('password_update/{user_id}','AuthController@password_update');
 
 Route::get('/logout','AuthController@logout');
 

@@ -239,10 +239,10 @@ function is_executive(){
         return false;
     }
 }
-function upload_image($file){
+function upload_image($file,$name_str=false){
     $extension = $file->getClientOriginalExtension();
-    $rand = str_random();
-    $file_name = $rand.'.'.$extension;
+    $rand = \Illuminate\Support\Str::random(16);
+    $file_name = $name_str ? $name_str.$rand.'.'.$extension : $rand.'.'.$extension;
     $file->move('public/uploads/',$file_name);
     return $file_name;
 }

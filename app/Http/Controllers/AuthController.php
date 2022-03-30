@@ -20,7 +20,7 @@ class AuthController extends Controller{
 
 
     public function __construct(){
-        $this->middleware('RedirectIfAuthenticate',['except'=>'logout']);
+        $this->middleware('RedirectIfAuthenticate',['except'=>['logout','profile_update','login_id_update','password_update']]);
     }
     
     public function index(){
@@ -86,6 +86,39 @@ class AuthController extends Controller{
     public function logout(){
         Auth::logout();
         return redirect('/');
+    }
+    public function profile_update(Request $request, $user_id){
+        //return $request->all();
+        $user = User::find($user_id);
+        $user->fill([
+            'full_name' => $request->full_name,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'photo'=> $request->hasFile('photo') ? upload_image($request->file('photo'),'user_'.$user_id.'_') : $user->photo,
+        ])->save();
+        return redirect()->back()->with('message','Information updated...');
+
+    }
+    public function login_id_update(Request $request, $user_id){
+        $user = User::find($user_id);
+        if(auth()->user()->email != $request->email){
+            if(!User::where('email',$request->email)->first()){
+                $user->fill([
+                    'email'=>$request->email
+                ])->save();
+            }else{
+                return redirect()->back()->with('message','This Login ID already taken, Try another...');
+            }
+        }
+        return redirect()->back()->with('message','Login ID updated...');
+    }
+    public function password_update(Request $request, $user_id){
+        //return $request->all();
+        User::find($user_id)->fill([
+            'password'=>\Illuminate\Support\Facades\Hash::make($request->password),
+        ])->save();
+
+        return redirect()->back()->with('message','Password updated...');
     }
 
 
