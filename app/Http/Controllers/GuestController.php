@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Booking_payment_detail;
 use App\Guest;
 use App\User;
 use Carbon\Carbon;
@@ -90,5 +91,17 @@ class GuestController extends Controller
     public function destroy(Guest $guest)
     {
         //
+    }
+
+    public function guest_payment(){
+        $results = Booking_payment_detail::orderBy('id','desc');
+        if(request()->from){
+            $results->where('created_at','>=',request()->from.' 00:00:00');
+        }
+        if(request()->to){
+            $results->where('created_at','<=',request()->to.' 23:23:59');
+        }
+        $results =  $results->get();
+        return view('admin.admin_payment_report',compact('results'));
     }
 }

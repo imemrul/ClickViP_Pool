@@ -19,19 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d7bb677-0ae2-40bd-85fc-57f8c66a374b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/user_2_MtqgTgknyJqKojio.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/user_3_.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/user_3_VOHEJTz1pdwBePxR.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/user_3_aNOkTdPAFR1anCHQ.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cvpms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cvpms.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pmpg.iml" beforeDir="false" />
+    <list default="true" id="7d7bb677-0ae2-40bd-85fc-57f8c66a374b" name="Default Changelist" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Functions/custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Functions/custom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/modules/guest/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modules/guest/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientCrud.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientCrud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/modules/client/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modules/client/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/modules/executive/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modules/executive/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,8 +188,20 @@
       <workItem from="1648563283769" duration="6771000" />
       <workItem from="1648573693882" duration="3079000" />
       <workItem from="1648610785701" duration="1299000" />
-      <workItem from="1648629680930" duration="598000" />
+      <workItem from="1648629680930" duration="1426000" />
+      <workItem from="1648701805836" duration="2288000" />
+      <workItem from="1648704921035" duration="2993000" />
+      <workItem from="1648905168458" duration="221000" />
+      <workItem from="1648975239499" duration="2090000" />
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1648631216883</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648631216883</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,30 +219,38 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1648715704202">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1648715704202" />
     <state x="463" y="290" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1648575931521">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="290" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1366.728@0.0.1366.728" timestamp="1648575931521" />
-    <state x="596" y="115" key="FileChooserDialogImpl" timestamp="1648612542704">
+    <state x="596" y="115" key="FileChooserDialogImpl" timestamp="1648905390508">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="596" y="115" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1648612542704" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1648576154373">
+    <state x="596" y="115" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1648905390508" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1648631223719">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1648576154373" />
-    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1648576142477">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1648631223719" />
+    <state x="400" y="152" key="git4idea.merge.GitPullDialog" timestamp="1648631131244">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1648576142477" />
+    <state x="400" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1648631131244" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1648574975525">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1648574975525" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1648573794741">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1648977196716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1648573794741" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1648977196716" />
   </component>
 </project>
