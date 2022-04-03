@@ -29,9 +29,9 @@ class ClientCrud extends Controller
     {
         //return 'test';
         //return auth()->user();
-        $agents = User::where('roll_id',2)->get();
-        $clients = Client::with(['agent'])->orderBy('name','asc')->paginate(30);
-        return view('admin.modules.client.index',compact('request','clients','agents'));
+        $clients = User::orderBy('full_name','asc')->where('roll_id',3)->paginate(30);
+        //return $clients;
+        return view('admin.modules.client.index',compact('request','clients'));
     }
 
     /**
@@ -144,15 +144,11 @@ class ClientCrud extends Controller
     }
     public function search(Request $request){
         //return $request->all();
-        $clients = Client::orderBy('name','asc');
+        $clients = User::orderBy('full_name','asc');
         if(!empty($request->name)){
             $clients->where(function($query) use($request){
-                $query->where('name','LIKE','%'.$request->name.'%');
+                $query->where('full_name','LIKE','%'.$request->name.'%');
             });
-        }
-        if(!empty($request->agent_id)){
-
-            $clients->whereIn('agent_id',$request->agent_id);
         }
         $clients = $clients->paginate(30);
         return view('admin.modules.client.index',compact('request','clients'));

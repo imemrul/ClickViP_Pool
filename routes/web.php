@@ -59,6 +59,9 @@ Route::group(['prefix'=>'module'],function(){
     Route::any('admin_revenue_report','Admin@admin_revenue_report');
     Route::any('admin_payment_report','Admin@admin_payment_report');
 
+
+    Route::any('guest_payment','GuestController@guest_payment');
+
     Route::resource('page','PageController');
     Route::any('client/search','ClientCrud@search');
     Route::resource('client','ClientCrud');

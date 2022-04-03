@@ -22,34 +22,14 @@ function menu_array(){
             'label'=>'Host',
             'roll_id'=>1,
             'icon'=>'perm_identity',
-            'link'=>'#',
-            'sub'=>[
-                [
-                    'label'=>'Create',
-                    'link'=>URL::to('module/executive/create')
-                ],
-                [
-                    'label'=>'List',
-                    'link'=>URL::to('module/executive')
-                ],
-            ]
+            'link'=>URL::to('module/executive')
         ],
        
         [
             'label'=>'Guest',
             'roll_id'=>1,
             'icon'=>'perm_identity',
-            'link'=>'#',
-            'sub'=>[
-                [
-                    'label'=>'Create',
-                    'link'=>URL::to('module/client/create')
-                ],
-                [
-                    'label'=>'List',
-                    'link'=>URL::to('module/client')
-                ],
-            ]
+            'link'=>URL::to('module/client')
         ],
         [
             'label'=>'Manage Pool',
