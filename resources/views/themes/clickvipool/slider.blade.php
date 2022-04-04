@@ -3,7 +3,8 @@
         <section class="frontpage-slider">
             <div class="owl-slider owl-slider-header owl-slider-fullscreen">
                 <!-- === slide item === -->
-                <div class="item" style="background-image:url({{ asset('public/themes/clickvipool/assets/images/slide-2.jpg')}})">
+                @foreach($sliders as $slider)
+                <div class="item" style="background-image:url({{ asset($slider->slide_image)}})">
                     <div class="box text-center">
                         <div class="container">
                             {{-- <div class="rating animated" data-animation="fadeInDown">
@@ -16,105 +17,23 @@
                             <div class="col-xs-8 col-sm-8"></div>
                             <div class="col-xs-4 col-sm-4" style="background:rgb(0 0 0 / 50%);padding:50px 0">
                                 <h2 class="title animated h1" data-animation="fadeInDown">
-                                    Utilise <br /> <span>Your Private Pool</span>
+                                   {!!$slider->title!!}
                                 </h2>
                                 <div class="desc animated" data-animation="fadeInUp">
-                                    Give Rent Your Pool
+                                    {!!$slider->descOne!!}
                                 </div>
                                 <div class="desc animated" data-animation="fadeInUp">
-                                    Be an Host.
+                                    {!!$slider->descYwo!!}
                                 </div>
                                 <div class="animated" data-animation="fadeInUp">
-                                    <a href="#" class="btn btn-clean">Read More..</a>
+                                    <a href="{!!$slider->btnUrl!!}" class="btn btn-clean">Read More..</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                @endforeach
                 <!-- === slide item === -->
-
-                <div class="item" style="background-image:url({{ asset('public/themes/clickvipool/assets/images/slide-1.jpg')}})">
-                    <div class="box text-center">
-                        <div class="container">
-                            <div class="col-xs-8 col-sm-8"></div>
-                            <div class="col-xs-4 col-sm-4" style="background:rgb(0 0 0 / 50%);">
-                                <h2 class="title animated h1" data-animation="fadeInDown">
-                                    Utilise <br /> <span>Your Private Pool</span>
-                                </h2>
-                                <div class="desc animated" data-animation="fadeInUp">
-                                    Give Rent Your Pool
-                                </div>
-                                <div class="desc animated" data-animation="fadeInUp">
-                                    Be an Host.
-                                </div>
-                                <div class="animated" data-animation="fadeInUp">
-                                    <a href="#" class="btn btn-clean">Read More..</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <!-- === slide item === -->
-
-                <div class="item" style="background-image:url({{ asset('public/themes/clickvipool/assets/images/slide-5.jpg')}})">
-                    <div class="box text-center">
-                        <div class="container">
-                            {{-- <div class="rating animated" data-animation="fadeInDown">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div> --}}
-                            <div class="col-xs-8 col-sm-8"></div>
-                            <div class="col-xs-4 col-sm-4" style="background:rgb(0 0 0 / 50%);">
-                                <h2 class="title animated h1" data-animation="fadeInDown">
-                                    Utilise <br /> <span>Your Private Pool</span>
-                                </h2>
-                                <div class="desc animated" data-animation="fadeInUp">
-                                    Give Rent Your Pool
-                                </div>
-                                <div class="desc animated" data-animation="fadeInUp">
-                                    Be an Host.
-                                </div>
-                                <div class="animated" data-animation="fadeInUp">
-                                    <a href="#" class="btn btn-clean">Read More..</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- === slide item === -->
-                <div class="item" style="background-image:url({{ asset('public/themes/clickvipool/assets/images/slide-4.jpg')}})">
-                    <div class="box text-center">
-                        <div class="container">
-                            {{-- <div class="rating animated" data-animation="fadeInDown">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div> --}}
-                            <div class="col-xs-8 col-sm-8"></div>
-                            <div class="col-xs-4 col-sm-4" style="background:rgb(0 0 0 / 50%);">
-                                <h2 class="title animated h1" data-animation="fadeInDown">
-                                    Utilise <br /> <span>Your Private Pool</span>
-                                </h2>
-                                <div class="desc animated" data-animation="fadeInUp">
-                                    Give Rent Your Pool
-                                </div>
-                                <div class="desc animated" data-animation="fadeInUp">
-                                    Be an Host.
-                                </div>
-                                <div class="animated" data-animation="fadeInUp">
-                                    <a href="#" class="btn btn-clean">Read More..</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div> <!--/owl-slider-->
         </section>
         <!-- ======================== Booking ======================== -->

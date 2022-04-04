@@ -58,6 +58,7 @@ Route::group(['prefix'=>'module'],function(){
     Route::resource('setting','SettingController');
     Route::any('admin_revenue_report','Admin@admin_revenue_report');
     Route::any('admin_payment_report','Admin@admin_payment_report');
+    Route::resource('slider', 'SliderController');
 
 
     Route::any('guest_payment','GuestController@guest_payment');

@@ -8,8 +8,10 @@ use App\Facility;
 use App\Pool_image;
 use App\User;
 use App\Page;
+use App\Slider;
 use App\Weekly_session_timing;
 use App\Weekly_session_wise_pool_price;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,8 +25,9 @@ class HomeController extends Controller
     {
         $recentPools = Pool::orderBy('id','desc')->paginate(9);
         $facilities = Facility::all();
+        $sliders = Slider::where('activeTo', '>=', Carbon::today())->get();
         // dd($facilities);
-        return view('themes.clickvipool.index',compact('recentPools','facilities'));
+        return view('themes.clickvipool.index',compact('recentPools','facilities','sliders'));
     }
     public function pool_details($slug){
         $result = Pool::where('slug',$slug)->first();

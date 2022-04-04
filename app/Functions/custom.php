@@ -100,8 +100,8 @@ function menu_array(){
                     'link'=>URL::to('module/setting')
                 ],
                 [
-                    'label'=>'Agent Commision',
-                    'link'=>'#'
+                    'label'=>'Slider',
+                    'link'=>URL::to('module/slider')
                 ],
                 [
                     'label'=>'System Login Info',
