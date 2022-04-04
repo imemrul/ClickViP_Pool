@@ -46,7 +46,7 @@
                                     {!! $row->title !!}
                                 </td>
                                 <th>{!! $row->activeTo !!}</th>
-                                <td>{!! $row->created_at or 'N/A' !!}</td>
+                                <td>{!! $row->created_at !!}</td>
                                 <td>{!! $row->updated_at !!}</td>
                                 <td style="width:100px;">
                                     <a data-toggle="tooltip" data-title="Edit & Update" class="btn btn-xs btn-primary" href="{!! URL::to('module/slider/'.$row->id,'edit') !!}"><i class="material-icons">edit</i></a>
