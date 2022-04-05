@@ -28,7 +28,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.modules.slider.create');
     }
 
     /**
@@ -39,7 +39,18 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->file('image'));
+        $data = $request->all();
+        if($file = $request->hasFile('image')) {
+            $file = $request->file('image') ;
+            $fileName = $file->getClientOriginalName() ;
+            $destinationPath = public_path().'/uploads/slider' ;
+            $file->move($destinationPath,$fileName);
+            $data['slide_image'] = '/public/uploads/slider/'.$fileName;
+            $data['activeTo'] = "2222-01-02";
+            $slider = Slider::create($data);
+            return redirect()->back();
+        }
     }
 
     /**

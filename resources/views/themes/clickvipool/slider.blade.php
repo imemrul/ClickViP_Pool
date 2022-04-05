@@ -23,7 +23,7 @@
                                     {!!$slider->descOne!!}
                                 </div>
                                 <div class="desc animated" data-animation="fadeInUp">
-                                    {!!$slider->descTwo!!}
+                                    {!!$slider->descYwo!!}
                                 </div>
                                 <div class="animated" data-animation="fadeInUp">
                                     <a href="{!!$slider->btnUrl!!}" class="btn btn-clean">Read More..</a>
