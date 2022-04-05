@@ -72,7 +72,8 @@ class SliderController extends Controller
      */
     public function edit(Slider $slider)
     {
-        //
+        $slide = Slider::find($slider)->first();
+        return view('admin.modules.slider.edit',compact('slide'));
     }
 
     /**
@@ -84,7 +85,13 @@ class SliderController extends Controller
      */
     public function update(Request $request, Slider $slider)
     {
-        //
+        // dd($request->all());
+        $slide = Slider::find($slider);
+        $slide->fill($request->all())->save();
+        // if($request->hasFile('image')){
+           
+        // }
+        return redirect()->back()->with('message','Slider Updated...');
     }
 
     /**

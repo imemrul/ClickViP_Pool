@@ -18,16 +18,16 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            Create new Slider
+                           Update Slider
                         </h2>
                     </div>
                     <div class="body" id="app">
                         <div class="row clearfix">
-                            {!! Form::open(['url'=>URL::to('module/slider'),'class'=>'form','files'=>'true']) !!}
+                            {!! Form::model($slide,['url'=>URL::to('module/slider',$slide->id),'class'=>'form','files'=>'true','method'=>'patch']) !!}
                             <div class="col-xs-12">
                                 <div class="card">
                                     <div class="header">
-                                        <h4 class="card-title">Create Slider</h4>
+                                        <h4 class="card-title">Update Slider</h4>
                                     </div>
                                     <div class="body">
                                         <div class="row">
@@ -80,7 +80,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" name="submit" value="SAVE" class="btn btn-success btn-lg">
+                                    <input type="submit" name="submit" value="UPDATE" class="btn btn-success btn-block">
                                 </div>
 
                             </div>

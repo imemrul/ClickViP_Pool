@@ -239,21 +239,14 @@
                                 </div>
                            </div>
                             {!! Form::close() !!}
-
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-
-
 @endsection
 @section('custom_page_style')
-
 @endsection
 @section('custom_page_script')
     <script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.5/dist/latest/bootstrap-autocomplete.min.js"></script>
@@ -268,7 +261,6 @@
                     date:null,
                 }],
                 imageRow :[{}],
-
             },
             methods:{
                 addRow:function(){
@@ -295,8 +287,6 @@
                 },
             }
         });
-
-
         $(document).ready(function(){
             google.maps.event.addDomListener(window, 'load', function () {
                 var places = new google.maps.places.Autocomplete(document.getElementById('location'));

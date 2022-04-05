@@ -22,7 +22,7 @@
                 <div class="card">
                     <div class="header">
                         <strong>All Slider</strong>
-                        <a href="#" class="pull-right" data-toggle="modal" data-target="#myModal">Create New Slider</a>
+                        <a href="{!!URL::to('module/slider/create')!!}" class="pull-right">Create New Slider</a>
                         
                     </div>
                     <div class="body table-responsive">
