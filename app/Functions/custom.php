@@ -100,7 +100,7 @@ function menu_array(){
                     'link'=>URL::to('module/setting')
                 ],
                 [
-                    'label'=>'Slider',
+                    'label'=>'Slider Setting',
                     'link'=>URL::to('module/slider')
                 ],
                 [

@@ -83,10 +83,10 @@ class SliderController extends Controller
      * @param  \App\Slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Slider $slider)
+    public function update(Request $request, $id)
     {
         // dd($request->all());
-        $slide = Slider::find($slider);
+        $slide = Slider::find($id);
         $slide->fill($request->all())->save();
         // if($request->hasFile('image')){
            
