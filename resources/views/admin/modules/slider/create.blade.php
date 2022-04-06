@@ -65,17 +65,9 @@
                                                 </div>
                                             </div>
                                             <div class="col-xs-12">
-                                                <label for="">Button Url</label>
-                                                <div class="form-group">
-                                                    <div class="form-line" id="bs_datepicker_container">
-                                                        <input type="text" class="form-control" placeholder="Please choose a date...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12">
-                                                <label for="">Button Url</label>
+                                                <label for="btnUrl">Button Url</label>
                                                 <div class="input-group">
-                                                    <span id="" class="input-group-addon">
+                                                    <span id="btnUrl" class="input-group-addon">
                                                         <i class="material-icons">link</i>
                                                     </span>
                                                     <div class="form-line focused" style="margin-bottom: 0px;">

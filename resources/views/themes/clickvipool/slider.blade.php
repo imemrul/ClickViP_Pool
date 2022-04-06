@@ -1,10 +1,9 @@
         <!-- ========================  Header content ======================== -->
-
         <section class="frontpage-slider">
             <div class="owl-slider owl-slider-header owl-slider-fullscreen">
                 <!-- === slide item === -->
                 @foreach($sliders as $slider)
-                <div class="item" style="background-image:url({{ asset($slider->slide_image)}})">
+                <div class="item" style="background-image:url({{ asset("public/".$slider->slide_image)}})">
                     <div class="box text-center">
                         <div class="container">
                             {{-- <div class="rating animated" data-animation="fadeInDown">

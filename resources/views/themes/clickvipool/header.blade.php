@@ -186,13 +186,13 @@
                             </div>
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label for="first_name">Phone</label>
-                                    <input type="text" name="phone" id="first_name" class="form-control" autocomplete="off" required>
+                                    <label for="phone">Phone</label>
+                                    <input type="text" name="phone" id="phone" class="form-control" autocomplete="off" required>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label for="first_name">Email address</label>
+                                    <label for="email">Email address</label>
                                     <input type="email" name="email" id="email" class="form-control" autocomplete="off" @blur="checkEmailAvailibility" v-model="email" required>
                                     <div v-if="error_mes_duplicate_email" class="alert alert-danger" role="alert">
                                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -203,7 +203,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label for="first_name">Password</label>
+                                    <label for="password">Password</label>
                                     <input type="password" name="password" class="form-control" autocomplete="off" required>
                                 </div>
                             </div>

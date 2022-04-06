@@ -46,7 +46,7 @@ class SliderController extends Controller
             $fileName = $file->getClientOriginalName() ;
             $destinationPath = public_path().'/uploads/slider' ;
             $file->move($destinationPath,$fileName);
-            $data['slide_image'] = '/public/uploads/slider/'.$fileName;
+            $data['slide_image'] = 'uploads/slider/'.$fileName;
             $data['activeTo'] = "2222-01-02";
             $slider = Slider::create($data);
             return redirect()->back();
@@ -87,10 +87,18 @@ class SliderController extends Controller
     {
         // dd($request->all());
         $slide = Slider::find($id);
-        $slide->fill($request->all())->save();
-        // if($request->hasFile('image')){
-           
-        // }
+        $data = $request->all();
+        if($request->hasFile('slide_image')){
+            if(file_exists('public/'.$slide->slide_image)){
+            unlink('public/'.$slide->slide_image);
+            }
+            $file = $request->file('slide_image') ;
+            $fileName = $file->getClientOriginalName() ;
+            $destinationPath = public_path().'/uploads/slider' ;
+            $file->move($destinationPath,$fileName);
+            $data['slide_image'] = 'uploads/slider/'.$fileName;
+        }
+        $slide->fill($data)->save();
         return redirect()->back()->with('message','Slider Updated...');
     }
 

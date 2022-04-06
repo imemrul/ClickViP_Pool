@@ -75,6 +75,17 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-xs-12">
+                                                <label for="">Slider Image</label>
+                                                <div class="input-group">
+                                                    <span id="" class="input-group-addon">
+                                                        <i class="material-icons">photo</i>
+                                                    </span>
+                                                    <div class="form-line focused" style="margin-bottom: 0px;">
+                                                        <img src="/public/{!!$slide->slide_image!!}" width="200px"><input type="file" name="slide_image">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     
                                     </div>
@@ -82,29 +93,20 @@
                                 <div class="form-group">
                                     <input type="submit" name="submit" value="UPDATE" class="btn btn-success btn-block">
                                 </div>
-
                             </div>
                             {!! Form::close() !!}
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-
-
 @endsection
 @section('custom_page_style')
-
 @endsection
 @section('custom_page_script')
     <script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.5/dist/latest/bootstrap-autocomplete.min.js"></script>
-
     <script type="text/javascript">
-
         let app = new Vue({
             el:'#app',
             data:{
@@ -112,30 +114,7 @@
                 client_id:0
             },
             methods:{
-
             }
         });
-
-        $('.client_name_autoCompleter').autoComplete({
-            resolverSettings: {
-                url: '{!! URL::to('get_clients') !!}'
-            },
-            minLength:2,
-            preventEnter:true
-        }).on('autocomplete.select', function (evt, item) {
-            console.log(item.value);
-            axios.get('{!! URL::to('get_contact_person_by_client') !!}/'+item.value).then(function(res){
-                app.client_id = item.value;
-                app.contact_persons = res.data;
-            })
-        });
-        $(document).ready(function() {
-        $('#summernote').summernote({
-            height: 300,                 // set editor height
-            minHeight: null,             // set minimum height of editor
-            maxHeight: null,             // set maximum height of editor
-            focus: true                  // set focus to editable area after initializing summernote
-        });
-    });
     </script>
 @endsection
