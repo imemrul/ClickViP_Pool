@@ -155,10 +155,8 @@
                     <h4 class="alert alert-success">{!! session()->get('success_message') !!}</h4>
                 </div>
             </div>
-
         </section>
         @endif
-
         <!-- Registration Modal -->
         <div class="modal fade" id="registration_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:9999">
             <div class="modal-dialog modal-md" role="document">
