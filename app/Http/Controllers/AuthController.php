@@ -28,7 +28,13 @@ class AuthController extends Controller{
     }
     public function registration(Request $request){
         $input = $request->all();
-        $input['roll_id'] = 3;
+        if($input['submission_type'] == "guest"){
+            $input['roll_id'] = 3;
+        }
+        if($input['submission_type'] == "host"){
+            $input['roll_id'] = 2;
+        }
+        
         $input['password'] = Hash::make($input['password']);
         $user = User::create($input);
         $token = Str::random(64);

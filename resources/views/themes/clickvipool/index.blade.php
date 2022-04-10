@@ -7,41 +7,6 @@
 
         <!-- ========================  Stretcher widget ======================== -->
 
-        <section class="stretcher-wrapper">
-
-            <!-- === stretcher header === -->
-
-            <div class="section-header">
-                <div class="container">
-                    <h2 class="title">Pool facilities <a href="#" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
-                    <p>
-                        With the best luxury spa, salon and fitness experiences
-                    </p>
-                </div>
-            </div>
-
-            <!-- === stretcher === -->
-
-            <ul class="stretcher">
-                @foreach($facilities as $facility)
-                <!-- === stretcher item === -->
-  
-                <li class="stretcher-item" style="background-image:url({{ asset('public/uploads/'.$facility->image)}});">
-                    <!--logo-item-->
-                    <div class="stretcher-logo">
-                        <div class="text">
-                            <span class="text-intro h4">{{$facility->name}}</span>
-                        </div>
-                    </div>
-                    <!--main text-->
-                    <figure>
-                        <h4>{{$facility->name}}</h4>
-                        <figcaption>{{$facility->description}}</figcaption>
-                    </figure>
-                </li>
-                @endforeach
-            </ul>
-        </section>
 
         <!-- ========================  Blog ======================== -->
 
@@ -64,7 +29,7 @@
                     <!-- === article item === -->
 
                     <div class="col-sm-4">
-                        <a href="blog-item.html">
+                        <a href="#">
                             <article>
                                 <div class="image">
                                     <img src="{{ asset('public/themes/clickvipool/assets/images/activity-3.jpg')}}" alt="" />
@@ -126,33 +91,22 @@
                             </article>
                         </a>
                     </div>
-
                 </div> <!--/row-->
             </div> <!--/container-->
         </section>
-
-
         <!-- ======================== Quotes ======================== -->
-
         <section class="quotes quotes-slider" style="background-image:url({{ asset('public/themes/clickvipool/assets/images/header-1.jpg')}})">
             <div class="container">
-
                 <!-- === Quotes header === -->
-
                 <div class="section-header">
                     <h2 class="title">Testimonials</h2>
                     <p>What other think about us</p>
                 </div>
-
                 <div class="row">
-
                     <div class="col-md-8 col-md-offset-2">
                         <div class="quote-carousel">
-
                             <!-- === quoute item === -->
-
                             <div class="quote">
-
                                 <div class="text">
                                     <h4>Jenna Hale</h4>
                                     <p>Ipsum dolore eros dolore <br />dolor dolores sit iriure</p>
@@ -167,9 +121,7 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- === quoute item === -->
-
                             <div class="quote">
                                 <div class="text">
                                     <h4>Glen Jordan</h4>
@@ -185,9 +137,7 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- === quoute item === -->
-
                             <div class="quote">
                                 <div class="text">
                                     <h4>Lea Nils</h4>
@@ -203,9 +153,7 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- === quoute item === -->
-
                             <div class="quote">
                                 <div class="text">
                                     <h4>Nora Star</h4>
@@ -221,9 +169,7 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- === quoute item === -->
-
                             <div class="quote">
                                 <div class="text">
                                     <h4>Glen Jordan</h4>

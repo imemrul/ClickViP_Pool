@@ -13,7 +13,6 @@
     </div>
 
     <!-- ===  Checkout steps === -->
-
     <div class="step-wrapper">
         <div class="container">
             <div class="stepper">
@@ -22,11 +21,10 @@
                         <a href="#"><span data-text="Room & rates"></span></a>
                     </li>
                     <li class="col-md-4">
-                        <a href="{!! url('pool/payment',$result->slug) !!}"><span data-text="Reservation"></span></a>
+                        <a href="#"><span data-text="Reservation"></span></a>
                     </li>
                     <li class="col-md-4">
-                        <a href="{!! url('pool/payment/confirmation',$result->slug) !!}"><span
-                                    data-text="Checkout"></span></a>
+                        <a href="#"><span data-text="Checkout"></span></a>
                     </li>
                 </ul>
             </div>
@@ -117,7 +115,6 @@
                                         Facilities
                                     </th>
                                     <th>
-                                       
                                             <div class="row">
                                                 @foreach($result->facilities as $items => $val)
                                                 @php $facility = \App\Facility::where('id', $val['facility_id'])->first(); @endphp

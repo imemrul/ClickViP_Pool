@@ -41,7 +41,22 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+        .tacbox {
+        display:block;
+        padding: 1em;
+        margin: 2em;
+        border: 3px solid #ddd;
+        background-color: #eee;
+        max-width: 800px;
+        }
 
+        input {
+        height: 2em;
+        width: 2em;
+        vertical-align: middle;
+        }
+    </style>
 
 </head>
 
@@ -185,7 +200,7 @@
                             <div class="col-xs-12 col-sm-12">
                                 <div class="form-group">
                                     <label for="phone">Phone</label>
-                                    <input type="text" name="phone" id="phone" class="form-control" autocomplete="off" required>
+                                    <input type="number" name="phone" id="phone" class="form-control" autocomplete="off" required>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12">
@@ -205,8 +220,10 @@
                                     <input type="password" name="password" class="form-control" autocomplete="off" required>
                                 </div>
                             </div>
+                            <div class="col-xs-12 col-sm-12">
+                                <span class="checkbox"><input name="toc" value="8" type="checkbox" id="fa_id_4"> <label for="fa_id_4">I accept the <a href="{!!URL::to('legal-notice-disclaimer')!!}" target="_blank">Terms and Conditions</a></label></span>
+                            </div>
                         </div>
-
                         <div class="row">
                             <div class="col-xs-6">
                                 <button :disabled="submitting" type="submit" name="submission_type" value="guest" class="btn btn-md btn-block btn-primary" role="button">Register as a guest</button>
