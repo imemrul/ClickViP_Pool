@@ -131,10 +131,10 @@
                                                                             </td>
                                                                             <td>
                                                                                 <div class="form-line">
-                                                                                    <select v-model="row.status ='<?= $result->status ?>'" name="status">
+                                                                                    <select name="status">
                                                                                         <option>Select Status</option>
-                                                                                        <option value="Active">Active</option>
-                                                                                        <option value="Inactive">Inactive</option>
+                                                                                        <option value="Active" {{ $result->status === "Active" ? "selected" : "" }}>Active</option>
+                                                                                        <option value="Inactive" {{ $result->status === "Inactive" ? "selected" : "" }}>Inactive</option>
                                                                                     </select>
                                                                                 </div>
                                                                             </td>

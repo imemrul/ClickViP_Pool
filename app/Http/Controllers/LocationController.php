@@ -85,7 +85,7 @@ class LocationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request->all());
+        // dd($request->all());
         //return $request->all();
         Location::find($id)->fill($request->all())->save();
         return redirect()->back()->with('message','Service Location Updated..');
