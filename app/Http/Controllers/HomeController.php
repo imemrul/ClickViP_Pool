@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Home;
@@ -46,8 +45,13 @@ class HomeController extends Controller
     }
     public function page($slug){
         $result = Page::where('slug',$slug)->first();
-        //return $result;
-        return view('themes.clickvipool.page',compact('result'));
+        if($result){
+            //return $result;
+            return view('themes.clickvipool.page',compact('result'));
+        }
+        else{
+            return redirect('/');
+        }
     }
     public function get_available_slot($date){
         $pool = Pool::find(request()->pool_id);
@@ -66,6 +70,4 @@ class HomeController extends Controller
         }
         return $arr;
     }
-
-
 }
