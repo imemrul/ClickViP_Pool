@@ -119,11 +119,10 @@
                                                 @foreach($result->facilities as $items => $val)
                                                 @php $facility = \App\Facility::where('id', $val['facility_id'])->first(); @endphp
                                                     <div class="col-xs-3">
-                                                    <span class="checkbox">
-                                                        <input name="facilities[]" value="{!! $facility->id !!}"
-                                                               type="checkbox" id="fa_id_{!! $items !!}" checked>
-                                                        <label for="fa_id_{!! $items !!}">{!! $facility->name !!}</label>
-                                                    </span>
+                                                        <span class="checkbox">
+                                                            <input name="facilities[]" value="{!! $facility->id !!}" type="checkbox" id="fa_id_{!! $items !!}" checked>
+                                                            <label for="fa_id_{!! $items !!}">{!! $facility->name !!}</label>
+                                                        </span>
                                                     </div>
                                                 @endforeach
                                             </div>
@@ -247,8 +246,7 @@
                             </div>
                             <div>
                                 @if (Auth::check())
-
-                                <input type="submit" value="BOOK" class="btn btn-main">
+                                <button type="submit" form="form1" value="BOOK" class="btn btn-main">BOOK</button>
                                 @else
                                 <a href="#" data-toggle="modal" data-target="#login_form" class="btn btn-main">Login for Booking</a>
                                 @endif
