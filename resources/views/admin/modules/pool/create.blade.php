@@ -103,6 +103,8 @@
                                                         <td>
                                                             <input type="text" name="available_date[]" placeholder="Date..."
                                                                    class="form-control datepicker">
+                                                            <input type="text" name="available_date[]" placeholder="Date..."
+                                                                   class="form-control datepicker">
                                                         </td>
                                                         <td>
                                                             <?php

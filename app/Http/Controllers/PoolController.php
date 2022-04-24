@@ -8,6 +8,9 @@ use App\Pool_image;
 use App\Weekly_session_timing;
 use App\Weekly_session_wise_pool_price;
 use Carbon\Carbon;
+use DateTime;
+use DateInterval;
+use DatePeriod;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -144,19 +147,39 @@ class PoolController extends Controller
             $pool_master['allow_instant_booking'] = 'Yes';
         }
         $pool->fill($pool_master)->save();
-        foreach($request->available_date as $i=>$date){
-            if($date){
-                foreach ($request->weekly_session_timing[$i] as $id=>$pirce){
-                    if($pirce && $pirce !== 0){
-                        $session_wise_price = new Weekly_session_wise_pool_price();
-                        $session_wise_price->weekly_session_id = $id;
-                        $session_wise_price->date = $date;
-                        $session_wise_price->price = $pirce;
-                        $pool->session_wise_price()->save($session_wise_price);
-                    }
+
+        $begin = new DateTime($request->start_date);
+        $end   = new DateTime($request->end_date);
+
+        $interval = DateInterval::createFromDateString('1 day');
+        $period = new DatePeriod($begin, $interval, $end);
+
+        foreach ($period as $dt) {
+            $date = $dt->format("Y-m-d");
+            echo $date;
+            foreach ($request->weekly_session_timing[$i] as $id=>$pirce){
+                if($pirce && $pirce !== 0){
+                    $session_wise_price = new Weekly_session_wise_pool_price();
+                    $session_wise_price->weekly_session_id = $id;
+                    $session_wise_price->date = $date;
+                    $session_wise_price->price = $pirce;
+                    $pool->session_wise_price()->save($session_wise_price);
                 }
             }
         }
+        // foreach($request->available_date as $i=>$date){
+        //     if($date){
+        //         foreach ($request->weekly_session_timing[$i] as $id=>$pirce){
+        //             if($pirce && $pirce !== 0){
+        //                 $session_wise_price = new Weekly_session_wise_pool_price();
+        //                 $session_wise_price->weekly_session_id = $id;
+        //                 $session_wise_price->date = $date;
+        //                 $session_wise_price->price = $pirce;
+        //                 $pool->session_wise_price()->save($session_wise_price);
+        //             }
+        //         }
+        //     }
+        // }
         if($request->hasFile('image')){
             foreach($request->file('image') as $file)
             {

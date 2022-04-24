@@ -96,7 +96,7 @@
                                                     </tr>
                                                     </thead>
                                                     <tbody>
-                                                    @foreach($result->session_wise_price->groupBy('date') as $index=>$date)
+                                                    @foreach($result->session_wise_price->where('date', date('Y-m-d'))->groupBy('date') as $index=>$date)
                                                         <tr>
                                                             <td>{!! $index !!}</td>
                                                             <td>
@@ -120,14 +120,18 @@
                                                         <th style="width: 160px;">Date</th>
                                                         <th>Time slot</th>
                                                         <th class="text-center">
-                                                            <a href="#" class="btn btn-xs btn-success" @click.prevent="addRow"><i class="material-icons">add</i></a>
+                                                            {{-- <a href="#" class="btn btn-xs btn-success" @click.prevent="addRow"><i class="material-icons">add</i></a> --}}
                                                         </th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
                                                     <tr v-for="(item,index) in timeSlotArr">
                                                         <td>
-                                                            <input type="text" name="available_date[]" placeholder="Date..."
+                                                            <strong>Start Date:</strong>
+                                                            <input type="text" name="start_date" placeholder="Start Date..."
+                                                                   class="form-control datepicker">
+                                                            <strong>End Date:</strong>
+                                                            <input type="text" name="end_date" placeholder="End Date..."
                                                                    class="form-control datepicker">
                                                         </td>
                                                         <td>
@@ -139,11 +143,11 @@
                                                                         //$value =
                                                                 ?>
                                                                 <label :for="'time_slot_checkbox_{!! $i !!}_'+index">{!! $item->title .'-'.$item->week_day.'-('. date('h:i a',strtotime($item->start_from)) . '-'. date('h:i a',strtotime($item->end_at)) .')' !!}</label>
-                                                                <input value="" type="text" :name="'weekly_session_timing['+index+'][{!! $item->id !!}]'"  :id="'time_slot_checkbox_{!! $i !!}_'+index" class="form-control">
+                                                                <input value="" type="text" :name="'weekly_session_timing['+index+'][{!! $item->id !!}]'"  :id="'time_slot_checkbox_{!! $i !!}_'+index" class="form-control" placeholder="Session Price">
                                                             @endforeach
                                                         </td>
                                                         <td>
-                                                            <a href="#" class="btn btn-xs btn-danger" @click.prevent="removeRow(index)"><i class="material-icons">remove</i></a>
+                                                            {{-- <a href="#" class="btn btn-xs btn-danger" @click.prevent="removeRow(index)"><i class="material-icons">remove</i></a> --}}
                                                         </td>
                                                     </tr>
                                                     </tbody>
