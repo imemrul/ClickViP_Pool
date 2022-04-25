@@ -108,8 +108,8 @@
                             <!-- === quoute item === -->
                             <div class="quote">
                                 <div class="text">
-                                    <h4>Jenna Hale</h4>
-                                    <p>Ipsum dolore eros dolore <br />dolor dolores sit iriure</p>
+                                    <h4>Amer Ahmed</h4>
+                                    <p>Splendid afternoon.</p>
                                 </div>
                                 <div class="more">
                                     <div class="rating">
@@ -124,8 +124,8 @@
                             <!-- === quoute item === -->
                             <div class="quote">
                                 <div class="text">
-                                    <h4>Glen Jordan</h4>
-                                    <p>Ipsum dolore eros dolore <br />dolor dolores sit iriure</p>
+                                    <h4>Bob Parton</h4>
+                                    <p>Amazing host, <br />pool located in quite place.</p>
                                 </div>
                                 <div class="more">
                                     <div class="rating">
@@ -140,8 +140,8 @@
                             <!-- === quoute item === -->
                             <div class="quote">
                                 <div class="text">
-                                    <h4>Lea Nils</h4>
-                                    <p>Ipsum dolore eros dolore <br />dolor dolores sit iriure</p>
+                                    <h4>Jenna Hadid</h4>
+                                    <p>Nice concept, <br />good for sharing a local moment.</p>
                                 </div>
                                 <div class="more">
                                     <div class="rating">
@@ -156,8 +156,8 @@
                             <!-- === quoute item === -->
                             <div class="quote">
                                 <div class="text">
-                                    <h4>Nora Star</h4>
-                                    <p>Ipsum dolore eros dolore <br />dolor dolores sit iriure</p>
+                                    <h4>Nora Jihene</h4>
+                                    <p>Easy booking, host gave us a warm welcome. <br />Really enjoyed the morning spent there.</p>
                                 </div>
                                 <div class="more">
                                     <div class="rating">
@@ -172,8 +172,8 @@
                             <!-- === quoute item === -->
                             <div class="quote">
                                 <div class="text">
-                                    <h4>Glen Jordan</h4>
-                                    <p>Ipsum dolore eros dolore <br />dolor dolores sit iriure</p>
+                                    <h4>Melissa Miles</h4>
+                                    <p>Booked for a afternoon time with family, <br />I really enjoyed the time there. How lovely to get a private pool only for us.</p>
                                 </div>
                                 <div class="more">
                                     <div class="rating">

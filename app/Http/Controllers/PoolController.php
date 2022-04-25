@@ -66,19 +66,33 @@ class PoolController extends Controller
             $pool_master['allow_instant_booking'] = 'Yes';
         }
         $pool = Pool::create($pool_master);
-        foreach($request->available_date as $i=>$date){
-            if($date){
-                foreach ($request->weekly_session_timing[$i] as $id=>$pirce){
-                    if($pirce && $pirce !== 0){
-                        $session_wise_price = new Weekly_session_wise_pool_price();
-                        $session_wise_price->weekly_session_id = $id;
-                        $session_wise_price->date = $date;
-                        $session_wise_price->price = $pirce;
-                        $pool->session_wise_price()->save($session_wise_price);
-                    }
+        
+        $dates = $this->getBetweenDates($request->start_date, $request->end_date);
+
+        foreach ($dates as $date) {
+            foreach ($request->weekly_session_timing[0] as $id=>$pirce){
+                if($pirce && $pirce !== 0){
+                    $session_wise_price = new Weekly_session_wise_pool_price();
+                    $session_wise_price->weekly_session_id = $id;
+                    $session_wise_price->date = $date;
+                    $session_wise_price->price = $pirce;
+                    $pool->session_wise_price()->save($session_wise_price);
                 }
             }
         }
+        // foreach($request->available_date as $i=>$date){
+        //     if($date){
+        //         foreach ($request->weekly_session_timing[$i] as $id=>$pirce){
+        //             if($pirce && $pirce !== 0){
+        //                 $session_wise_price = new Weekly_session_wise_pool_price();
+        //                 $session_wise_price->weekly_session_id = $id;
+        //                 $session_wise_price->date = $date;
+        //                 $session_wise_price->price = $pirce;
+        //                 $pool->session_wise_price()->save($session_wise_price);
+        //             }
+        //         }
+        //     }
+        // }
         if($request->hasFile('image')){
             foreach($request->file('image') as $file)
             {
@@ -127,6 +141,23 @@ class PoolController extends Controller
         return view('admin.modules.pool.edit',compact('result'));
     }
 
+    function getBetweenDates($startDate, $endDate)
+    {
+        $rangArray = [];
+            
+        $startDate = strtotime($startDate);
+        $endDate = strtotime($endDate);
+             
+        for ($currentDate = $startDate; $currentDate <= $endDate; 
+                                        $currentDate += (86400)) {
+                                                
+            $date = date('Y-m-d', $currentDate);
+            $rangArray[] = $date;
+        }
+  
+        return $rangArray;
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -136,6 +167,7 @@ class PoolController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $i = count($request->weekly_session_timing[0]);
         //delete_session_time_slotreturn 'test';
         $pool = Pool::find($id);
         //return $pool->location;
@@ -148,16 +180,10 @@ class PoolController extends Controller
         }
         $pool->fill($pool_master)->save();
 
-        $begin = new DateTime($request->start_date);
-        $end   = new DateTime($request->end_date);
+        $dates = $this->getBetweenDates($request->start_date, $request->end_date);
 
-        $interval = DateInterval::createFromDateString('1 day');
-        $period = new DatePeriod($begin, $interval, $end);
-
-        foreach ($period as $dt) {
-            $date = $dt->format("Y-m-d");
-            echo $date;
-            foreach ($request->weekly_session_timing[$i] as $id=>$pirce){
+        foreach ($dates as $date) {
+            foreach ($request->weekly_session_timing[0] as $id=>$pirce){
                 if($pirce && $pirce !== 0){
                     $session_wise_price = new Weekly_session_wise_pool_price();
                     $session_wise_price->weekly_session_id = $id;

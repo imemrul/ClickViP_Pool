@@ -140,7 +140,7 @@
                                                             ?>
                                                             @foreach($weekly_timing_session as $i=>$item)
                                                                 <?php
-                                                                        //$value =
+                                                                //$value =
                                                                 ?>
                                                                 <label :for="'time_slot_checkbox_{!! $i !!}_'+index">{!! $item->title .'-'.$item->week_day.'-('. date('h:i a',strtotime($item->start_from)) . '-'. date('h:i a',strtotime($item->end_at)) .')' !!}</label>
                                                                 <input value="" type="text" :name="'weekly_session_timing['+index+'][{!! $item->id !!}]'"  :id="'time_slot_checkbox_{!! $i !!}_'+index" class="form-control" placeholder="Session Price">

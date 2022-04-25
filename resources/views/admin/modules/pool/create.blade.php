@@ -101,9 +101,11 @@
                                                     <tbody>
                                                     <tr v-for="(item,index) in timeSlotArr">
                                                         <td>
-                                                            <input type="text" name="available_date[]" placeholder="Date..."
+                                                            <strong>Start Date:</strong>
+                                                            <input type="text" name="start_date" placeholder="Start Date..."
                                                                    class="form-control datepicker">
-                                                            <input type="text" name="available_date[]" placeholder="Date..."
+                                                            <strong>End Date:</strong>
+                                                            <input type="text" name="end_date" placeholder="End Date..."
                                                                    class="form-control datepicker">
                                                         </td>
                                                         <td>
