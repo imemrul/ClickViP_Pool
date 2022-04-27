@@ -25,6 +25,11 @@ Route::post('profile_update/{user_id}','AuthController@profile_update');
 Route::post('login_id_update/{user_id}','AuthController@login_id_update');
 Route::post('password_update/{user_id}','AuthController@password_update');
 
+Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
 Route::get('/logout','AuthController@logout');
 
 
@@ -87,7 +92,3 @@ Route::group(['prefix'=>'module'],function(){
 });
 
 Route::get('{slug}', 'HomeController@page');
-
-
-
-

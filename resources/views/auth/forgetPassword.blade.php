@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -32,38 +32,29 @@
         </div>
         <div class="card">
             <div class="body">
-                <form id="sign_in" method="POST" action="{!! URL::to('login') !!}">
-                    {!! Form::token() !!}
-                    <div class="msg">Sign in to start your session</div>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="material-icons">person</i>
-                        </span>
-                        <div class="form-line">
-                            <input type="text" class="form-control" name="email" placeholder="Username" required autofocus>
+                @if (Session::has('message'))
+                         <div class="alert alert-success" role="alert">
+                            {{ Session::get('message') }}
                         </div>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="material-icons">lock</i>
-                        </span>
-                        <div class="form-line">
-                            <input type="password" class="form-control" name="password" placeholder="Password" required>
-                        </div>
-                    </div>
-                    <div class="row">
-
-                        <div class="col-xs-6">
-                            <button class="btn btn-block bg-teal waves-effect" type="submit">SIGN IN</button>
-                        </div>
-                        <div class="col-xs-6">
-                             <a href="{{ route('forget.password.get') }}">Reset Password</a>
-                        </div>
-                    </div>
-                    <div class="row m-t-15 m-b--20">
-
-                    </div>
-                </form>
+                    @endif
+  
+                      <form action="{{ route('forget.password.post') }}" method="POST">
+                          @csrf
+                          <div class="form-group row">
+                              <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                              <div class="col-md-6">
+                                  <input type="text" id="email_address" class="form-control" name="email" required autofocus>
+                                  @if ($errors->has('email'))
+                                      <span class="text-danger">{{ $errors->first('email') }}</span>
+                                  @endif
+                              </div>
+                          </div>
+                          <div class="col-md-6 offset-md-4">
+                              <button type="submit" class="btn btn-primary">
+                                  Send Password Reset Link
+                              </button>
+                          </div>
+                      </form>
             </div>
         </div>
     </div>
