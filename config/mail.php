@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'forkadul.islam@bikroy.com'),
-        'name' => env('MAIL_FROM_NAME', 'Bikroy IT'),
+        'address' => env('MAIL_FROM_ADDRESS', 'system@clickvipool.com'),
+        'name' => env('MAIL_FROM_NAME', 'ClickviPool'),
     ],
 
     /*
