@@ -15,11 +15,11 @@ use App\Events\TaskEvent;
 
 Route::get('/', 'HomeController@index');
 Route::get('dashboard', [AuthController::class, 'dashboard'])->middleware(['auth', 'is_verify_email']);
-Route::get('account/verify/{token}', [AuthController::class, 'verifyAccount'])->name('user.verify');
 Route::get('dashboard', 'Admin@index');
 Route::get('/login','AuthController@index');
 Route::post('/login','AuthController@login');
 Route::post('/ajax_login','AuthController@ajax_login');
+Route::post('account/verify/{token}','AuthController@verifyAccount');
 Route::get('/my_account','GuestController@index');
 Route::post('profile_update/{user_id}','AuthController@profile_update');
 Route::post('login_id_update/{user_id}','AuthController@login_id_update');
